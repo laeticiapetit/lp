@@ -214,7 +214,7 @@ main > section:last-of-type {
   width: 250px;
   height: 350px;
   border-radius: 10%;
-  background: url('../photopresentation.png') center / cover no-repeat;
+  background: url('photopresentation.png') center / cover no-repeat;
 }
 
 .project-grid,
@@ -385,3 +385,4 @@ footer .icons img:hover {
     font-size: 28px;
   }
 }
+
