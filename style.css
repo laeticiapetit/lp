@@ -413,4 +413,50 @@ footer .icons img:hover {
   opacity: 1;
 }
 
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  padding: 40px;
+}
+
+.hero-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: clamp(42px, 6vw, 72px);
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: black;
+}
+
+
 
