@@ -401,4 +401,16 @@ footer .icons img:hover {
   }
 }
 
+.gallery-item::after {
+  content: "Illustration digitale";
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+  transition: 0.3s;
+}
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
 
