@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio – Laeticia Petit</title>
+
+  <!-- Polices -->
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <img src="../menuburger.png" class="menu-icon" alt="Menu">
+
+  <a href="portfolio.html" class="logo">
+    <h1>MON PORTFOLIO</h1>
+  </a>
+
+  <img src="../lpwhite logo.png" class="logo-right" alt="Logo Laeticia Petit">
+</header>
+
+<!-- ================= MENU MOBILE ================= -->
+<nav id="mobileMenu">
+  <div>
+    <span>Qui suis-je ?</span>
+    <a href="àmonsujet.html">À mon sujet</a>
+    <a href="magalerie.html">Ma Galerie</a>
+  </div>
+  <div>
+    <span>De la Formation au Projet</span>
+    <a href="parcourspro.html">Mon parcours de Formation</a>
+    <a href="moncv.html">Mon CV</a>
+  </div>
+  <div>
+    <span>Mes projets</span>
+    <a href="mesprojetsevenementiels.html">Mes Projets Evénementiels</a>
+    <a href="mescreationsvisuelles.html">Mes Créations Visuelles</a>
+  </div>
+</nav>
+
+<!-- ================= PARCOURS ================= -->
+<section class="section">
+  <div class="glass-block">
+
+    <h2>Mon parcours de formation</h2>
+    <p>Pour vous présenter mon parcours en quelques slides...</p>
+
+    <!-- ================= CARROUSEL ================= -->
+    <section class="carousel">
+
+      <div class="carousel-container">
+        <div class="carousel-track">
+
+          <div class="slide">
+            <img src="../ynov.png" alt="Ynov">
+          </div>
+
+          <div class="slide">
+            <img src="../jardileclerc.png" alt="Jardileclerc">
+          </div>
+
+          <div class="slide">
+            <img src="../valdoieformation.png" alt="Valdoie Formation">
+          </div>
+
+          <div class="slide">
+            <img src="../noélamaisondesanimaux.png" alt="Noé – La Maison des Animaux">
+          </div>
+
+          <div class="slide">
+            <img src="../vireformation.png" alt="CFA Vire">
+          </div>
+
+        </div>
+
+        <!-- Flèches -->
+        <button class="nav prev">❮</button>
+        <button class="nav next">❯</button>
+      </div>
+
+      <!-- Points -->
+      <div class="dots"></div>
+    </section>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  2026 © Laeticia PETIT
+
+  <div class="icons">
+    <a href="https://www.instagram.com/little_ness_art/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+
+    <a href="https://www.linkedin.com/in/laeticia-petit-116b12319/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
+    </a>
+
+    <a href="mailto:laetitia84.petit@gmail.com">
+      <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Email">
+    </a>
+  </div>
+</footer>
+
+<!-- ================= BOUTON RETOUR EN HAUT ================= -->
+<button id="backToTop" aria-label="Retour en haut">↑</button>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* MENU MOBILE */
+  const menuIcon = document.querySelector('.menu-icon');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuIcon && mobileMenu) {
+    menuIcon.addEventListener('click', () => {
+      mobileMenu.style.display =
+        mobileMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+      });
+    });
+  }
+
+  /* CARROUSEL */
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.querySelector('.nav.prev');
+  const nextBtn = document.querySelector('.nav.next');
+  const dotsContainer = document.querySelector('.dots');
+
+  let index = 0;
+
+  if (track && slides.length && prevBtn && nextBtn && dotsContainer) {
+    dotsContainer.innerHTML = "";
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = "button";
+      if (i === 0) dot.classList.add('active');
+      dotsContainer.appendChild(dot);
+
+      dot.addEventListener('click', () => {
+        index = i;
+        updateCarousel();
+      });
+    });
+
+    const dots = dotsContainer.querySelectorAll('button');
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach(d => d.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') nextBtn.click();
+      if (e.key === 'ArrowLeft') prevBtn.click();
+    });
+  }
+
+  /* RETOUR EN HAUT */
+  const backToTop = document.getElementById("backToTop");
+
+  if (backToTop) {
+    const toggleBackToTop = () => {
+      backToTop.style.display = (window.scrollY > 100) ? "flex" : "none";
+    };
+
+    toggleBackToTop();
+    window.addEventListener("scroll", toggleBackToTop, { passive: true });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+});
+</script>
+
+</body>
+</html>

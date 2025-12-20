@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio - Laeticia Petit</title>
+
+  <!-- Polices -->
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <img src="../menuburger.png" class="menu-icon" alt="Menu">
+  <a href="portfolio.html" class="logo"><h1>MON PORTFOLIO</h1></a>
+  <img src="../lpwhite logo.png" class="logo-right" alt="Logo Laeticia Petit">
+</header>
+
+<nav id="mobileMenu">
+  <div>
+    <span>Qui suis-je ?</span>
+    <a href="àmonsujet.html">À mon sujet</a>
+    <a href="magalerie.html">Ma Galerie</a>
+  </div>
+  <div>
+    <span>De la Formation au Projet</span>
+    <a href="parcourspro.html">Mon parcours de Formation</a>
+    <a href="moncv.html">Mon CV</a>
+  </div>
+  <div>
+    <span>Mes projets</span>
+    <a href="mesprojetsevenementiels.html">Mes Projets Evénementiels</a>
+    <a href="mescreationsvisuelles.html">Mes Créations Visuelles</a>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="glass-block creations-visuelles">
+
+    <h2 class="section-title">Mes Créations Visuelles</h2>
+
+    <article class="projet-visuel">
+      <div class="video-container">
+        <video controls>
+          <source src="../oraya.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+      </div>
+
+      <div class="projet-texte">
+        <h3>Oraya</h3>
+        <p>
+          Oraya est une marque de skincare fictive créée sur 3 semaines à l'occasion
+          des Ymmersions lors de ma rentrée à Ynov.
+        </p>
+        <span class="date">septembre 2025</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<footer>
+  2026 © Laeticia PETIT
+  <div class="icons">
+    <a href="https://www.instagram.com/little_ness_art/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+    <a href="https://www.linkedin.com/in/laeticia-petit-116b12319/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn"></a>
+    <a href="mailto:laetitia84.petit@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Email"></a>
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Retour en haut">↑</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const menuIcon = document.querySelector('.menu-icon');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuIcon && mobileMenu) {
+    menuIcon.addEventListener('click', () => {
+      mobileMenu.style.display =
+        mobileMenu.style.display === 'block' ? 'none' : 'block';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.style.display = 'none');
+    });
+  }
+
+  const backToTop = document.getElementById("backToTop");
+  if (backToTop) {
+    const toggle = () => backToTop.style.display = window.scrollY > 100 ? "flex" : "none";
+    toggle();
+    window.addEventListener("scroll", toggle, { passive: true });
+    backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
+
+});
+</script>
+
+</body>
+</html>

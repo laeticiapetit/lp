@@ -1,0 +1,387 @@
+/* ======================================================
+   RESET & BASE
+====================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+
+  background: url('https://images.pexels.com/photos/18796877/pexels-photo-18796877.jpeg')
+    no-repeat center / cover;
+  background-attachment: fixed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ======================================================
+   HEADER & NAV
+====================================================== */
+
+header {
+  margin-bottom: 60px;
+  height: 120px;
+  padding: 30px 50px;
+
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1100;
+}
+
+header h1 {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.menu-icon,
+.logo-right {
+  width: 70px;
+  cursor: pointer;
+}
+
+/* ================= MOBILE MENU ================= */
+
+#mobileMenu {
+  display: none;
+  position: fixed;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  padding: 30px 0;
+
+  background: rgba(0,0,0,0.95);
+  text-align: center;
+  z-index: 1900;
+}
+
+#mobileMenu div { margin-bottom: 20px; }
+
+#mobileMenu span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#mobileMenu a {
+  display: block;
+  padding: 8px 0;
+  transition: color 0.3s;
+}
+
+#mobileMenu a:hover {
+  color: #b3e37e;
+}
+
+/* ======================================================
+   STRUCTURE & SECTIONS
+====================================================== */
+
+.section {
+  text-align: center;
+}
+
+.section > .glass-block {
+  margin-bottom: 100px;
+}
+
+.section + .divider {
+  margin-top: -80px;
+}
+
+main > :first-child {
+  margin-top: 0;
+}
+
+main > section:last-of-type {
+  margin-bottom: 120px;
+}
+
+/* ================= DIVIDER ================= */
+
+.divider img {
+  width: 260px;
+  display: block;
+  margin: 60px auto;
+}
+
+/* ======================================================
+   GLASS BLOCK
+====================================================== */
+
+.glass-block {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 25px;
+  padding: 60px 50px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+}
+
+/* ======================================================
+   BUTTON
+====================================================== */
+
+.btn {
+  display: inline-block;
+  padding: 16px 35px;
+  border-radius: 30px;
+
+  background: white;
+  color: black;
+  font-weight: 600;
+
+  margin-top: 25px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #de7ee3;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* ======================================================
+   CARDS (FACTORIZED)
+====================================================== */
+
+.card,
+.gallery-item,
+.instagram-qr,
+.cv-frame {
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.gallery-item:hover,
+.instagram-qr:hover,
+.cv-frame:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+}
+
+.gallery-item img,
+.instagram-qr img,
+.cv-frame img {
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img,
+.instagram-qr:hover img,
+.cv-frame:hover img {
+  transform: scale(1.05);
+}
+
+/* ======================================================
+   PAGE : ACCUEIL
+====================================================== */
+
+.profile-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.profile-img {
+  width: 250px;
+  height: 350px;
+  border-radius: 10%;
+  background: url('../photopresentation.png') center / cover no-repeat;
+}
+
+.project-grid,
+.passion-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  width: 45%;
+  max-width: 450px;
+  height: 350px;
+}
+
+.passion-card {
+  width: 18%;
+  height: 300px;
+}
+
+/* ======================================================
+   PAGE : GALERIE
+====================================================== */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.gallery-item {
+  height: 360px;
+}
+
+/* ======================================================
+   PAGE : À MON SUJET
+====================================================== */
+
+.about {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  margin-bottom: 180px;
+}
+
+.about-block {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 100px;
+}
+
+.about-block.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ======================================================
+   PAGE : PROJETS (CRÉATIONS & ÉVÉNEMENTIEL)
+====================================================== */
+
+.projet-visuel {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.projet-visuel.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+footer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
+  background: #000;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer .icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .icons img {
+  width: 50px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+footer .icons img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* ======================================================
+   BACK TO TOP
+====================================================== */
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  background: #e38ad6;
+  color: white;
+  font-size: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background: #d26bc6;
+  transform: translateY(-5px);
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 900px) {
+
+  .passion-card { width: 30%; height: 250px; }
+  .project-card { width: 90%; height: 250px; }
+  .gallery-item { height: 320px; }
+  .instagram-qr { width: 320px; height: 320px; }
+
+  .about-block,
+  .about-block.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .passion-card,
+  .project-card {
+    width: 90%;
+    height: 200px;
+  }
+
+  .gallery-item { height: 260px; }
+
+  .instagram-qr {
+    width: 240px;
+    height: 240px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+}
