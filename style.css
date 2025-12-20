@@ -1,31 +1,27 @@
-/* ======================================================
-   RESET & BASE
-====================================================== */
 
-*,
-*::before,
-*::after {
+main > :first-child {
+  margin-top: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-
   font-family: 'Montserrat', sans-serif;
-  color: white;
-
   background: url('https://images.pexels.com/photos/18796877/pexels-photo-18796877.jpeg')
     no-repeat center / cover;
   background-attachment: fixed;
+  color: white;
 }
 
 a {
@@ -33,20 +29,14 @@ a {
   text-decoration: none;
 }
 
-/* ======================================================
-   HEADER & NAV
-====================================================== */
-
 header {
   margin-bottom: 60px;
+  background: rgba(0, 0, 0, 0.7);
   height: 120px;
   padding: 30px 50px;
-
-  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   position: relative;
   z-index: 1100;
@@ -59,13 +49,15 @@ header h1 {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
-.menu-icon,
-.logo-right {
+.menu-icon {
   width: 70px;
   cursor: pointer;
 }
 
-/* ================= MOBILE MENU ================= */
+.logo-right {
+  width: 70px;
+}
+
 
 #mobileMenu {
   display: none;
@@ -73,14 +65,17 @@ header h1 {
   top: 120px;
   left: 0;
   width: 100%;
-  padding: 30px 0;
-
   background: rgba(0,0,0,0.95);
+  padding: 30px 0;
   text-align: center;
+
   z-index: 1900;
 }
 
-#mobileMenu div { margin-bottom: 20px; }
+
+#mobileMenu div {
+  margin-bottom: 20px;
+}
 
 #mobileMenu span {
   display: block;
@@ -98,31 +93,14 @@ header h1 {
   color: #b3e37e;
 }
 
-/* ======================================================
-   STRUCTURE & SECTIONS
-====================================================== */
 
 .section {
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
   text-align: center;
+  overflow: hidden;
 }
 
-.section > .glass-block {
-  margin-bottom: 100px;
-}
-
-.section + .divider {
-  margin-top: -80px;
-}
-
-main > :first-child {
-  margin-top: 0;
-}
-
-main > section:last-of-type {
-  margin-bottom: 120px;
-}
-
-/* ================= DIVIDER ================= */
 
 .divider img {
   width: 260px;
@@ -130,85 +108,25 @@ main > section:last-of-type {
   margin: 60px auto;
 }
 
-/* ======================================================
-   GLASS BLOCK
-====================================================== */
 
-.glass-block {
-  background: rgba(0, 0, 0, 0.55);
-  border-radius: 25px;
-  padding: 60px 50px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+.quote-box {
+  background: rgba(255,255,255,0.95);
+  color: #222;
+  width: 80%;
+  margin: auto;
+  padding: 4%;
+  border-radius: 35px;
+  font-size: clamp(1.2rem, 2vw, 2.2rem);
+  line-height: 1.6;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-/* ======================================================
-   BUTTON
-====================================================== */
-
-.btn {
-  display: inline-block;
-  padding: 16px 35px;
-  border-radius: 30px;
-
-  background: white;
-  color: black;
-  font-weight: 600;
-
-  margin-top: 25px;
-  transition: 0.3s;
+.quote-box span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
 }
 
-.btn:hover {
-  background: #de7ee3;
-  color: white;
-  transform: translateY(-3px);
-}
-
-/* ======================================================
-   CARDS (FACTORIZED)
-====================================================== */
-
-.card,
-.gallery-item,
-.instagram-qr,
-.cv-frame {
-  border-radius: 20px;
-  overflow: hidden;
-
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;   
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.card:hover,
-.gallery-item:hover,
-.instagram-qr:hover,
-.cv-frame:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
-}
-
-.gallery-item img,
-.instagram-qr img,
-.cv-frame img {
-  transition: transform 0.4s ease;
-}
-
-.gallery-item:hover img,
-.instagram-qr:hover img,
-.cv-frame:hover img {
-  transform: scale(1.05);
-}
-
-/* ======================================================
-   PAGE : ACCUEIL
-====================================================== */
 
 .profile-section {
   display: flex;
@@ -221,12 +139,60 @@ main > section:last-of-type {
   width: 250px;
   height: 350px;
   border-radius: 10%;
-  background: url('photopresentation.png') center / cover no-repeat;
+  background: url('../photopresentation.png') center / cover no-repeat;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
+
+.profile-text p {
+  margin: 15px 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 16px 35px;
+  border-radius: 30px;
+  background: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 25px;
+}
+
+.btn:hover {
+  background: #de7ee3;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.card {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
 
 .project-grid,
 .passion-grid {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
@@ -242,70 +208,90 @@ main > section:last-of-type {
   height: 300px;
 }
 
-/* ======================================================
-   PAGE : GALERIE
-====================================================== */
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 25px;
+  margin-top: 40px;
 }
 
 .gallery-item {
   height: 360px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ======================================================
-   PAGE : À MON SUJET
-====================================================== */
-
-.about {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-  margin-bottom: 180px;
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-.about-block {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  margin-bottom: 100px;
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
 
-.about-block.reverse {
-  flex-direction: row-reverse;
+.gallery-item:hover img {
+  transform: scale(1.05);
 }
 
-/* ======================================================
-   PAGE : PROJETS (CRÉATIONS & ÉVÉNEMENTIEL)
-====================================================== */
 
-.projet-visuel {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  margin-bottom: 80px;
-}
-
-.projet-visuel.reverse {
-  flex-direction: row-reverse;
-}
-
-/* ======================================================
-   FOOTER
-====================================================== */
-
-footer {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-
-  background: #000;
-  padding: 40px 20px;
+.instagram-section {
   text-align: center;
 }
 
+.instagram-qr {
+  margin: 50px auto;
+  width: 440px;        
+  height: 440px;       
+  background: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-qr img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.instagram-qr:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+}
+
+.instagram-qr:hover img {
+  transform: scale(1.05);
+}
+
+
+footer {
+  width: 100vw;                
+  margin-left: calc(50% - 50vw);
+
+  background-color: #000;
+  color: #fff;
+
+  padding: 40px 20px;
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+/* Icônes */
 footer .icons {
   margin-top: 15px;
   display: flex;
@@ -315,6 +301,7 @@ footer .icons {
 
 footer .icons img {
   width: 50px;
+  height: 50px;
   transition: transform 0.3s, filter 0.3s;
 }
 
@@ -323,72 +310,38 @@ footer .icons img:hover {
   filter: brightness(1.2);
 }
 
-/* ======================================================
-   BACK TO TOP
-====================================================== */
-
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-
-  background: #e38ad6;
-  color: white;
-  font-size: 22px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-  z-index: 1000;
-}
-
-#backToTop:hover {
-  background: #d26bc6;
-  transform: translateY(-5px);
-}
-
-/* ======================================================
-   RESPONSIVE
-====================================================== */
 
 @media (max-width: 900px) {
-
-  .passion-card { width: 30%; height: 250px; }
-  .project-card { width: 90%; height: 250px; }
-  .gallery-item { height: 320px; }
-  .instagram-qr { width: 320px; height: 320px; }
-
-  .about-block,
-  .about-block.reverse {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
+  .passion-card {
+    width: 30%;
+    height: 250px;
   }
 
+  .project-card {
+    width: 90%;
+    height: 250px;
+  }
+
+  .gallery-item {
+    height: 320px;
+  }
+
+  .instagram-qr {
+    width: 320px;
+    height: 320px;
+  }
 }
 
 @media (max-width: 500px) {
-
   .passion-card,
   .project-card {
     width: 90%;
     height: 200px;
   }
 
-   .passion-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-  .gallery-item { height: 260px; }
+  .gallery-item {
+    height: 260px;
+  }
 
   .instagram-qr {
     width: 240px;
@@ -396,37 +349,457 @@ footer .icons img:hover {
   }
 
   header h1 {
+    position: relative;
+    height: 120px;
     font-size: 28px;
   }
 }
 
-.glass-block {
-  animation: fadeUp 0.8s ease forwards;
+
+
+.cv-page {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
+.cv-page h2 {
+  margin-bottom: 20px;
+}
+
+.cv-intro {
+  font-size: 16px;
+  opacity: 0.85;
+  margin-bottom: 60px;
+}
+
+.cv-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
+.cv-frame {
+  background: rgba(0,0,0,0.65);
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.55);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+.cv-frame:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.7);
+}
+
+
+.cv-frame img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 18px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+
+.cv-frame:hover img {
+  transform: scale(1.015);
+}
+
+.cv-actions {
+  margin-top: 60px;
+}
+
+@media (max-width: 900px) {
+  .cv-frame {
+    padding: 25px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .cv-frame img {
+    max-width: 100%;
   }
 }
 
-.gallery-item::after {
-  content: "Illustration digitale";
+.about {
+  margin: auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin-bottom: 180px;
+}
+
+
+.about-block {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 100px;
+}
+
+
+.about-block.reverse {
+  flex-direction: row-reverse;
+}
+
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #f0f0f0;
+  margin-bottom: 18px;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.75);
+}
+
+
+
+@media (max-width: 900px) {
+  .about-block,
+  .about-block.reverse {
+    flex-direction: column;
+    padding: 50px 30px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-image img {
+    height: 300px;
+  }
+}
+
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.creations-visuelles {
+  margin: 0 auto;
+  flex: 1;
+  max-width: 1200px;
+  padding: 0 40px;
+}
+
+
+.section-title {
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 30px;
+  margin-bottom: 70px;
+}
+
+
+.projet-visuel {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.video-container {
+  flex: 1.5;
+}
+
+.video-container video {
+  width: 100%;
+  max-height: 420px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.projet-texte {
+  flex: 0.7;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+.projet-texte h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.projet-texte p {
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+.projet-texte .date {
+  font-size: 10px;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .projet-visuel {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .video-container,
+  .projet-texte {
+    flex: 1;
+  }
+
+  .video-container video {
+    max-height: none;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+}
+
+.projet-visuel.reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 900px) {
+  .projet-visuel.reverse {
+    flex-direction: column;
+  }
+}
+
+
+.parcours {
+  margin: 60px auto 120px;
+  max-width: 1200px;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.parcours h2 {
+  color: #ffffff;
+  font-family: 'League Spartan', sans-serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.parcours p {
+  color: rgba(255,255,255,0.85);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+
+main,
+.carousel,
+.carousel-track,
+.slide {
+  border-radius: 0;
+  overflow: visible;
+}
+
+
+.carousel {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+
+.nav {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  opacity: 0;
-  transition: 0.3s;
-}
-.gallery-item:hover::after {
-  opacity: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
 }
 
+.nav.prev {
+  left: 20px;
+}
+
+.nav.next {
+  right: 20px;
+}
+
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.dots button.active {
+  background: #e38ad6; 
+}
+
+
+.carousel-title {
+  text-align: center;
+  margin: 60px auto 30px;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.carousel-title h2 {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff; 
+}
+
+.carousel-title p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #d9d9d9;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #e38ad6;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+  transform: translateY(-5px);
+  background: #d26bc6;
+}
+
+.glass-block {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 25px;
+  padding: 60px 50px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+}
+
+.section > .glass-block {
+  margin-bottom: 100px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 25px;
+  padding: 60px 50px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+}
+
+.section:has(.glass-block) {
+  background: transparent;
+  padding: 0;
+}
+
+.section-first {
+  margin-top: 0;
+}
+
+.section + .divider {
+  margin-top: -80px;
+}
+
+.projet-visuel:last-child {
+  margin-bottom: 0;
+}
+
+.section:has(.projet-visuel) {
+  padding-bottom: 40px;
+}
+
+.about-block:last-child {
+  margin-bottom: 0;
+}
+
+.section:has(.glass-block):last-of-type {
+  padding-bottom: 80px;
+}
+
+main > section:last-of-type {
+  margin-bottom: 120px;
+}
 
 
 
