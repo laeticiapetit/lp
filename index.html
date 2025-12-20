@@ -7,6 +7,8 @@
 
   <!-- Polices -->
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,13 +16,13 @@
 
 <!-- ================= HEADER ================= -->
 <header>
-  <img src="../menuburger.png" class="menu-icon" alt="Menu">
+  <img src="menuburger.png" class="menu-icon" alt="Menu">
 
-  <a href="portfolio.html" class="logo">
+  <a href="index.html" class="logo">
     <h1>MON PORTFOLIO</h1>
   </a>
 
-  <img src="../lpwhite logo.png" class="logo-right" alt="Logo Laeticia Petit">
+  <img src="lpwhite_logo.png" class="logo-right" alt="Logo Laeticia Petit">
 </header>
 
 <!-- ================= MENU MOBILE ================= -->
@@ -44,7 +46,6 @@
   </div>
 </nav>
 
-
 <!-- ================= CITATION ================= -->
 <section class="section">
   <div class="glass-block">
@@ -57,7 +58,7 @@
 
 <!-- ================= DIVIDER ================= -->
 <div class="divider">
-  <img src="../séparateurstar.png" alt="">
+  <img src="separateurstar.png" alt="">
 </div>
 
 <!-- ================= PROFIL ================= -->
@@ -72,7 +73,7 @@
       <p>Actuellement étudiante en marketing et en création web, je développe mes compétences digitales.</p>
       <p>Je suis également passionnée par le dessin et la création artistique.</p>
 
-      <a href="àmonsujet.html" class="btn">Qui suis-je ?</a>
+      <a href="liens/amonsujet.html" class="btn">Qui suis-je ?</a>
     </div>
 
   </div>
@@ -80,7 +81,7 @@
 
 <!-- ================= DIVIDER ================= -->
 <div class="divider">
-  <img src="../séparateurstar.png" alt="">
+  <img src="separateurstar.png" alt="">
 </div>
 
 <!-- ================= MES PROJETS ================= -->
@@ -90,12 +91,12 @@
     <h2>Mes Projets</h2>
 
     <div class="project-grid">
-      <a href="mescreationsvisuelles.html" class="card project-card">
-        <img src="../mescreationsvisuelles.png" alt="Créations visuelles">
+      <a href="liens/mescreationsvisuelles.html" class="card project-card">
+        <img src="mescreationsvisuelles.png" alt="Créations visuelles">
       </a>
 
-      <a href="mesprojetsevenementiels.html" class="card project-card">
-        <img src="../mesprojetsevenementiels.png" alt="Projets événementiels">
+      <a href="liens/mesprojetsevenementiels.html" class="card project-card">
+        <img src="mesprojetsevenementiels.png" alt="Projets événementiels">
       </a>
     </div>
 
@@ -104,7 +105,7 @@
 
 <!-- ================= DIVIDER ================= -->
 <div class="divider">
-  <img src="../séparateurstar.png" alt="">
+  <img src="separateurstar.png" alt="">
 </div>
 
 <!-- ================= MA PASSION ================= -->
@@ -115,27 +116,27 @@
 
     <div class="passion-grid">
       <a href="https://www.instagram.com/p/DOkz6szCF8o/" target="_blank" class="card passion-card">
-        <img src="../3.png" alt="Dessin Instagram 1">
+        <img src="3.png" alt="Dessin Instagram 1">
       </a>
 
       <a href="https://www.instagram.com/p/DPqYoM9iO5h/" target="_blank" class="card passion-card">
-        <img src="../2.png" alt="Dessin Instagram 2">
+        <img src="2.png" alt="Dessin Instagram 2">
       </a>
 
       <a href="https://www.instagram.com/little_ness_art/p/DRKKmT8gg1p/" target="_blank" class="card passion-card">
-        <img src="../1.png" alt="Dessin Instagram 3">
+        <img src="1.png" alt="Dessin Instagram 3">
       </a>
 
       <a href="https://www.instagram.com/little_ness_art/p/DRrrKG-iE73/" target="_blank" class="card passion-card">
-        <img src="../4.png" alt="Dessin Instagram 4">
+        <img src="4.png" alt="Dessin Instagram 4">
       </a>
 
       <a href="https://www.instagram.com/p/C-hbLjiq71p/" target="_blank" class="card passion-card">
-        <img src="../5.png" alt="Dessin Instagram 5">
+        <img src="5.png" alt="Dessin Instagram 5">
       </a>
     </div>
 
-    <a href="magalerie.html" class="btn">VOIR LA GALERIE</a>
+    <a href="liens/magalerie.html" class="btn">VOIR LA GALERIE</a>
 
   </div>
 </section>
@@ -159,14 +160,11 @@
   </div>
 </footer>
 
-<!-- ================= BOUTON RETOUR EN HAUT ================= -->
 <button id="backToTop" aria-label="Retour en haut">↑</button>
 
-<!-- ================= SCRIPT ================= -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* MENU MOBILE */
   const menuIcon = document.querySelector('.menu-icon');
   const mobileMenu = document.getElementById('mobileMenu');
 
@@ -183,7 +181,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* RETOUR EN HAUT */
   const backToTop = document.getElementById("backToTop");
 
   if (backToTop) {
@@ -204,6 +201,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
-
-
 
