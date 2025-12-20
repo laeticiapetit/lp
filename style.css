@@ -382,6 +382,13 @@ footer .icons img:hover {
     height: 200px;
   }
 
+   .passion-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
   .gallery-item { height: 260px; }
 
   .instagram-qr {
@@ -420,6 +427,7 @@ footer .icons img:hover {
 .gallery-item:hover::after {
   opacity: 1;
 }
+
 
 
 
