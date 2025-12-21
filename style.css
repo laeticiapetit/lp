@@ -653,7 +653,6 @@ main,
 
 /* IMPORTANT : on ne coupe pas l'image */
 .page-parcours .slide img{
-  width: min(1100px, 95vw);
   height: auto;
   max-height: 80vh;
   object-fit: contain;        /* affiche tout */
@@ -834,6 +833,7 @@ main > section:last-of-type {
     max-height: 60vh;
   }
 }
+
 
 
 
