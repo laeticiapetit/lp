@@ -703,8 +703,9 @@ main,
 }
 
 .dots button.active {
-  background: #e38ad6; 
+  background: #E8C482;
 }
+
 
 
 .carousel-title {
@@ -799,6 +800,7 @@ main,
 main > section:last-of-type {
   margin-bottom: 120px;
 }
+
 
 
 
