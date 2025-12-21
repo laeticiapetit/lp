@@ -89,7 +89,7 @@ header h1 {
 }
 
 #mobileMenu a:hover {
-  color: #b3e37e;
+  color: #E8C482;
 }
 
 
@@ -799,6 +799,7 @@ main,
 main > section:last-of-type {
   margin-bottom: 120px;
 }
+
 
 
 
