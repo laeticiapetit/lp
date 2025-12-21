@@ -735,7 +735,7 @@ main,
   height: 45px;
   border-radius: 50%;
   border: none;
-  background: #e38ad6;
+  background: #E8C482;
   color: white;
   font-size: 22px;
   cursor: pointer;
@@ -799,6 +799,7 @@ main,
 main > section:last-of-type {
   margin-bottom: 120px;
 }
+
 
 
 
