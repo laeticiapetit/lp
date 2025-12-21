@@ -18,8 +18,7 @@ html, body {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: url('night.png')
-    no-repeat center / cover;
+  background: url('night.png') no-repeat center / cover;
   background-attachment: fixed;
   color: white;
 }
@@ -800,6 +799,7 @@ main,
 main > section:last-of-type {
   margin-bottom: 120px;
 }
+
 
 
 
