@@ -813,15 +813,28 @@ main > section:last-of-type {
 }
 
 
+@media (max-width: 900px) {
+  .page-parcours .slide img {
+    width: 95vw;
+    max-height: 70vh;
+  }
+}
+
 @media (max-width: 500px) {
   .carousel {
-    height: 80vh;
+    height: 75vh;
   }
 
   .carousel-container {
-    height: 70vh;
+    height: 65vh;
+  }
+
+  .page-parcours .slide img {
+    width: 100%;
+    max-height: 60vh;
   }
 }
+
 
 
 
