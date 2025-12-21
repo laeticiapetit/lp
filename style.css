@@ -812,12 +812,6 @@ main > section:last-of-type {
   }
 }
 
-@media (max-width: 900px) {
-  .slide img {
-    width: 95%;
-    height: 70%;
-  }
-}
 
 @media (max-width: 500px) {
   .carousel {
@@ -827,13 +821,8 @@ main > section:last-of-type {
   .carousel-container {
     height: 70vh;
   }
-
-  .slide img {
-    width: 100%;
-    height: 60%;
-    border-radius: 20px;
-  }
 }
+
 
 
 
