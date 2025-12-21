@@ -162,7 +162,7 @@ header h1 {
 }
 
 .btn:hover {
-  background: #de7ee3;
+  background: #E8C482;
   color: white;
   transform: translateY(-3px);
 }
@@ -799,6 +799,7 @@ main,
 main > section:last-of-type {
   margin-bottom: 120px;
 }
+
 
 
 
