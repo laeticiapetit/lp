@@ -585,6 +585,11 @@ body {
   }
 }
 
+.section h2 {
+  margin-bottom: 40px;
+}
+
+
 .projet-visuel.reverse {
   flex-direction: row-reverse;
 }
@@ -853,6 +858,7 @@ main > section:last-of-type {
     max-height: 60vh;
   }
 }
+
 
 
 
