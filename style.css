@@ -654,7 +654,7 @@ main,
 /* IMPORTANT : on ne coupe pas l'image */
 .page-parcours .slide img{
   height: auto;
-  max-height: 80vh;
+  max-height: 100vh;
   object-fit: contain;        /* affiche tout */
   object-position: center;    /* centré */
   border-radius: 20px;
@@ -833,6 +833,7 @@ main > section:last-of-type {
     max-height: 60vh;
   }
 }
+
 
 
 
