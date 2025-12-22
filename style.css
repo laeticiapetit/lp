@@ -20,10 +20,6 @@ body {
   color: white;
 }
 
-html, body {
-  height: 100%;
-}
-
 .page-background {
   position: fixed;
   top: 0;
@@ -32,12 +28,6 @@ html, body {
   height: 100%;
   background: url("goldennight.png") center center / cover no-repeat;
   z-index: -10;
-}
-
-  main, header, footer {
-    position: relative;
-    z-index: 1;
-  }
 }
 
 a {
@@ -1075,6 +1065,7 @@ main > section:last-of-type {
     background-position: center top;
   }
 }
+
 
 
 
