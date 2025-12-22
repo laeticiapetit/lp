@@ -828,7 +828,82 @@ main > section:last-of-type {
   .carousel-container {
     height: 65vh;
   }
+
+  .about-block {
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .about-text {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .about-image img {
+    height: 240px;   /* 🔥 beaucoup plus agréable */
+    border-radius: 18px;
+  }
+
+  .projet-visuel {
+    gap: 25px;
+    margin-bottom: 70px;
+  }
+
+  .video-container.youtube {
+    border-radius: 16px;
+  }
+
+  .projet-texte {
+    max-width: 92%;
+    text-align: center;
+  }
+
+  .projet-texte h3 {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .projet-texte p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .projet-texte .date {
+    margin-top: 18px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .creations-visuelles {
+    padding: 0 20px;
+  }
+
+  .video-container.youtube {
+    margin-bottom: 20px;
+  }
+
+  .glass-block {
+    padding: 35px 20px;
+  }
 }
+
+
+
+
 
 
 
