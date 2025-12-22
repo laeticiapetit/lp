@@ -911,25 +911,25 @@ main > section:last-of-type {
 ================================ */
 @media (max-width: 500px) {
 
-  /* HEADER */
   header {
-    height: 70px;
-    padding: 10px 12px;
+    height: 70px;              /* header plus compact */
+    padding: 10px 12px;        /* moins d’air */
   }
 
   header h1 {
-    font-size: 18px;
+    font-size: 18px;           /* 🔑 clé pour que ça rentre */
     letter-spacing: 1px;
     line-height: 1;
-    white-space: nowrap;
-    text-align: center;
     margin: 0;
+    white-space: nowrap;       /* empêche le retour à la ligne */
+    text-align: center;
   }
 
   .menu-icon,
   .logo-right {
-    width: 36px;
-    flex-shrink: 0;
+    width: 36px;               /* logos plus petits */
+    height: auto;
+    flex-shrink: 0;            /* empêche l’écrasement */
   }
 
   /* CARTES */
@@ -967,6 +967,7 @@ main > section:last-of-type {
     font-size: 26px;
   }
 }
+
 
 
 
