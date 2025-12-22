@@ -1053,9 +1053,16 @@ main > section:last-of-type {
   .nav.next {
     right: 6px;
   }
-
 }
 
+
+@media (max-width: 768px) {
+  .page-background {
+    position: absolute;              /* 🔴 plus de fixed */
+    background-size: auto 100vh;     /* 🔴 plus de cover */
+    background-position: center top;
+  }
+}
 
 
 
