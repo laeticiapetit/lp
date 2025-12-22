@@ -579,10 +579,11 @@ body {
 
 /* ===== DATE ===== */
 .projet-texte .date {
+  display: block;      
   font-size: 12px;
   opacity: 0.7;
   font-style: italic;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 @media (max-width: 900px) {
@@ -907,6 +908,7 @@ main > section:last-of-type {
   }
 
 }
+
 
 
 
