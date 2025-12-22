@@ -18,7 +18,7 @@
   <a href="index.html" class="logo"><h1>MON PORTFOLIO</h1></a>
   <img src="lpwhite_logo.png" class="logo-right" alt="Logo Laeticia Petit">
 </header>
-  
+
 <!-- ================= MENU MOBILE ================= -->
 <nav id="mobileMenu">
   <div>
@@ -40,23 +40,23 @@
   </div>
 </nav>
 
-
-
+<!-- ================= CONTENU ================= -->
 <section class="section">
   <div class="glass-block creations-visuelles">
 
     <h2 class="section-title">Mes Créations Visuelles</h2>
 
-<article class="projet-visuel">
-  <div class="video-container youtube">
-    <iframe
-      src="https://www.youtube.com/embed/gvUs9p9zvxo?si=yQIcA-8LPK8GSHUl"
-      title="Présentation du projet Oraya"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
+    <article class="projet-visuel">
+      <div class="video-container youtube">
+        <iframe
+          src="https://www.youtube.com/embed/gvUs9p9zvxo"
+          title="Présentation du projet Oraya"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
 
       <div class="projet-texte">
         <h3>Oraya</h3>
@@ -71,12 +71,19 @@
   </div>
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer>
   2026 © Laeticia PETIT
   <div class="icons">
-    <a href="https://www.instagram.com/little_ness_art/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-    <a href="https://www.linkedin.com/in/laeticia-petit-116b12319/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn"></a>
-    <a href="mailto:laetitia84.petit@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Email"></a>
+    <a href="https://www.instagram.com/little_ness_art/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    <a href="https://www.linkedin.com/in/laeticia-petit-116b12319/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
+    </a>
+    <a href="mailto:laetitia84.petit@gmail.com">
+      <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Email">
+    </a>
   </div>
 </footer>
 
@@ -93,17 +100,26 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenu.style.display =
         mobileMenu.style.display === 'block' ? 'none' : 'block';
     });
+
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => mobileMenu.style.display = 'none');
+      link.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+      });
     });
   }
 
   const backToTop = document.getElementById("backToTop");
   if (backToTop) {
-    const toggle = () => backToTop.style.display = window.scrollY > 100 ? "flex" : "none";
+    const toggle = () => {
+      backToTop.style.display = window.scrollY > 100 ? "flex" : "none";
+    };
+
     toggle();
     window.addEventListener("scroll", toggle, { passive: true });
-    backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   }
 
 });
@@ -111,8 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
-
-
 
 
 
