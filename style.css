@@ -22,13 +22,11 @@ body {
 
 .page-background {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("goldennight.png") center center / cover no-repeat;
+  inset: 0;
+  background: url("goldennight.png") center / cover no-repeat;
   z-index: -10;
 }
+
 
 a {
   color: inherit;
@@ -1065,6 +1063,7 @@ main > section:last-of-type {
     background-position: center top;
   }
 }
+
 
 
 
