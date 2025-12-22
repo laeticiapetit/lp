@@ -791,10 +791,15 @@ main > section:last-of-type {
   }
 }
 
-
 /* ===============================
-   CAROUSEL PARCOURS – MOBILE FIX
 ================================ */
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* ✅ mobile safe */
+  }
+}
+
 /* ===============================
    RESPONSIVE – LISIBILITÉ
 ================================ */
@@ -1010,8 +1015,9 @@ main > section:last-of-type {
   .card {
     aspect-ratio: 16 / 9;   /* 🎯 parfait pour mobile */
     height: auto;           /* ⛔ annule les hauteurs écrasées */
-  }
+  }  
 }
+
 
 
 
