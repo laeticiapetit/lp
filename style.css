@@ -743,35 +743,49 @@ main > section:last-of-type {
 
 
 
+/* ===============================
+   RESPONSIVE – STRUCTURE MOBILE
+   (tablette + mobile)
+================================ */
 @media (max-width: 900px) {
 
-  .project-card {
-    width: 90%;
-    height: 250px;
-  }
-
-  .passion-card {
-    width: 30%;
-    height: 250px;
-  }
-
-  .gallery-item {
-    height: 320px;
-  }
-
-  .instagram-qr {
-    width: 320px;
-    height: 320px;
-  }
-
-  .projet-visuel {
-    flex-direction: column;
+  /* === PROJETS & À MON SUJET === */
+  .projet-visuel,
+  .projet-visuel.reverse,
+  .about-block,
+  .about-block.reverse {
+    flex-direction: column !important;
     align-items: center;
+    text-align: center;
     gap: 30px;
   }
 
+  /* === IMAGE / VIDÉO AU-DESSUS DU TEXTE === */
+  .video-container,
+  .video-container.youtube,
+  .about-image {
+    order: -1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* === TEXTE PLEINE LARGEUR === */
+  .projet-texte,
+  .about-text {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  /* === SECTION CONTENEURS === */
+  .creations-visuelles,
+  .about {
+    padding: 0 20px;
+  }
+
+  /* === TITRES SECTIONS === */
   .section-title {
     font-size: 30px;
+    margin-bottom: 40px;
   }
 }
 
@@ -836,7 +850,6 @@ main > section:last-of-type {
     opacity: 1;
     transform: scale(1.2);
   }
-}
 
   /* === PROJETS (événementiels + visuels) === */
   .projet-visuel,
@@ -1024,6 +1037,7 @@ main > section:last-of-type {
     padding: 35px 20px;
   }
 }
+
 
 
 
