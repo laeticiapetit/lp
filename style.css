@@ -884,6 +884,28 @@ main > section:last-of-type {
   }
 }
 
+@media (max-width: 500px) {
+
+  header {
+    height: 80px;
+    padding: 15px 20px;
+    justify-content: space-between;
+  }
+
+  header h1 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .menu-icon,
+  .logo-right {
+    width: 40px;
+  }
+
+}
+
 
 
 
