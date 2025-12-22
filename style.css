@@ -348,11 +348,13 @@ footer .icons img:hover {
   }
 
   header h1 {
-    position: relative;
-    height: 120px;
-    font-size: 28px;
+    font-size: 26px;      /* ou 24px si tu veux plus d’air */
+    height: auto;        /* ✅ OBLIGATOIRE */
+    line-height: 1.2;    /* ✅ lisible */
+    text-align: center;
   }
 }
+
 
 
 
@@ -908,6 +910,7 @@ main > section:last-of-type {
   }
 
 }
+
 
 
 
