@@ -1056,15 +1056,6 @@ main > section:last-of-type {
 }
 
 
-@media (max-width: 768px) {
-  .page-background {
-    position: absolute;
-    height: 100svh;
-    background-position: center top;
-  }
-}
-
-
 
 
 
