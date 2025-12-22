@@ -914,10 +914,6 @@ main > section:last-of-type {
 /* ===============================
    RESPONSIVE – FINITIONS
 ================================ */
-/* ===============================
-   RESPONSIVE – MOBILE (≤ 500px)
-   Version clean & maîtrisée
-================================ */
 @media (max-width: 500px) {
 
   /* ================= HEADER ================= */
@@ -942,9 +938,6 @@ main > section:last-of-type {
     flex-shrink: 0;
   }
 
-
-  /* ================= CARTES (INDEX & SECTIONS) ================= */
-
   /* passions */
   .passion-card {
     width: 100%;
@@ -967,6 +960,27 @@ main > section:last-of-type {
     height: 100%;
     object-fit: cover;
   }
+
+  /* ================= FIX IMAGES INDEX – MOBILE ================= */
+
+  .passion-card,
+  .gallery-item,
+  .card {
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+
+  .passion-card img,
+  .gallery-item img,
+  .card img {
+    height: auto !important;
+    max-height: none !important;
+    object-fit: cover;
+    display: block;
+  }
+
+}
 
 
   /* ================= INDEX – GROS BLOCS PROJETS ================= */
@@ -1041,6 +1055,7 @@ main > section:last-of-type {
     right: 6px;
   }
 }
+
 
 
 
