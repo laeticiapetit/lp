@@ -803,6 +803,10 @@ main > section:last-of-type {
     min-height: 100%;
     overflow-x: hidden;
   }
+
+    .page-background {
+    background-position: center top;
+  }
 }
 
 /* ===============================
@@ -1064,6 +1068,7 @@ main > section:last-of-type {
   }
 
 }
+
 
 
 
