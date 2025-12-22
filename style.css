@@ -914,40 +914,51 @@ main > section:last-of-type {
 /* ===============================
    RESPONSIVE – FINITIONS
 ================================ */
+/* ===============================
+   RESPONSIVE – MOBILE (≤ 500px)
+   Version clean & maîtrisée
+================================ */
 @media (max-width: 500px) {
 
+  /* ================= HEADER ================= */
   header {
-    height: 70px;              /* header plus compact */
-    padding: 10px 12px;        /* moins d’air */
+    height: 70px;
+    padding: 10px 12px;
   }
 
   header h1 {
-    font-size: 18px;           /* 🔑 clé pour que ça rentre */
+    font-size: 18px;          /* clé pour que tout rentre */
     letter-spacing: 1px;
-    line-height: 1;
+    line-height: 1.1;
     margin: 0;
-    white-space: nowrap;       /* empêche le retour à la ligne */
+    white-space: nowrap;
     text-align: center;
   }
 
   .menu-icon,
   .logo-right {
-    width: 36px;               /* logos plus petits */
+    width: 36px;
     height: auto;
-    flex-shrink: 0;            /* empêche l’écrasement */
+    flex-shrink: 0;
   }
 
-  /* CARTES */
+
+  /* ================= CARTES (INDEX & SECTIONS) ================= */
+
+  /* passions */
   .passion-card {
     width: 100%;
     height: auto;
     aspect-ratio: 3 / 4;
+    border-radius: 22px;
   }
 
+  /* projets */
   .project-card {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
+    border-radius: 22px;
   }
 
   .passion-card img,
@@ -957,9 +968,22 @@ main > section:last-of-type {
     object-fit: cover;
   }
 
-  /* GALERIE & QR */
+
+  /* ================= INDEX – GROS BLOCS PROJETS ================= */
+  /* (Mes créations visuelles / Mes projets événementiels) */
+
+  .card {
+    height: auto;                  /* ⛔ supprime les hauteurs fixes */
+    aspect-ratio: 16 / 9;          /* 🎯 plus haut & plus élégant */
+    border-radius: 26px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  }
+
+
+  /* ================= GALERIE & QR ================= */
   .gallery-item {
     height: 260px;
+    border-radius: 20px;
   }
 
   .instagram-qr {
@@ -967,32 +991,37 @@ main > section:last-of-type {
     height: 240px;
   }
 
-  /* TITRES */
+
+  /* ================= TITRES ================= */
   .section-title {
     font-size: 26px;
   }
 
+
+  /* ================= CAROUSEL PARCOURS ================= */
   .carousel {
-    height: auto;               /* ⛔ stop 130vh */
-    padding: 30px 0 50px;       /* ✅ espace haut/bas */
+    height: auto;                 /* ⛔ stop 130vh */
+    padding: 30px 0 50px;
   }
 
   .carousel-container {
-    height: auto;               /* ⛔ stop 120vh */
+    height: auto;                 /* ⛔ stop 120vh */
     padding: 20px 0;
   }
 
   .page-parcours .slide {
-    padding: 0 16px;            /* respiration latérale */
+    padding: 0 16px;
   }
 
   .page-parcours .slide img {
     width: 100%;
-    max-width: 360px;           /* ⬅️ plus grande */
+    max-width: 360px;             /* ✅ plus grand */
     max-height: none;
-    border-radius: 22px;        /* 💎 comme tu le voulais */
+    border-radius: 24px;          /* 💎 premium */
   }
 
+
+  /* ================= NAV & DOTS ================= */
   .dots {
     margin-top: 25px;
     margin-bottom: 10px;
@@ -1005,20 +1034,13 @@ main > section:last-of-type {
   }
 
   .nav.prev {
-    left: 5px;
+    left: 6px;
   }
 
   .nav.next {
-    right: 5px;
+    right: 6px;
   }
-
-  .card {
-    aspect-ratio: 16 / 9;   /* 🎯 parfait pour mobile */
-    height: auto;           /* ⛔ annule les hauteurs écrasées */
-  }  
 }
-
-
 
 
 
