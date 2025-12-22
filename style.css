@@ -555,6 +555,8 @@ body {
 
 
 .projet-texte {
+  max-width: 100%;
+  text-align: center;
   flex: 0.7;
   font-family: 'Montserrat', sans-serif;
   color: #ffffff;
@@ -581,6 +583,7 @@ body {
 @media (max-width: 900px) {
   .projet-visuel {
     flex-direction: column;
+    align-items: center;
     gap: 30px;
   }
 
@@ -591,6 +594,10 @@ body {
 
   .video-container video {
     max-height: none;
+  }
+
+    .video-container.youtube {
+    max-width: 100%;
   }
 
   .section-title {
@@ -871,6 +878,7 @@ main > section:last-of-type {
     max-height: 60vh;
   }
 }
+
 
 
 
