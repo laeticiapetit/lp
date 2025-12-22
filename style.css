@@ -1006,7 +1006,14 @@ main > section:last-of-type {
   .nav.next {
     right: 5px;
   }
+
+  .card {
+    aspect-ratio: 16 / 9;   /* 🎯 parfait pour mobile */
+    height: auto;           /* ⛔ annule les hauteurs écrasées */
+  }
 }
+
+
 
 
 
