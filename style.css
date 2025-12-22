@@ -795,8 +795,7 @@ main > section:last-of-type {
 ================================ */
 @media (max-width: 768px) {
   body {
-    background-position: top center; /* évite de couper le sujet */
-    background-size: cover;
+    background-position: center top; /* même rendu mais moins coupé */
   }
 }
 
@@ -1059,6 +1058,7 @@ main > section:last-of-type {
   }
 
 }
+
 
 
 
