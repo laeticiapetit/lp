@@ -791,15 +791,6 @@ main > section:last-of-type {
   }
 }
 
-@media (max-width: 900px) {
-  body {
-    background-size: 100% auto;
-    background-repeat: repeat-y;
-    background-position: top center;
-  }
-}
-
-
 /* ===============================
    RESPONSIVE – LISIBILITÉ
 ================================ */
@@ -1059,6 +1050,7 @@ main > section:last-of-type {
   }
 
 }
+
 
 
 
