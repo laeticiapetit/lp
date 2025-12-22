@@ -18,10 +18,10 @@ html, body {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: url('goldennight.png') no-repeat center / cover;
-  background-attachment: fixed;
+  background: url('goldennight.png') center / cover no-repeat;
   color: white;
 }
+
 
 a {
   color: inherit;
@@ -793,6 +793,14 @@ main > section:last-of-type {
 
 /* ===============================
 ================================ */
+@media (min-width: 769px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+/* ===============================
+================================ */
 
 @media (max-width: 768px) {
   body {
@@ -1055,6 +1063,7 @@ main > section:last-of-type {
     right: 6px;
   }
 }
+
 
 
 
