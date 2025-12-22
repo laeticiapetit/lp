@@ -780,20 +780,27 @@ main > section:last-of-type {
 @media (max-width: 500px) {
 
   header {
-    height: 80px;
-    padding: 15px 20px;
+    height: 70px;              /* header plus compact */
+    padding: 10px 12px;        /* moins d’air */
   }
 
   header h1 {
-    font-size: 20px;
-    line-height: 1.1;
-    white-space: nowrap;
+    font-size: 18px;           /* 🔑 clé pour que ça rentre */
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 0;
+    white-space: nowrap;       /* empêche le retour à la ligne */
+    text-align: center;
   }
 
   .menu-icon,
   .logo-right {
-    width: 40px;
+    width: 36px;               /* logos plus petits */
+    height: auto;
+    flex-shrink: 0;            /* empêche l’écrasement */
   }
+}
+
 
   .project-card,
   .passion-card {
@@ -822,6 +829,7 @@ main > section:last-of-type {
     height: 65vh;
   }
 }
+
 
 
 
