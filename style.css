@@ -568,7 +568,7 @@ body {
   font-family: 'League Spartan', sans-serif;
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* ===== TEXTE ===== */
@@ -907,6 +907,7 @@ main > section:last-of-type {
   }
 
 }
+
 
 
 
