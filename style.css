@@ -966,7 +966,48 @@ main > section:last-of-type {
   .section-title {
     font-size: 26px;
   }
+
+  .carousel {
+    height: auto;               /* ⛔ stop 130vh */
+    padding: 30px 0 50px;       /* ✅ espace haut/bas */
+  }
+
+  .carousel-container {
+    height: auto;               /* ⛔ stop 120vh */
+    padding: 20px 0;
+  }
+
+  .page-parcours .slide {
+    padding: 0 16px;            /* respiration latérale */
+  }
+
+  .page-parcours .slide img {
+    width: 100%;
+    max-width: 360px;           /* ⬅️ plus grande */
+    max-height: none;
+    border-radius: 22px;        /* 💎 comme tu le voulais */
+  }
+
+  .dots {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    background: rgba(0,0,0,0.55);
+    font-size: 1.6rem;
+    padding: 8px 12px;
+  }
+
+  .nav.prev {
+    left: 5px;
+  }
+
+  .nav.next {
+    right: 5px;
+  }
 }
+
 
 
 
