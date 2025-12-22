@@ -18,10 +18,15 @@ html, body {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: url('goldennight.png') center / cover no-repeat;
   color: white;
 }
 
+.page-background {
+  position: fixed;
+  inset: 0;
+  background: url("goldennight.png") center / cover no-repeat;
+  z-index: -1;
+}
 
 a {
   color: inherit;
@@ -1058,6 +1063,7 @@ main > section:last-of-type {
   }
 
 }
+
 
 
 
