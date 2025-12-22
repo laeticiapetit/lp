@@ -799,8 +799,6 @@ main > section:last-of-type {
     height: auto;
     flex-shrink: 0;            /* empêche l’écrasement */
   }
-}
-
 
   .project-card,
   .passion-card {
@@ -899,7 +897,62 @@ main > section:last-of-type {
   .glass-block {
     padding: 35px 20px;
   }
+
+  /* === CONTAINER DU CAROUSEL === */
+  .carousel {
+    height: auto;
+    padding: 40px 0 60px;
+  }
+
+  .carousel-container {
+    height: auto;
+  }
+
+  /* === SLIDE MOBILE === */
+  .page-parcours .slide {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* === IMAGE === */
+  .page-parcours .slide img {
+    width: 100%;
+    max-height: 240px;   /* 🔥 clé de la lisibilité */
+    object-fit: contain;
+    border-radius: 16px;
+  }
+
+  /* === TEXTE DANS LA SLIDE === */
+  .page-parcours .slide p,
+  .page-parcours .slide h3 {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* === FLÈCHES PLUS DISCRÈTES === */
+  .nav {
+    font-size: 1.4rem;
+    padding: 6px 10px;
+    opacity: 0.7;
+  }
+
+  .nav.prev {
+    left: 10px;
+  }
+
+  .nav.next {
+    right: 10px;
+  }
+
+  /* === DOTS === */
+  .dots {
+    margin-top: 15px;
+  }
+
 }
+
 
 
 
