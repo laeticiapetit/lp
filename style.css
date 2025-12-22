@@ -831,6 +831,52 @@ main > section:last-of-type {
     margin-top: 15px;
   }
 
+  /* === PROJETS (événementiels + visuels) === */
+  .projet-visuel,
+  .projet-visuel.reverse {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  /* === IMAGE / VIDÉO AU-DESSUS === */
+  .video-container,
+  .video-container.youtube,
+  .about-image {
+    order: -1;                 /* 🔥 image AVANT le texte */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* === VIDÉO RESPONSIVE === */
+  .video-container.youtube {
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+  }
+
+  /* === TEXTE PLEINE LARGEUR === */
+  .projet-texte,
+  .about-text {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .projet-texte h3 {
+    font-size: 20px;
+  }
+
+  .projet-texte p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* === IMAGE "À MON SUJET" === */
+  .about-image img {
+    height: auto;
+    max-height: 260px;
+    object-fit: cover;
+  }
 }
 
 
@@ -971,6 +1017,7 @@ main > section:last-of-type {
     padding: 35px 20px;
   }
 }
+
 
 
 
