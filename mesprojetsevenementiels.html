@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Portfolio - Laeticia Petit</title>
+  <title>Mes projets événementiels – Laeticia Petit</title>
 
   <!-- Polices -->
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
@@ -11,14 +11,18 @@
 </head>
 
 <body>
-  
+
 <!-- ================= HEADER ================= -->
 <header>
   <img src="menuburger.png" class="menu-icon" alt="Menu">
-  <a href="index.html" class="logo"><h1>MON PORTFOLIO</h1></a>
+
+  <a href="index.html" class="logo">
+    <h1>MON PORTFOLIO</h1>
+  </a>
+
   <img src="lpwhite_logo.png" class="logo-right" alt="Logo Laeticia Petit">
 </header>
-  
+
 <!-- ================= MENU MOBILE ================= -->
 <nav id="mobileMenu">
   <div>
@@ -28,55 +32,79 @@
   </div>
 
   <div>
-    <span>De la Formation au Projet</span>
-    <a href="parcourspro.html">Mon parcours de Formation</a>
+    <span>De la formation au projet</span>
+    <a href="parcourspro.html">Mon parcours de formation</a>
     <a href="moncv.html">Mon CV</a>
   </div>
 
   <div>
     <span>Mes projets</span>
-    <a href="mesprojetsevenementiels.html">Mes Projets Evénementiels</a>
-    <a href="mescreationsvisuelles.html">Mes Créations Visuelles</a>
+    <a href="mesprojetsevenementiels.html">Mes projets événementiels</a>
+    <a href="mescreationsvisuelles.html">Mes créations visuelles</a>
   </div>
 </nav>
 
+<!-- ================= CONTENU ================= -->
+<main>
 
-<section class="section">
- <div class="glass-block projets-evenementiels">
-    <h2 class="section-title">Mes projets événementiels</h2>
+  <section class="section">
+    <div class="glass-block projets-evenementiels">
 
-    <article class="projet-visuel reverse">
-      <div class="video-container">
-        <video controls>
-          <source src="erasmus.mp4" type="video/mp4">
-        </video>
-      </div>
+      <h2 class="section-title">Mes projets événementiels</h2>
 
-      <div class="projet-texte">
-        <h3>Projet Erasmus : Direction l'Allemagne !</h3>
-        <p>
-          Projet Erasmus réalisé à Villingen-Schwenningen dans le cadre de mes examens
-          finaux de BTS, comprenant une étude de marché allemande comparée aux habitudes
-          de consommation françaises et la réalisation d’un projet en jardinerie allemande (Spath).
-        </p>
-        <span class="date">février 2025</span>
-      </div>
-    </article>
+      <!-- ===== PROJET 1 ===== -->
+      <article class="projet-visuel reverse">
 
-  </div>
-</section>
+        <div class="video-container">
+          <video controls>
+            <source src="erasmus.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo.
+          </video>
+        </div>
 
+        <div class="projet-texte">
+          <h3>Projet Erasmus : Direction l'Allemagne</h3>
+          <p>
+            Projet Erasmus réalisé à Villingen-Schwenningen dans le cadre de mes examens
+            finaux de BTS. Il comprend une étude de marché allemande comparée aux habitudes
+            de consommation françaises, ainsi que la réalisation d’un projet en jardinerie
+            allemande (Spath).
+          </p>
+          <span class="date">Février 2025</span>
+        </div>
+
+      </article>
+
+      <!-- 👉 Tu pourras dupliquer ce bloc pour d’autres projets -->
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
 <footer>
   2026 © Laeticia PETIT
+
   <div class="icons">
-    <a href="https://www.instagram.com/little_ness_art/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-    <a href="https://www.linkedin.com/in/laeticia-petit-116b12319/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn"></a>
-    <a href="mailto:laetitia84.petit@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Email"></a>
+    <a href="https://www.instagram.com/little_ness_art/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+
+    <a href="https://www.linkedin.com/in/laeticia-petit-116b12319/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
+    </a>
+
+    <a href="mailto:laetitia84.petit@gmail.com">
+      <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Email">
+    </a>
   </div>
 </footer>
 
+<!-- ================= BOUTON RETOUR EN HAUT ================= -->
 <button id="backToTop" aria-label="Retour en haut">↑</button>
 
+<!-- ================= SCRIPT ================= -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -88,17 +116,25 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenu.style.display =
         mobileMenu.style.display === 'block' ? 'none' : 'block';
     });
+
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => mobileMenu.style.display = 'none');
+      link.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+      });
     });
   }
 
   const backToTop = document.getElementById("backToTop");
   if (backToTop) {
-    const toggle = () => backToTop.style.display = window.scrollY > 100 ? "flex" : "none";
+    const toggle = () => {
+      backToTop.style.display = window.scrollY > 100 ? "flex" : "none";
+    };
     toggle();
     window.addEventListener("scroll", toggle, { passive: true });
-    backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   }
 
 });
