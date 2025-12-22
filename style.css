@@ -515,12 +515,12 @@ body {
 
 
 .section-title {
-  text-align: center;
   font-family: 'League Spartan', sans-serif;
-  font-size: 30px;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
   margin-bottom: 70px;
 }
-
 
 .projet-visuel {
   display: flex;
@@ -562,20 +562,24 @@ body {
   color: #ffffff;
 }
 
+
+/* ===== TITRE DES PROJETS ===== */
 .projet-texte h3 {
-  font-size: 16px;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 22px;
   font-weight: 600;
   margin-bottom: 14px;
 }
 
+/* ===== TEXTE ===== */
 .projet-texte p {
-  font-size: 14px;
-  line-height: 1.55;
-  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
+/* ===== DATE ===== */
 .projet-texte .date {
-  font-size: 10px;
+  font-size: 12px;
   opacity: 0.7;
   font-style: italic;
 }
@@ -878,6 +882,7 @@ main > section:last-of-type {
     max-height: 60vh;
   }
 }
+
 
 
 
