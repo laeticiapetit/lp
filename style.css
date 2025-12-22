@@ -800,10 +800,26 @@ main > section:last-of-type {
     flex-shrink: 0;            /* empêche l’écrasement */
   }
 
-  .project-card,
+  /* ================= PASSIONS ================= */
   .passion-card {
-    width: 90%;
-    height: 200px;
+    width: 100%;
+    height: auto;                 /* 🔥 clé */
+    aspect-ratio: 3 / 4;          /* ratio élégant */
+  }
+
+  /* ================= PROJETS ================= */
+  .project-card {
+    width: 100%;
+    height: auto;                 /* 🔥 clé */
+    aspect-ratio: 16 / 9;         /* vidéo-like */
+  }
+
+  /* Images à l'intérieur */
+  .passion-card img,
+  .project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;            /* OK maintenant */
   }
 
   .gallery-item {
@@ -952,6 +968,7 @@ main > section:last-of-type {
   }
 
 }
+
 
 
 
