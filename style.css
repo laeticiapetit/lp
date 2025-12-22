@@ -746,10 +746,12 @@ main > section:last-of-type {
 /* ===============================
    RESPONSIVE – STRUCTURE MOBILE
    (tablette + mobile)
+/* ===============================
+   RESPONSIVE – STRUCTURE
 ================================ */
 @media (max-width: 900px) {
 
-  /* === PROJETS & À MON SUJET === */
+  /* PROJETS + À MON SUJET */
   .projet-visuel,
   .projet-visuel.reverse,
   .about-block,
@@ -760,7 +762,7 @@ main > section:last-of-type {
     gap: 30px;
   }
 
-  /* === IMAGE / VIDÉO AU-DESSUS DU TEXTE === */
+  /* IMAGE / VIDÉO AVANT TEXTE */
   .video-container,
   .video-container.youtube,
   .about-image {
@@ -769,20 +771,20 @@ main > section:last-of-type {
     max-width: 100%;
   }
 
-  /* === TEXTE PLEINE LARGEUR === */
+  /* TEXTE PLEINE LARGEUR */
   .projet-texte,
   .about-text {
     max-width: 100%;
-    padding: 0 10px;
+    padding: 0 15px;
   }
 
-  /* === SECTION CONTENEURS === */
+  /* CONTENEURS */
   .creations-visuelles,
   .about {
     padding: 0 20px;
   }
 
-  /* === TITRES SECTIONS === */
+  /* TITRES */
   .section-title {
     font-size: 30px;
     margin-bottom: 40px;
@@ -1037,6 +1039,7 @@ main > section:last-of-type {
     padding: 35px 20px;
   }
 }
+
 
 
 
