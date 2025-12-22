@@ -775,10 +775,13 @@ main > section:last-of-type {
   }
 }
 
-/* ================= CAROUSEL – MOBILE UNIQUEMENT ================= */
+
+/* ===============================
+   CAROUSEL PARCOURS – MOBILE FIX
+================================ */
 @media (max-width: 600px) {
 
-  /* === CONTAINER DU CAROUSEL === */
+  /* Conteneur général */
   .carousel {
     height: auto;
     padding: 40px 0 60px;
@@ -786,50 +789,54 @@ main > section:last-of-type {
 
   .carousel-container {
     height: auto;
+    padding: 0 15px;
   }
 
-  /* === SLIDE MOBILE === */
+  /* Slide */
   .page-parcours .slide {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-  /* === IMAGE === */
+  /* IMAGE DU SLIDE */
   .page-parcours .slide img {
     width: 100%;
-    max-height: 240px;   /* 🔥 lisible sur mobile */
+    max-width: 95vw;          /* 🔥 plus large */
+    max-height: 75vh;         /* 🔥 plus lisible */
     object-fit: contain;
-    border-radius: 16px;
+    border-radius: 22px;      /* ✨ élégance */
+    box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.35); /* aide à la lecture */
   }
 
-  /* === TEXTE === */
-  .page-parcours .slide p,
-  .page-parcours .slide h3 {
-    font-size: 14px;
-    line-height: 1.5;
-    text-align: center;
-  }
-
-  /* === FLÈCHES === */
+  /* Flèches plus accessibles */
   .nav {
+    width: 42px;
+    height: 42px;
     font-size: 1.4rem;
-    padding: 6px 10px;
+    background: rgba(0,0,0,0.55);
+  }
+
+  .nav.prev { left: 10px; }
+  .nav.next { right: 10px; }
+
+  /* Points */
+  .dots {
+    margin-top: 25px;
+  }
+
+  .dots button {
+    width: 10px;
+    height: 10px;
     opacity: 0.7;
   }
 
-  .nav.prev {
-    left: 10px;
+  .dots button.active {
+    opacity: 1;
+    transform: scale(1.2);
   }
-
-  .nav.next {
-    right: 10px;
-  }
-
-  /* === DOTS === */
-  .dots {
-    margin-top: 15px;
-  }
+}
 
   /* === PROJETS (événementiels + visuels) === */
   .projet-visuel,
@@ -1017,6 +1024,7 @@ main > section:last-of-type {
     padding: 35px 20px;
   }
 }
+
 
 
 
