@@ -1,7 +1,3 @@
-html, body {
-  height: 100%;
-}
-
 main > :first-child {
   margin-top: 0;
 }
@@ -24,11 +20,23 @@ body {
   color: white;
 }
 
+html, body {
+  height: 100%;
+}
+
 .page-background {
   position: fixed;
   inset: 0;
   background: url("goldennight.png") center / cover no-repeat;
   z-index: -1;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+  main, header, footer {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 a {
@@ -1061,11 +1069,12 @@ main > section:last-of-type {
 
 @media (max-width: 768px) {
   .page-background {
-    position: absolute;              /* 🔴 plus de fixed */
-    background-size: auto 100vh;     /* 🔴 plus de cover */
+    position: absolute;
+    height: 100svh;
     background-position: center top;
   }
 }
+
 
 
 
