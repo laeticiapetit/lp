@@ -714,6 +714,33 @@ main,
   transform: scale(1.02); /* très léger pour rester "propre" */
 }
 
+/* Empêche tout débordement visuel dans la page "Créations Visuelles" */
+.creations-visuelles.glass-block{
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Si ton glass-block n’a pas les deux classes sur le même élément,
+   alors utilise plutôt : */
+.creations-visuelles .glass-block{
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* La grille ne doit jamais dépasser la largeur du parent */
+.creations-visuelles .project-grid{
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* IMPORTANT (cause #1 des débordements en grid/flex) :
+   autorise les enfants à rétrécir */
+.creations-visuelles .project-grid > *{
+  min-width: 0;
+}
+
+
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -1093,6 +1120,7 @@ main > section:last-of-type {
     right: 6px;
   }
 }
+
 
 
 
