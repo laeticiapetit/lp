@@ -651,8 +651,6 @@ main,
   background: #E8C482;
 }
 
-
-
 .carousel-title {
   text-align: center;
   margin: 60px auto 30px;
@@ -671,6 +669,49 @@ main,
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: #d9d9d9;
+}
+
+.project-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+/* La "carte" */
+.project-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: rgba(0,0,0,0.55);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* format de la case (à ajuster si besoin) */
+  aspect-ratio: 16 / 9;
+}
+
+/* L'image : on respecte le format ORIGINAL, sans crop */
+.project-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* IMPORTANT */
+  display: block;
+  padding: 10px;         /* optionnel */
+  transition: transform 0.35s ease;
+}
+
+/* Hover : léger zoom global (ou tu peux enlever) */
+.project-item:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+.project-item:hover img{
+  transform: scale(1.02); /* très léger pour rester "propre" */
 }
 
 #backToTop {
@@ -752,9 +793,7 @@ main > section:last-of-type {
    RESPONSIVE – STRUCTURE MOBILE
    (tablette + mobile)
 /* ===============================
-   RESPONSIVE – STRUCTURE
-================================ */
-@media (max-width: 900px) {
+
 
   /* PROJETS + À MON SUJET */
   .projet-visuel,
@@ -1054,6 +1093,7 @@ main > section:last-of-type {
     right: 6px;
   }
 }
+
 
 
 
