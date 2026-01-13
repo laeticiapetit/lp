@@ -845,6 +845,13 @@ main > section:last-of-type {
   }
 }
 
+@media (max-width: 900px){
+  .creations-visuelles .gallery-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* ===============================
    RESPONSIVE – LISIBILITÉ
 ================================ */
@@ -1112,6 +1119,7 @@ main > section:last-of-type {
     background-position: center top;
   }
 }
+
 
 
 
