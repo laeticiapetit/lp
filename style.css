@@ -739,7 +739,6 @@ main,
 
 .slides-grid .slide-item{
   min-width: 0;
-  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 12px 28px rgba(0,0,0,0.45);
 }
@@ -1240,6 +1239,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
