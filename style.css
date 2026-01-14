@@ -37,7 +37,7 @@ a {
 
 header {
   margin-bottom: 60px;
-  d: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.55); /* identique au glass-block */
   height: 120px;
   padding: 30px 50px;
   display: flex;
@@ -47,6 +47,7 @@ header {
   position: relative;
   z-index: 1100;
 }
+
 
 header h1 {
   font-size: 48px;
@@ -1239,6 +1240,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
