@@ -1159,6 +1159,51 @@ main > section:last-of-type {
   }
 }
 
+/* ===============================
+   ORAYA — SLIDES EN 2 COLONNES
+   (AJOUT)
+================================ */
+
+.slides-grid{
+  display: grid; /* manquait */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+
+.slides-grid .slide-item{
+  min-width: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+}
+
+.slides-grid .slide-item img{
+  display: block;
+  width: 100%;
+  height: auto; /* pas de crop */
+}
+
+/* La vidéo prend toute la largeur (2 colonnes) */
+.slides-grid .video-container.youtube{
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Mobile : 1 colonne */
+@media (max-width: 900px){
+  .slides-grid{
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+
+
 
 
 
