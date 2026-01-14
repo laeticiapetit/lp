@@ -1149,4 +1149,14 @@ main > section:last-of-type {
   margin: 0 auto;
 }
 
+@media (max-width: 768px){
+  .page-background{
+    position: fixed;      /* au lieu de absolute */
+    inset: 0;
+    height: 100dvh;       /* au lieu de 100svh */
+    min-height: 100vh;
+    background-position: center top;
+  }
+}
+
 
