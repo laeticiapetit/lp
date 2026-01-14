@@ -698,11 +698,18 @@ main,
   box-shadow: 0 18px 40px rgba(0,0,0,0.65);
 }
 
-/* ===== ORAYA : VIDÉO À LA SUITE ===== */
-.creations-visuelles .projet-video{
-  margin-top: 80px;
+/* ===== ORAYA : VIDÉO JUSTE APRÈS LES SLIDES ===== */
+/* 1) enlève le gros margin-bottom de .projet-visuel sur cette page */
+.creations-visuelles .projet-visuel{
+  margin-bottom: 0;
 }
 
+/* 2) espace propre avant la vidéo (pas 80 + 80) */
+.creations-visuelles .projet-video{
+  margin-top: 40px;
+}
+
+/* 3) vidéo alignée sur la largeur des slides (override du 720px global) */
 .creations-visuelles .projet-video .video-container.youtube{
   width: 100%;
   max-width: 1100px;
@@ -715,8 +722,11 @@ main,
     grid-template-columns: 1fr;
     gap: 30px;
   }
-}
 
+  .creations-visuelles .projet-video{
+    margin-top: 30px;
+  }
+}
 
 
 
@@ -1130,6 +1140,7 @@ main > section:last-of-type {
     z-index: -10;
   }
 }
+
 
 
 
