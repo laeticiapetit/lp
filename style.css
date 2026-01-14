@@ -675,40 +675,57 @@ main,
   color: #d9d9d9;
 }
 
-/* ===== Créations Visuelles : grille projets ===== */
-.creations-visuelles .gallery-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  gap: 40px;
-  margin-top: 40px;
-  width: 100%;
-  box-sizing: border-box;
+/* =========================================================
+   PAGE: mescreationsvisuelles.html
+   Grille projets — 2 colonnes fixes
+========================================================= */
+
+/* Le bloc projet ne doit pas être en flex ici */
+.creations-visuelles .projet-visuel{
+  display: block;
 }
 
-/* ===== Miniatures projets ===== */
-.creations-visuelles .gallery-grid .project-item{
+/* Grille : 2 colonnes fixes */
+.creations-visuelles .gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Indispensable pour éviter les débordements */
+.creations-visuelles .gallery-grid > *{
+  min-width: 0;
+}
+
+/* Carte cliquable */
+.creations-visuelles .project-item{
   display: block;
+  width: 100%;
   border-radius: 16px;
   overflow: hidden;
-  background: rgba(0,0,0,0.25);
   box-shadow: 0 12px 28px rgba(0,0,0,0.45);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.creations-visuelles .gallery-grid .project-item img{
-  width: 100%;
-  height: auto;      /* PAS de crop */
+/* Image : format STRICTEMENT respecté */
+.creations-visuelles .project-item img{
   display: block;
+  width: 100%;
+  height: auto;   /* pas de crop */
 }
 
-.creations-visuelles .gallery-grid .project-item:hover{
+/* Hover élégant */
+.creations-visuelles .project-item:hover{
   transform: translateY(-6px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.65);
 }
 
-/* Sécurité anti-débordement */
-.creations-visuelles{
-  overflow: hidden;
+.slides-grid{
+  grid-template-columns: 1fr;
+  max-width: 900px;     /* largeur maîtrisée */
+  margin: 40px auto 0;
 }
 
 
@@ -834,6 +851,13 @@ main > section:last-of-type {
     margin-bottom: 40px;
   }
 }
+
+@media (max-width: 900px){
+  .creations-visuelles .gallery-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* ===============================
    RESPONSIVE – LISIBILITÉ
@@ -1102,8 +1126,4 @@ main > section:last-of-type {
     background-position: center top;
   }
 }
-
-
-
-
 
