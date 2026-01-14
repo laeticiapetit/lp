@@ -716,19 +716,6 @@ main,
   margin: 0 auto;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px){
-  .creations-visuelles .slides-grid{
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .creations-visuelles .projet-video{
-    margin-top: 30px;
-  }
-}
-
-
 
 #backToTop {
   position: fixed;
@@ -860,14 +847,17 @@ main > section:last-of-type {
   }
 }
 
-/* Responsive : 1 colonne sur mobile */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px){
-  .slides-grid{
+  .creations-visuelles .slides-grid{
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .creations-visuelles .projet-video{
+    margin-top: 30px;
   }
 }
-
-
 /* ===============================
    RESPONSIVE – LISIBILITÉ
 ================================ */
@@ -1140,6 +1130,7 @@ main > section:last-of-type {
     z-index: -10;
   }
 }
+
 
 
 
