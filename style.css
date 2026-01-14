@@ -460,26 +460,6 @@ body {
   max-width: 420px;
 }
 
-
-/* ================= VIDEO YOUTUBE – FORMAT EXACT ================= */
-
-.video-container.youtube {
-  flex: 1.4;
-  width: 100%;
-  max-width: 720px;        /* taille proche YouTube */
-  aspect-ratio: 16 / 9;   /* 🎯 FORMAT EXACT */
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
-}
-
-.video-container.youtube iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-
 .projet-texte {
   max-width: 100%;
   text-align: center;
@@ -1175,6 +1155,7 @@ main > section:last-of-type {
     background-position: center top;
   }
 }
+
 
 
 
