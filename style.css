@@ -465,12 +465,6 @@ body {
   margin-top: 80px;
 }
 
-/* Centrage propre de la vidéo */
-.projet-visuel.projet-video .video-container.youtube{
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 
 .projet-texte {
   flex: 0.6;
@@ -1131,6 +1125,7 @@ main > section:last-of-type {
     background-position: center top;
   }
 }
+
 
 
 
