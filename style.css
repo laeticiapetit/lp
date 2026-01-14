@@ -22,13 +22,11 @@ body {
 
 .page-background {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("goldennight.png") center center / cover no-repeat;
+  inset: 0;
+  background: url("goldennight.png") center / cover no-repeat;
   z-index: -10;
 }
+
 
 a {
   color: inherit;
@@ -455,14 +453,30 @@ body {
   margin-bottom: 80px;
 }
 
-/* ===============================
-   Vidéo finale – alignée à la suite
-================================ */
-
 .projet-texte {
   flex: 0.6;
   max-width: 420px;
 }
+
+
+/* ================= VIDEO YOUTUBE – FORMAT EXACT ================= */
+
+.video-container.youtube {
+  flex: 1.4;
+  width: 100%;
+  max-width: 720px;        /* taille proche YouTube */
+  aspect-ratio: 16 / 9;   /* 🎯 FORMAT EXACT */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+}
+
+.video-container.youtube iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 
 .projet-texte {
   max-width: 100%;
@@ -637,8 +651,6 @@ main,
   background: #E8C482;
 }
 
-
-
 .carousel-title {
   text-align: center;
   margin: 60px auto 30px;
@@ -659,61 +671,48 @@ main,
   color: #d9d9d9;
 }
 
-/* ===============================
-   CRÉATIONS VISUELLES – VERSION STABLE
-=============================== */
-
-.creations-visuelles {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 40px;
+.project-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
 }
 
-/* bloc projet */
-.creations-visuelles .projet-visuel{
-  display: block;
-}
+/* La "carte" */
+.project-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-/* =========================================================
-   PAGE: mescreationsvisuelles.html
-   Grille projets — 2 colonnes fixes
-========================================================= */
-
-/* Le bloc projet ne doit pas être en flex ici */
-.creations-visuelles .projet-visuel{
-  display: block;
-}
-
-
-
-/* Indispensable pour éviter les débordements */
-.creations-visuelles .gallery-grid > *{
-  min-width: 0;
-}
-
-/* Carte cliquable */
-.creations-visuelles .project-item{
-  display: block;
-  width: 100%;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  background: rgba(0,0,0,0.55);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* format de la case (à ajuster si besoin) */
+  aspect-ratio: 16 / 9;
 }
 
-/* Image : format STRICTEMENT respecté */
-.creations-visuelles .project-item img{
-  display: block;
+/* L'image : on respecte le format ORIGINAL, sans crop */
+.project-item img{
   width: 100%;
-  height: auto;   /* pas de crop */
+  height: 100%;
+  object-fit: contain;   /* IMPORTANT */
+  display: block;
+  padding: 10px;         /* optionnel */
+  transition: transform 0.35s ease;
 }
 
-/* Hover élégant */
-.creations-visuelles .project-item:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.65);
+/* Hover : léger zoom global (ou tu peux enlever) */
+.project-item:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
-
+.project-item:hover img{
+  transform: scale(1.02); /* très léger pour rester "propre" */
+}
 
 #backToTop {
   position: fixed;
@@ -794,9 +793,7 @@ main > section:last-of-type {
    RESPONSIVE – STRUCTURE MOBILE
    (tablette + mobile)
 /* ===============================
-   RESPONSIVE – STRUCTURE
-================================ */
-@media (max-width: 900px) {
+
 
   /* PROJETS + À MON SUJET */
   .projet-visuel,
@@ -818,7 +815,6 @@ main > section:last-of-type {
     max-width: 100%;
   }
 
-
   /* TEXTE PLEINE LARGEUR */
   .projet-texte,
   .about-text {
@@ -836,13 +832,6 @@ main > section:last-of-type {
   .section-title {
     font-size: 30px;
     margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 900px){
-  .creations-visuelles .slides-grid{
-    grid-template-columns: 1fr;
-    gap: 30px;
   }
 }
 
@@ -1106,18 +1095,70 @@ main > section:last-of-type {
 }
 
 
-@media (max-width: 768px) {
-  .page-background{
-    position: fixed;      /* comme desktop */
-    inset: 0;             /* top/right/bottom/left = 0 */
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;    /* fallback */
-    background-position: center top;
-    background-size: cover;
-    z-index: -10;
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
