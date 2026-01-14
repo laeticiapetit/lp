@@ -455,6 +455,23 @@ body {
   margin-bottom: 80px;
 }
 
+/* ===============================
+   Vidéo finale – alignée à la suite
+================================ */
+
+/* On annule le flex uniquement ici */
+.projet-visuel.projet-video{
+  display: block;
+  margin-top: 80px;
+}
+
+/* Centrage propre de la vidéo */
+.projet-visuel.projet-video .video-container.youtube{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
 .projet-texte {
   flex: 0.6;
   max-width: 420px;
@@ -1155,6 +1172,7 @@ main > section:last-of-type {
     background-position: center top;
   }
 }
+
 
 
 
