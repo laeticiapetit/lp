@@ -672,103 +672,50 @@ main,
   color: #d9d9d9;
 }
 
-/* =========================================================
-   PAGE: mescreationsvisuelles.html
-   Grille projets — 2 colonnes fixes
-========================================================= */
-
-/* Le bloc projet ne doit pas être en flex ici */
-.creations-visuelles .projet-visuel{
-  display: block;
-}
-
-/* Grille : 2 colonnes fixes */
-.creations-visuelles .gallery-grid{
+/* ===== ORAYA : SLIDES (2 colonnes) ===== */
+.creations-visuelles .slides-grid{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 40px;
   width: 100%;
-  max-width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 0;
 }
 
-/* Indispensable pour éviter les débordements */
-.creations-visuelles .gallery-grid > *{
+.creations-visuelles .slides-grid > *{
   min-width: 0;
 }
 
-/* Carte cliquable */
-.creations-visuelles .project-item{
-  display: block;
-  width: 100%;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* Image : format STRICTEMENT respecté */
-.creations-visuelles .project-item img{
-  display: block;
-  width: 100%;
-  height: auto;   /* pas de crop */
-}
-
-/* Hover élégant */
-.creations-visuelles .project-item:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.65);
-}
-
-/* ===== Diapositives Oraya ===== */
-.slides-grid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.slide-item{
-  display: block;
+.creations-visuelles .slide-item{
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 12px 28px rgba(0,0,0,0.45);
   transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.slide-item img{
-  width: 100%;
-  height: auto;       /* respecte le format de la diapo */
+.creations-visuelles .slide-item img{
   display: block;
+  width: 100%;
+  height: auto;
 }
 
-.slide-item:hover{
+.creations-visuelles .slide-item:hover{
   transform: translateY(-6px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.65);
 }
 
-/* Réduction visuelle des slides */
-.slides-grid{
-  max-width: 1100px;   /* limite la largeur totale */
-  margin: 40px auto 0;
-}
-
-.slide-item{
-  max-width: 520px;    /* taille “portfolio” idéale */
-  margin: 0 auto;
-}
-
-/* ===== Vidéo : à la suite, largeur cohérente avec les slides ===== */
+/* ===== ORAYA : VIDÉO À LA SUITE ===== */
 .creations-visuelles .projet-video{
-  display: block;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
-/* La vidéo prend la largeur dispo du bloc, comme les slides */
 .creations-visuelles .projet-video .video-container.youtube{
   width: 100%;
-  max-width: 1100px;   /* même logique que .slides-grid */
+  max-width: 1100px;
   margin: 0 auto;
 }
+
+
 
 
 #backToTop {
@@ -895,8 +842,9 @@ main > section:last-of-type {
 }
 
 @media (max-width: 900px){
-  .creations-visuelles .gallery-grid{
+  .creations-visuelles .slides-grid{
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
 
@@ -1175,6 +1123,7 @@ main > section:last-of-type {
     background-position: center top;
   }
 }
+
 
 
 
