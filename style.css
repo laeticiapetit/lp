@@ -757,13 +757,16 @@ main,
   margin: 0 auto;
 }
 
-.projet-video{
-  justify-content: center;
-  margin-top: 80px;
+/* ===== Vidéo : à la suite, largeur cohérente avec les slides ===== */
+.creations-visuelles .projet-video{
+  display: block;
+  margin-top: 40px;
 }
 
-.projet-video .video-container.youtube{
-  max-width: 900px;
+/* La vidéo prend la largeur dispo du bloc, comme les slides */
+.creations-visuelles .projet-video .video-container.youtube{
+  width: 100%;
+  max-width: 1100px;   /* même logique que .slides-grid */
   margin: 0 auto;
 }
 
@@ -1172,6 +1175,7 @@ main > section:last-of-type {
     background-position: center top;
   }
 }
+
 
 
 
