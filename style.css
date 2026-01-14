@@ -813,12 +813,19 @@ main > section:last-of-type {
 
   /* IMAGE / VIDÉO AVANT TEXTE */
   .video-container,
-  .video-container.youtube,
   .about-image {
     order: -1;
     width: 100%;
     max-width: 100%;
   }
+
+  .video-container.youtube {
+  flex: 1.4;
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+}
+
 
   /* TEXTE PLEINE LARGEUR */
   .projet-texte,
@@ -1130,6 +1137,7 @@ main > section:last-of-type {
     z-index: -10;
   }
 }
+
 
 
 
