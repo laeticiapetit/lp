@@ -800,6 +800,7 @@ main > section:last-of-type {
 
   /* IMAGE / VIDÉO AVANT TEXTE */
   .video-container,
+  .video-container.youtube,
   .about-image {
     order: -1;
     width: 100%;
@@ -1106,6 +1107,7 @@ main > section:last-of-type {
     z-index: -10;
   }
 }
+
 
 
 
