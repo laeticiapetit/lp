@@ -659,20 +659,31 @@ main,
   color: #d9d9d9;
 }
 
-/* ===== ORAYA : SLIDES (2 colonnes) ===== */
+/* ===============================
+   CRÉATIONS VISUELLES – VERSION STABLE
+=============================== */
+
+.creations-visuelles {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 40px;
+}
+
+/* bloc projet */
+.creations-visuelles .projet-visuel{
+  display: block;
+}
+
+/* grille 2 colonnes fixes */
 .creations-visuelles .slides-grid{
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   width: 100%;
-  max-width: 1100px;
-  margin: 40px auto 0;
+  margin-top: 40px;
 }
 
-.creations-visuelles .slides-grid > *{
-  min-width: 0;
-}
-
+/* carte image */
 .creations-visuelles .slide-item{
   border-radius: 18px;
   overflow: hidden;
@@ -686,27 +697,10 @@ main,
   height: auto;
 }
 
+/* hover */
 .creations-visuelles .slide-item:hover{
   transform: translateY(-6px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.65);
-}
-
-/* ===== ORAYA : VIDÉO JUSTE APRÈS LES SLIDES ===== */
-/* 1) enlève le gros margin-bottom de .projet-visuel sur cette page */
-.creations-visuelles .projet-visuel{
-  margin-bottom: 0;
-}
-
-/* 2) espace propre avant la vidéo (pas 80 + 80) */
-.creations-visuelles .projet-video{
-  margin-top: 40px;
-}
-
-/* 3) vidéo alignée sur la largeur des slides (override du 720px global) */
-.creations-visuelles .projet-video .video-container.youtube{
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 
@@ -833,24 +827,6 @@ main > section:last-of-type {
   }
 }
 
-@media (max-width: 900px){
-  .creations-visuelles .slides-grid{
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px){
-  .creations-visuelles .slides-grid{
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .creations-visuelles .projet-video{
-    margin-top: 30px;
-  }
-}
 /* ===============================
    RESPONSIVE – LISIBILITÉ
 ================================ */
@@ -1199,5 +1175,6 @@ main > section:last-of-type {
     margin-top: 30px;
   }
 }
+
 
 
