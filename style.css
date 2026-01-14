@@ -1127,3 +1127,26 @@ main > section:last-of-type {
   }
 }
 
+/* ===============================
+   PATCH ORAYA : enlever le "double gap"
+   =============================== */
+
+/* Dans la page Oraya : on n'applique pas le margin-bottom énorme sur les blocs */
+.creations-visuelles .projet-visuel{
+  margin-bottom: 0;      /* <-- clé : supprime les 80px sous les slides */
+  gap: 0;                /* au cas où */
+}
+
+/* Vidéo : espace maîtrisé */
+.creations-visuelles .projet-video{
+  margin-top: 40px;      /* <-- au lieu de 80 */
+}
+
+/* Largeur vidéo alignée sur tes slides */
+.creations-visuelles .projet-video .video-container.youtube{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
