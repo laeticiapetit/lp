@@ -20,12 +20,12 @@ body {
   color: white;
 }
 
-.page-background {
+.page-background{
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;   /* mobile moderne */
+  min-height: 100vh;/* fallback */
   background: url("goldennight.png") center center / cover no-repeat;
   z-index: -10;
 }
@@ -37,7 +37,7 @@ a {
 
 header {
   margin-bottom: 60px;
-  background: rgba(0, 0, 0, 0.7);
+  d: rgba(0, 0, 0, 0.7);
   height: 120px;
   padding: 30px 50px;
   display: flex;
@@ -1158,5 +1158,6 @@ main > section:last-of-type {
     background-position: center top;
   }
 }
+
 
 
