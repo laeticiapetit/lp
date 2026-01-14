@@ -459,13 +459,6 @@ body {
    Vidéo finale – alignée à la suite
 ================================ */
 
-/* On annule le flex uniquement ici */
-.projet-visuel.projet-video{
-  display: block;
-  margin-top: 80px;
-}
-
-
 .projet-texte {
   flex: 0.6;
   max-width: 420px;
@@ -819,13 +812,6 @@ main > section:last-of-type {
     max-width: 100%;
   }
 
-  .video-container.youtube {
-  flex: 1.4;
-  width: 100%;
-  max-width: 720px;
-  aspect-ratio: 16 / 9;
-}
-
 
   /* TEXTE PLEINE LARGEUR */
   .projet-texte,
@@ -1140,141 +1126,78 @@ main > section:last-of-type {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ===============================
+   ORAYA (page oraya.html) : SLIDES + VIDEO
+   =============================== */
+
+/* slides */
+.creations-visuelles .slides-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+
+.creations-visuelles .slides-grid > *{
+  min-width: 0;
+}
+
+.creations-visuelles .slide-item{
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.creations-visuelles .slide-item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.creations-visuelles .slide-item:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.65);
+}
+
+/* enlever le "double gap" */
+.creations-visuelles .projet-visuel{
+  margin-bottom: 0;
+}
+
+/* vidéo à la suite */
+.creations-visuelles .projet-video{
+  margin-top: 40px;
+}
+
+.creations-visuelles .projet-video .video-container.youtube{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+}
+
+.creations-visuelles .projet-video .video-container.youtube iframe{
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* responsive */
+@media (max-width: 900px){
+  .creations-visuelles .slides-grid{
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .creations-visuelles .projet-video{
+    margin-top: 30px;
+  }
+}
 
 
