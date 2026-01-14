@@ -715,6 +715,14 @@ main,
   margin: 0 auto;
 }
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px){
+  .creations-visuelles .slides-grid{
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
 
 
 
@@ -1123,6 +1131,7 @@ main > section:last-of-type {
     background-position: center top;
   }
 }
+
 
 
 
