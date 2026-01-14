@@ -760,14 +760,15 @@ main,
   margin: 0 auto;
 }
 
-.video-title{
-  margin-top: 60px;
-  margin-bottom: 20px;
-  font-family: 'League Spartan', sans-serif;
-  font-size: 22px;
-  font-weight: 600;
+.projet-video{
+  justify-content: center;
+  margin-top: 80px;
 }
 
+.projet-video .video-container.youtube{
+  max-width: 900px;
+  margin: 0 auto;
+}
 
 
 #backToTop {
@@ -1174,6 +1175,7 @@ main > section:last-of-type {
     background-position: center top;
   }
 }
+
 
 
 
