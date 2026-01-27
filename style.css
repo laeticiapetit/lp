@@ -749,6 +749,12 @@ main,
   height: auto; /* pas de crop */
 }
 
+.slides-grid .slide-item frame{
+  display: block;
+  width: 100%;
+  height: auto; /* pas de crop */
+}
+
 /* La vidéo prend toute la largeur (2 colonnes) */
 .slides-grid .video-container.youtube{
   grid-column: 1 / -1;
@@ -1237,6 +1243,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
