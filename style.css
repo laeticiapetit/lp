@@ -749,10 +749,11 @@ main,
   height: auto; /* pas de crop */
 }
 
-.slides-grid .slide-item video{
-  display: block;
-  width: 100%;
-  height: auto; /* pas de crop */
+.slide-item video{   
+  width: 100%;   
+  height: 100%;   
+  object-fit: cover;   
+  display: block; 
 }
 
 /* La vidéo prend toute la largeur (2 colonnes) */
@@ -1243,6 +1244,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
