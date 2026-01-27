@@ -749,7 +749,7 @@ main,
   height: auto; /* pas de crop */
 }
 
-.slides-grid .slide-item frame{
+.slides-grid .slide-item video{
   display: block;
   width: 100%;
   height: auto; /* pas de crop */
@@ -1243,6 +1243,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
