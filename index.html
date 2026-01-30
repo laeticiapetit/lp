@@ -45,113 +45,123 @@
 
 
 <!-- ================= HERO / ACCUEIL ================= -->
-<main>
-  
-<section class="section section-first">
-  <div class="glass-block profile-section">
+<main class="home">
 
-    <div class="profile-img"></div>
+  <!-- ===== HERO (photo + texte) ===== -->
+  <section class="home-hero">
+    <!-- Étoiles décoratives (placées par CSS) -->
+    <span class="sparkle s1" aria-hidden="true"></span>
+    <span class="sparkle s2" aria-hidden="true"></span>
+    <span class="sparkle s3" aria-hidden="true"></span>
 
-    <div class="profile-text">
-      <h2>Bienvenue sur mon portfolio !</h2>
-
-      <p>
-        Je m’appelle Laeticia Petit, je suis étudiante en marketing et en création web.
-      </p>
-
-      <p>
-        Je développe mes compétences dans le digital et la conception visuelle.
-      </p>
-
-      <p>
-        Je suis également passionnée par le dessin et la création artistique.
-      </p>
-
-      <a href="amonsujet.html" class="btn">
-        Découvrir mon univers
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= DIVIDER ================= -->
-<div class="divider">
-  <img src="separateurstar.png" alt="">
-</div>
-
-<!-- ================= MES DERNIERS PROJETS ================= -->
-<section class="section">
-  <div class="glass-block">
-
-    <h2>Mes derniers projets…</h2>
-
-    <div class="project-grid">
-
-      <a href="mescreationsvisuelles.html" class="card project-card">
-        <img src="mescreationsvisuelles.png" alt="Créations visuelles">
-      </a>
-
-      <a href="mesprojetsevenementiels.html" class="card project-card">
-        <img src="mesprojetsevenementiels.png" alt="Projets événementiels">
-      </a>
-
-      <div class="card project-card">
-        <img src="bientotdisponible.png" alt="Bientôt disponible">
+    <div class="hero-card">
+      <div class="hero-photo">
+        <img src="photopresentation.png" alt="Photo de présentation">
       </div>
 
+      <div class="hero-content">
+        <h2>Bienvenue sur mon portfolio !</h2>
+
+        <p>Je m’appelle Laeticia Petit, je suis étudiante en marketing et en création web.</p>
+        <p>Je développe mes compétences dans le digital.</p>
+        <p>Je suis également passionnée par le dessin et la création artistique.</p>
+
+        <a href="amonsujet.html" class="hero-btn">Découvrir mon univers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MES DERNIERS PROJETS ===== -->
+  <section class="home-projects">
+    <!-- Étoiles décoratives -->
+    <span class="sparkle s4" aria-hidden="true"></span>
+    <span class="sparkle s5" aria-hidden="true"></span>
+
+    <h3 class="section-pill">Mes derniers projets…</h3>
+
+    <div class="projects-grid">
+      <!-- Rangée 1 -->
+      <a href="mesprojetsevenementiels.html" class="project-tile">
+        <img src="legalinstinct.png" alt="Projet Legal Instinct">
+      </a>
+
+      <a href="#" class="project-tile is-soon" aria-label="Bientôt disponible">
+        <img src="bientotdisponible.png" alt="Bientôt disponible">
+      </a>
+
+      <a href="mesprojetsevenementiels.html" class="project-tile">
+        <img src="legalinstinct2.png" alt="Projet Legal Instinct (variante)">
+      </a>
+
+      <!-- Rangée 2 -->
+      <a href="mescreationsvisuelles.html" class="project-tile">
+        <img src="oraya.png" alt="Projet Oraya">
+      </a>
+
+      <a href="#" class="project-tile is-soon" aria-label="Bientôt disponible">
+        <img src="bientotdisponible2.png" alt="Bientôt disponible">
+      </a>
+
+      <a href="mescreationsvisuelles.html" class="project-tile">
+        <img src="oraya2.png" alt="Projet Oraya (variante)">
+      </a>
     </div>
 
-    <p style="margin-top: 20px; opacity: 0.8;">
-      Cliquez pour en voir +
-    </p>
+    <p class="projects-more">Cliquez pour en voir +</p>
+  </section>
 
-  </div>
-</section>
+  <!-- ===== MA PASSION DU DESSIN ===== -->
+  <section class="home-passion">
+    <!-- Étoiles décoratives -->
+    <span class="sparkle s6" aria-hidden="true"></span>
+    <span class="sparkle s7" aria-hidden="true"></span>
 
-<!-- ================= DIVIDER ================= -->
-<div class="divider">
-  <img src="separateurstar.png" alt="">
-</div>
+    <h3 class="section-pill">Ma passion du Dessin !</h3>
 
-<!-- ================= MA PASSION ================= -->
-<section class="section">
-  <div class="glass-block">
-
-    <h2>Ma passion du dessin !</h2>
-
-    <div class="passion-grid">
-
-      <a href="https://www.instagram.com/p/DOkz6szCF8o/" target="_blank" class="card passion-card">
+    <div class="passion-mosaic">
+      <a href="https://www.instagram.com/p/DOkz6szCF8o/" target="_blank" class="passion-tile">
         <img src="3.png" alt="Dessin 1">
       </a>
 
-      <a href="https://www.instagram.com/p/DPqYoM9iO5h/" target="_blank" class="card passion-card">
+      <a href="https://www.instagram.com/p/DPqYoM9iO5h/" target="_blank" class="passion-tile">
         <img src="2.png" alt="Dessin 2">
       </a>
 
-      <a href="https://www.instagram.com/little_ness_art/p/DRKKmT8gg1p/" target="_blank" class="card passion-card">
+      <a href="https://www.instagram.com/little_ness_art/p/DRKKmT8gg1p/" target="_blank" class="passion-tile">
         <img src="1.png" alt="Dessin 3">
       </a>
 
-      <a href="https://www.instagram.com/little_ness_art/p/DRrrKG-iE73/" target="_blank" class="card passion-card">
+      <a href="https://www.instagram.com/little_ness_art/p/DRrrKG-iE73/" target="_blank" class="passion-tile">
         <img src="4.png" alt="Dessin 4">
       </a>
 
-      <a href="https://www.instagram.com/p/C-hbLjiq71p/" target="_blank" class="card passion-card">
+      <a href="https://www.instagram.com/p/C-hbLjiq71p/" target="_blank" class="passion-tile">
         <img src="5.png" alt="Dessin 5">
       </a>
 
+      <!-- Si tu veux autant d’images que sur le screen, ajoute-en d’autres ici -->
+      <a href="https://www.instagram.com/little_ness_art/" target="_blank" class="passion-tile">
+        <img src="6.png" alt="Dessin 6">
+      </a>
+
+      <a href="https://www.instagram.com/little_ness_art/" target="_blank" class="passion-tile">
+        <img src="7.png" alt="Dessin 7">
+      </a>
+
+      <a href="https://www.instagram.com/little_ness_art/" target="_blank" class="passion-tile">
+        <img src="8.png" alt="Dessin 8">
+      </a>
+
+      <a href="https://www.instagram.com/little_ness_art/" target="_blank" class="passion-tile">
+        <img src="9.png" alt="Dessin 9">
+      </a>
     </div>
 
-    <a href="magalerie.html" class="btn" style="margin-top: 30px;">
-      Voir la galerie
-    </a>
-
-  </div>
-</section>
+    <a href="magalerie.html" class="passion-btn">Voir la Galerie</a>
+  </section>
 
 </main>
+
 <!-- ================= FOOTER ================= -->
 <footer>
   2026 © Laeticia PETIT
@@ -212,6 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
 
