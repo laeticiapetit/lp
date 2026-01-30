@@ -1241,6 +1241,273 @@ main > section:last-of-type {
 
 
 
+/* =========================================
+   HOME (index) — style écran screenshot
+   À coller TOUT EN BAS du style.css
+========================================= */
+
+/* Page d’accueil : on veut voir le background partout */
+.home{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 18px 70px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== ÉTOILES DÉCORATIVES ===== */
+.home .sparkle{
+  position: absolute;
+  color: rgba(255,255,255,0.95);
+  text-shadow: 0 0 12px rgba(255,255,255,0.35);
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+/* Le symbole "étoile" */
+.home .sparkle::before{
+  content: "✦";
+  display: block;
+}
+
+/* Tailles / positions proches du screenshot */
+.home .sparkle.s1{ top: 70px;  left: 18px;  font-size: 22px; opacity: .9; }
+.home .sparkle.s2{ top: 120px; right: 26px; font-size: 16px; opacity: .8; }
+.home .sparkle.s3{ top: 210px; left: 110px; font-size: 18px; opacity: .85; }
+
+.home .sparkle.s4{ top: 34px;  left: 20px;  font-size: 18px; opacity: .9; }
+.home .sparkle.s5{ top: 220px; right: 18px; font-size: 22px; opacity: .85; }
+
+.home .sparkle.s6{ top: 40px;  left: 22px;  font-size: 18px; opacity: .9; }
+.home .sparkle.s7{ top: 210px; right: 20px; font-size: 22px; opacity: .85; }
+
+/* ===== HERO ===== */
+.home-hero{
+  position: relative;
+  margin: 18px auto 22px;
+}
+
+.hero-card{
+  width: 100%;
+  background: rgba(0,0,0,0.55);
+  border-radius: 16px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px);
+}
+
+.hero-photo{
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+}
+
+.hero-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content h2{
+  font-family: "League Spartan", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 4px 0 8px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.hero-content p{
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 1.55;
+  opacity: 0.92;
+  margin: 4px 0;
+}
+
+.hero-btn{
+  display: inline-block;
+  margin-top: 10px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: #E8C482;
+  color: #111;
+  font-weight: 700;
+  font-size: 11px;
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.hero-btn:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* ===== TITRES "PILULE" (Mes derniers projets / Passion) ===== */
+.section-pill{
+  display: inline-block;
+  background: rgba(0,0,0,0.55);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin: 0 0 14px;
+  font-family: "League Spartan", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+/* ===== PROJETS (3 colonnes x 2 rangées) ===== */
+.home-projects{
+  position: relative;
+  margin: 10px 0 26px;
+}
+
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.project-tile{
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+  aspect-ratio: 1 / 1;
+  background: #000;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.project-tile img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-tile:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.55);
+}
+
+/* Le texte "Cliquez pour en voir +" aligné à droite comme sur le screen */
+.projects-more{
+  margin-top: 10px;
+  text-align: right;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* ===== PASSION (mosaïque) ===== */
+.home-passion{
+  position: relative;
+  margin-top: 8px;
+}
+
+/* Mosaïque façon “collage” */
+.passion-mosaic{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 65px;
+  gap: 10px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.passion-tile{
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+  background: #000;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.passion-tile img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Variations de hauteurs (effet mosaïque) */
+.passion-tile:nth-child(1){ grid-row: span 3; }
+.passion-tile:nth-child(2){ grid-row: span 4; }
+.passion-tile:nth-child(3){ grid-row: span 3; }
+.passion-tile:nth-child(4){ grid-row: span 4; }
+.passion-tile:nth-child(5){ grid-row: span 3; }
+.passion-tile:nth-child(6){ grid-row: span 4; }
+.passion-tile:nth-child(7){ grid-row: span 3; }
+.passion-tile:nth-child(8){ grid-row: span 4; }
+.passion-tile:nth-child(9){ grid-row: span 3; }
+
+.passion-tile:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.55);
+}
+
+/* Bouton "Voir la Galerie" centré */
+.passion-btn{
+  display: inline-block;
+  margin: 14px auto 0;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.passion-btn:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* ===== Responsive mobile proche screen ===== */
+@media (max-width: 520px){
+  .home{ padding: 0 14px 60px; }
+
+  .hero-card{
+    grid-template-columns: 110px 1fr;
+    gap: 14px;
+  }
+  .hero-photo{ width: 110px; height: 110px; }
+
+  .projects-grid{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .passion-mosaic{
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 60px;
+    gap: 8px;
+    padding: 10px;
+  }
+}
+
+/* Neutralise les anciens gros fonds de sections uniquement sur la home */
+.home .section,
+.home .glass-block{
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+
 
 
 
