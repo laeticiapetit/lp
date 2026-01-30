@@ -704,7 +704,6 @@ main,
 .creations-visuelles .project-item{
   display: block;
   width: 100%;
-  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 12px 28px rgba(0,0,0,0.45);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -1244,6 +1243,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
