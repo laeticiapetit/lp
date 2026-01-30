@@ -795,7 +795,6 @@ main,
 
 .glass-block {
   background: rgba(0, 0, 0, 0.55);
-  border-radius: 25px;
   padding: 60px 50px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.45);
 }
@@ -803,7 +802,6 @@ main,
 .section > .glass-block {
   margin-bottom: 100px;
   background: rgba(0, 0, 0, 0.55);
-  border-radius: 25px;
   padding: 60px 50px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.45);
 }
@@ -907,7 +905,6 @@ main > section:last-of-type {
   .about-image img {
     height: auto;
     max-height: 260px;
-    border-radius: 18px;
     object-fit: cover;
   }
 
@@ -948,7 +945,6 @@ main > section:last-of-type {
   /* === VIDÉOS === */
   .video-container.youtube {
     aspect-ratio: 16 / 9;
-    border-radius: 16px;
     margin-bottom: 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.45);
   }
@@ -974,7 +970,6 @@ main > section:last-of-type {
     max-width: 95vw;
     max-height: 75vh;
     object-fit: contain;
-    border-radius: 22px;
     box-shadow: 0 18px 40px rgba(0,0,0,0.55);
     background: rgba(0,0,0,0.35);
   }
@@ -1240,6 +1235,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
