@@ -795,18 +795,6 @@ main,
   box-shadow: 0 15px 35px rgba(0,0,0,0.45);
 }
 
-.section > .glass-block {
-  margin-bottom: 100px;
-  background: rgba(0, 0, 0, 0.55);
-  padding: 60px 50px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
-}
-
-.section:has(.glass-block) {
-  background: transparent;
-  padding: 0;
-}
-
 .section-first {
   margin-top: 0;
 }
@@ -1246,17 +1234,196 @@ main > section:last-of-type {
    À coller TOUT EN BAS du style.css
 ========================================= */
 
-/* Page d’accueil : on veut voir le background partout */
+/* =========================================================
+   HOME (index) — EXACT écran screenshot (override propre)
+   À coller TOUT EN BAS du style.css
+========================================================= */
+
+/* Important : la page doit avoir <main class="home"> */
 .home{
-  width: 100%;
-  max-width: 1100px;
+  width: min(430px, 100%);
   margin: 0 auto;
-  padding: 0 18px 70px;
+  padding: 0 14px 70px;
   position: relative;
   z-index: 1;
 }
 
-/* ===== ÉTOILES DÉCORATIVES ===== */
+/* 1) Neutraliser la structure “grosses sections” sur la home */
+.home .section,
+.home .glass-block{
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+.home .divider{
+  display: none !important; /* sur ton screen il n’y a pas les séparateurs */
+}
+
+/* 2) HERO (photo + texte dans un bloc glass compact) */
+.home-hero{
+  position: relative;
+  margin: 18px 0 22px;
+}
+
+.home .hero-card{
+  background: rgba(0,0,0,0.55);
+  border-radius: 14px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 14px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+  backdrop-filter: blur(10px);
+}
+
+.home .hero-photo{
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+}
+
+.home .hero-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home .hero-content h2{
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 2px 0 8px;
+}
+
+.home .hero-content p{
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 4px 0;
+}
+
+.home .hero-btn{
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #E8C482;
+  color: #111;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+/* 3) Titres “bandeau” comme sur le screen */
+.home .section-pill{
+  display: inline-block;
+  background: rgba(0,0,0,0.55);
+  border-radius: 12px;
+  padding: 9px 12px;
+  margin: 0 0 12px;
+  font-family: "League Spartan", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* 4) Projets : grille 3×2 compacte */
+.home-projects{
+  position: relative;
+  margin: 10px 0 26px;
+}
+
+.home .projects-grid{
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.home .project-tile{
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+  aspect-ratio: 1/1;
+  background: #000;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+}
+
+.home .project-tile img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home .projects-more{
+  margin-top: 10px;
+  text-align: right;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* 5) Passion : mosaïque collage */
+.home-passion{
+  position: relative;
+}
+
+.home .passion-mosaic{
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 62px;
+  gap: 8px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.home .passion-tile{
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+  background: #000;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+}
+
+.home .passion-tile img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Effet mosaïque (hauteurs variables) */
+.home .passion-tile:nth-child(1){ grid-row: span 3; }
+.home .passion-tile:nth-child(2){ grid-row: span 4; }
+.home .passion-tile:nth-child(3){ grid-row: span 3; }
+.home .passion-tile:nth-child(4){ grid-row: span 4; }
+.home .passion-tile:nth-child(5){ grid-row: span 3; }
+.home .passion-tile:nth-child(6){ grid-row: span 4; }
+.home .passion-tile:nth-child(7){ grid-row: span 3; }
+.home .passion-tile:nth-child(8){ grid-row: span 4; }
+.home .passion-tile:nth-child(9){ grid-row: span 3; }
+
+.home .passion-btn{
+  display: block;
+  width: fit-content;
+  margin: 14px auto 0;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* 6) Étoiles décoratives */
 .home .sparkle{
   position: absolute;
   color: rgba(255,255,255,0.95);
@@ -1266,246 +1433,20 @@ main > section:last-of-type {
   line-height: 1;
 }
 
-/* Le symbole "étoile" */
 .home .sparkle::before{
   content: "✦";
   display: block;
 }
 
-/* Tailles / positions proches du screenshot */
-.home .sparkle.s1{ top: 70px;  left: 18px;  font-size: 22px; opacity: .9; }
-.home .sparkle.s2{ top: 120px; right: 26px; font-size: 16px; opacity: .8; }
-.home .sparkle.s3{ top: 210px; left: 110px; font-size: 18px; opacity: .85; }
+.home .sparkle.s1{ top: 18px; left: 12px; font-size: 20px; opacity: .9; }
+.home .sparkle.s2{ top: 70px; right: 16px; font-size: 14px; opacity: .8; }
+.home .sparkle.s3{ top: 140px; left: 130px; font-size: 16px; opacity: .85; }
 
-.home .sparkle.s4{ top: 34px;  left: 20px;  font-size: 18px; opacity: .9; }
-.home .sparkle.s5{ top: 220px; right: 18px; font-size: 22px; opacity: .85; }
+.home .sparkle.s4{ top: 40px; left: 10px; font-size: 18px; opacity: .85; }
+.home .sparkle.s5{ top: 170px; right: 10px; font-size: 22px; opacity: .85; }
 
-.home .sparkle.s6{ top: 40px;  left: 22px;  font-size: 18px; opacity: .9; }
-.home .sparkle.s7{ top: 210px; right: 20px; font-size: 22px; opacity: .85; }
-
-/* ===== HERO ===== */
-.home-hero{
-  position: relative;
-  margin: 18px auto 22px;
-}
-
-.hero-card{
-  width: 100%;
-  background: rgba(0,0,0,0.55);
-  border-radius: 16px;
-  padding: 16px;
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 16px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
-  backdrop-filter: blur(10px);
-}
-
-.hero-photo{
-  width: 120px;
-  height: 120px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
-}
-
-.hero-photo img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-content h2{
-  font-family: "League Spartan", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  margin: 4px 0 8px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-}
-
-.hero-content p{
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  line-height: 1.55;
-  opacity: 0.92;
-  margin: 4px 0;
-}
-
-.hero-btn{
-  display: inline-block;
-  margin-top: 10px;
-  padding: 9px 14px;
-  border-radius: 999px;
-  background: #E8C482;
-  color: #111;
-  font-weight: 700;
-  font-size: 11px;
-  transition: transform .2s ease, filter .2s ease;
-}
-
-.hero-btn:hover{
-  transform: translateY(-2px);
-  filter: brightness(1.05);
-}
-
-/* ===== TITRES "PILULE" (Mes derniers projets / Passion) ===== */
-.section-pill{
-  display: inline-block;
-  background: rgba(0,0,0,0.55);
-  border-radius: 12px;
-  padding: 10px 12px;
-  margin: 0 0 14px;
-  font-family: "League Spartan", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-}
-
-/* ===== PROJETS (3 colonnes x 2 rangées) ===== */
-.home-projects{
-  position: relative;
-  margin: 10px 0 26px;
-}
-
-.projects-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  background: rgba(0,0,0,0.35);
-  border-radius: 14px;
-  padding: 12px;
-}
-
-.project-tile{
-  border-radius: 12px;
-  overflow: hidden;
-  display: block;
-  aspect-ratio: 1 / 1;
-  background: #000;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.4);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.project-tile img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.project-tile:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 16px 34px rgba(0,0,0,0.55);
-}
-
-/* Le texte "Cliquez pour en voir +" aligné à droite comme sur le screen */
-.projects-more{
-  margin-top: 10px;
-  text-align: right;
-  font-size: 11px;
-  opacity: 0.8;
-}
-
-/* ===== PASSION (mosaïque) ===== */
-.home-passion{
-  position: relative;
-  margin-top: 8px;
-}
-
-/* Mosaïque façon “collage” */
-.passion-mosaic{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 65px;
-  gap: 10px;
-  background: rgba(0,0,0,0.35);
-  border-radius: 14px;
-  padding: 12px;
-}
-
-.passion-tile{
-  border-radius: 12px;
-  overflow: hidden;
-  display: block;
-  background: #000;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.4);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.passion-tile img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Variations de hauteurs (effet mosaïque) */
-.passion-tile:nth-child(1){ grid-row: span 3; }
-.passion-tile:nth-child(2){ grid-row: span 4; }
-.passion-tile:nth-child(3){ grid-row: span 3; }
-.passion-tile:nth-child(4){ grid-row: span 4; }
-.passion-tile:nth-child(5){ grid-row: span 3; }
-.passion-tile:nth-child(6){ grid-row: span 4; }
-.passion-tile:nth-child(7){ grid-row: span 3; }
-.passion-tile:nth-child(8){ grid-row: span 4; }
-.passion-tile:nth-child(9){ grid-row: span 3; }
-
-.passion-tile:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 16px 34px rgba(0,0,0,0.55);
-}
-
-/* Bouton "Voir la Galerie" centré */
-.passion-btn{
-  display: inline-block;
-  margin: 14px auto 0;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(0,0,0,0.55);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 700;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
-  transition: transform .2s ease, filter .2s ease;
-}
-
-.passion-btn:hover{
-  transform: translateY(-2px);
-  filter: brightness(1.1);
-}
-
-/* ===== Responsive mobile proche screen ===== */
-@media (max-width: 520px){
-  .home{ padding: 0 14px 60px; }
-
-  .hero-card{
-    grid-template-columns: 110px 1fr;
-    gap: 14px;
-  }
-  .hero-photo{ width: 110px; height: 110px; }
-
-  .projects-grid{
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 10px;
-  }
-
-  .passion-mosaic{
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 60px;
-    gap: 8px;
-    padding: 10px;
-  }
-}
-
-/* Neutralise les anciens gros fonds de sections uniquement sur la home */
-.home .section,
-.home .glass-block{
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
+.home .sparkle.s6{ top: 40px; left: 10px; font-size: 18px; opacity: .85; }
+.home .sparkle.s7{ top: 180px; right: 10px; font-size: 22px; opacity: .85; }
 
 
 
