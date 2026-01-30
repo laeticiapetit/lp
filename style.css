@@ -65,7 +65,6 @@ header h1 {
   width: 70px;
 }
 
-
 #mobileMenu {
   display: none;
   position: fixed;
@@ -100,7 +99,6 @@ header h1 {
   color: #E8C482;
 }
 
-
 .section {
   background: rgba(0,0,0,0.5);
   text-align: center;
@@ -115,43 +113,138 @@ header h1 {
 }
 
 
-.quote-box {
-  background: rgba(255,255,255,0.95);
-  color: #222;
-  width: 80%;
-  margin: auto;
-  padding: 4%;
-  border-radius: 35px;
-  font-size: clamp(1.2rem, 2vw, 2.2rem);
-  line-height: 1.6;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+/* =====================================================
+   HOME — MATCH FIGMA (basé sur ton PNG)
+===================================================== */
+
+body.home main{
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 0 16px 90px;
 }
 
-.quote-box span {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.9rem;
+/* supprimer les gros blocs */
+body.home .section,
+body.home .glass-block,
+body.home .section > .glass-block{
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
 }
 
-
-.profile-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
+/* enlever les séparateurs */
+body.home .divider{
+  display: none !important;
 }
 
-.profile-img {
-  width: 250px;
-  height: 350px;
-  background: url('photopresentation.png') center / cover no-repeat;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+/* ================= HERO ================= */
+body.home .profile-section{
+  background: rgba(0,0,0,0.55);
+  border-radius: 16px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px;
+  align-items: center;
+  text-align: left;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
 }
 
-.profile-text p {
-  margin: 15px 0;
+body.home .profile-img{
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
+}
+
+body.home .profile-text h2{
   font-size: 16px;
-  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+body.home .profile-text p{
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 4px 0;
+}
+
+body.home .btn{
+  margin-top: 10px;
+  padding: 8px 14px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: #E8C482;
+  color: #111;
+}
+
+/* ================= PROJETS ================= */
+body.home .project-grid{
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: rgba(0,0,0,0.45);
+  padding: 14px;
+  border-radius: 16px;
+}
+
+body.home .project-card{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+/* ================= PASSION ================= */
+body.home .passion-grid{
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 70px;
+  gap: 10px;
+  background: rgba(0,0,0,0.45);
+  padding: 14px;
+  border-radius: 16px;
+}
+
+body.home .passion-card{
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* effet mosaïque */
+body.home .passion-card:nth-child(1){ grid-row: span 3; }
+body.home .passion-card:nth-child(2){ grid-row: span 4; }
+body.home .passion-card:nth-child(3){ grid-row: span 3; }
+body.home .passion-card:nth-child(4){ grid-row: span 4; }
+body.home .passion-card:nth-child(5){ grid-row: span 3; }
+
+/* ================= ÉTOILES ================= */
+body.home .profile-section,
+body.home .project-grid,
+body.home .passion-grid{
+  position: relative;
+}
+
+body.home .profile-section::before,
+body.home .project-grid::before,
+body.home .passion-grid::before{
+  content: "✦";
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  font-size: 18px;
+  opacity: .9;
+}
+
+body.home .profile-section::after,
+body.home .project-grid::after,
+body.home .passion-grid::after{
+  content: "✦";
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  font-size: 14px;
+  opacity: .8;
 }
 
 
@@ -1219,234 +1312,6 @@ main > section:last-of-type {
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* =========================================
-   HOME (index) — style écran screenshot
-   À coller TOUT EN BAS du style.css
-========================================= */
-
-/* =========================================================
-   HOME (index) — EXACT écran screenshot (override propre)
-   À coller TOUT EN BAS du style.css
-========================================================= */
-
-/* Important : la page doit avoir <main class="home"> */
-.home{
-  width: min(430px, 100%);
-  margin: 0 auto;
-  padding: 0 14px 70px;
-  position: relative;
-  z-index: 1;
-}
-
-/* 1) Neutraliser la structure “grosses sections” sur la home */
-.home .section,
-.home .glass-block{
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow: visible !important;
-}
-
-.home .divider{
-  display: none !important; /* sur ton screen il n’y a pas les séparateurs */
-}
-
-/* 2) HERO (photo + texte dans un bloc glass compact) */
-.home-hero{
-  position: relative;
-  margin: 18px 0 22px;
-}
-
-.home .hero-card{
-  background: rgba(0,0,0,0.55);
-  border-radius: 14px;
-  padding: 14px;
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 14px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
-  backdrop-filter: blur(10px);
-}
-
-.home .hero-photo{
-  width: 120px;
-  height: 120px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
-}
-
-.home .hero-photo img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.home .hero-content h2{
-  font-family: "League Spartan", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  margin: 2px 0 8px;
-}
-
-.home .hero-content p{
-  font-family: "Montserrat", sans-serif;
-  font-size: 11px;
-  line-height: 1.5;
-  opacity: 0.9;
-  margin: 4px 0;
-}
-
-.home .hero-btn{
-  display: inline-block;
-  margin-top: 8px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: #E8C482;
-  color: #111;
-  font-weight: 700;
-  font-size: 11px;
-}
-
-/* 3) Titres “bandeau” comme sur le screen */
-.home .section-pill{
-  display: inline-block;
-  background: rgba(0,0,0,0.55);
-  border-radius: 12px;
-  padding: 9px 12px;
-  margin: 0 0 12px;
-  font-family: "League Spartan", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-/* 4) Projets : grille 3×2 compacte */
-.home-projects{
-  position: relative;
-  margin: 10px 0 26px;
-}
-
-.home .projects-grid{
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  background: rgba(0,0,0,0.45);
-  border-radius: 14px;
-  padding: 12px;
-}
-
-.home .project-tile{
-  border-radius: 12px;
-  overflow: hidden;
-  display: block;
-  aspect-ratio: 1/1;
-  background: #000;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.4);
-}
-
-.home .project-tile img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.home .projects-more{
-  margin-top: 10px;
-  text-align: right;
-  font-size: 11px;
-  opacity: 0.8;
-}
-
-/* 5) Passion : mosaïque collage */
-.home-passion{
-  position: relative;
-}
-
-.home .passion-mosaic{
-  display: grid !important;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 62px;
-  gap: 8px;
-  background: rgba(0,0,0,0.45);
-  border-radius: 14px;
-  padding: 12px;
-}
-
-.home .passion-tile{
-  border-radius: 12px;
-  overflow: hidden;
-  display: block;
-  background: #000;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
-}
-
-.home .passion-tile img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Effet mosaïque (hauteurs variables) */
-.home .passion-tile:nth-child(1){ grid-row: span 3; }
-.home .passion-tile:nth-child(2){ grid-row: span 4; }
-.home .passion-tile:nth-child(3){ grid-row: span 3; }
-.home .passion-tile:nth-child(4){ grid-row: span 4; }
-.home .passion-tile:nth-child(5){ grid-row: span 3; }
-.home .passion-tile:nth-child(6){ grid-row: span 4; }
-.home .passion-tile:nth-child(7){ grid-row: span 3; }
-.home .passion-tile:nth-child(8){ grid-row: span 4; }
-.home .passion-tile:nth-child(9){ grid-row: span 3; }
-
-.home .passion-btn{
-  display: block;
-  width: fit-content;
-  margin: 14px auto 0;
-  padding: 9px 12px;
-  border-radius: 999px;
-  background: rgba(0,0,0,0.55);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 700;
-}
-
-/* 6) Étoiles décoratives */
-.home .sparkle{
-  position: absolute;
-  color: rgba(255,255,255,0.95);
-  text-shadow: 0 0 12px rgba(255,255,255,0.35);
-  pointer-events: none;
-  user-select: none;
-  line-height: 1;
-}
-
-.home .sparkle::before{
-  content: "✦";
-  display: block;
-}
-
-.home .sparkle.s1{ top: 18px; left: 12px; font-size: 20px; opacity: .9; }
-.home .sparkle.s2{ top: 70px; right: 16px; font-size: 14px; opacity: .8; }
-.home .sparkle.s3{ top: 140px; left: 130px; font-size: 16px; opacity: .85; }
-
-.home .sparkle.s4{ top: 40px; left: 10px; font-size: 18px; opacity: .85; }
-.home .sparkle.s5{ top: 170px; right: 10px; font-size: 22px; opacity: .85; }
-
-.home .sparkle.s6{ top: 40px; left: 10px; font-size: 18px; opacity: .85; }
-.home .sparkle.s7{ top: 180px; right: 10px; font-size: 22px; opacity: .85; }
 
 
 
