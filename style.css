@@ -185,6 +185,26 @@ header h1 {
   transform: translateY(-3px);
 }
 
+.btn-wrapper: hover {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  padding: 16px 35px;
+  border-radius: 30px;
+  background: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 25px;
+}
+
+.btn-wrapper:hover {
+  background: #E8C482;
+  color: white;
+  transform: translateY(-3px);
+}
+
 .card {
   display: block;
   border-radius: 20px;
@@ -1286,22 +1306,6 @@ main > section:last-of-type {
   margin: 0 auto;
 }
 
-
-
-
-.btn-wrapper {
-  display: flex;
-  justify-content: center;
-  width: fit-content;
-  padding: 16px 35px;
-  border-radius: 30px;
-  background: white;
-  color: black;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-top: 25px;
-}
 
 
 
