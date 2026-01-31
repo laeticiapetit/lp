@@ -187,15 +187,15 @@ header h1 {
 }
 
 
-.project-grid {
-
-  
 .passion-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 miniatures par ligne */
   gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
+
+
 
 .project-card {
   width: 45%;
@@ -1233,6 +1233,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
