@@ -129,6 +129,7 @@ header h1 {
 .dessin-section {  
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 
@@ -136,7 +137,7 @@ header h1 {
   width: 190vh;
   height: auto;
   object-fit: contain;
-  margin-bot: 20px;
+  margin-bottom: 20px;
 }
 
 .banner-left { 
@@ -1248,6 +1249,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
