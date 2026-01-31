@@ -753,15 +753,11 @@ main,
 
 .project-grid{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  width: min(900px, 92vw);
   margin: 0 auto;
 }
 
-  .project-grid{ 
-    grid-template-columns: repeat(2, 1fr); 
-  }
 
 #backToTop {
   position: fixed;
@@ -1247,23 +1243,6 @@ main > section:last-of-type {
 
 
 
-
-
-/* 🔥 Force 2 colonnes dans la grille des projets */
-.glass-block .project-grid {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
-  gap: 30px !important;
-  width: min(1100px, 92vw) !important;
-  margin: 0 auto !important;
-}
-
-.glass-block .project-grid img {
-  width: 100% !important;
-  aspect-ratio: 4 / 3 !important;
-  object-fit: cover !important;
-  display: block !important;
-}
 
 
 
