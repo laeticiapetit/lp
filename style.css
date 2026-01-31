@@ -142,7 +142,6 @@ header h1 {
 .banner-left { 
   width: 150vh;
   height: auto;
-  display: flex;
   justify-content: left;
   padding: 30px 30px;
 }
@@ -1233,6 +1232,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
