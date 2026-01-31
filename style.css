@@ -159,7 +159,7 @@ header h1 {
 }
 
 .project-grid img{
-  width: 400px;
+  width: auto;
   height: auto;
   object-fit: contain;
 }
@@ -1245,6 +1245,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
