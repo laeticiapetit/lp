@@ -118,7 +118,7 @@ header h1 {
 
 .profile-section {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 
 .profile-img {
@@ -1216,6 +1216,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
