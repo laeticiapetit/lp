@@ -146,9 +146,7 @@ header h1 {
   height: auto;         /* respecte le ratio */
   display: block;       /* supprime les espaces inline */
   margin: 0;
-  justify-content: flex-start;/* collée à gauche */
 }
-
 
 .btn {
   display: inline-block;
@@ -1269,6 +1267,7 @@ main > section:last-of-type {
   object-fit: cover !important;
   display: block !important;
 }
+
 
 
 
