@@ -9,7 +9,7 @@ html, body {
   overflow-x: hidden;
 }
 
-* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1251,6 +1251,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
