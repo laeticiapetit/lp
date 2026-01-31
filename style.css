@@ -146,7 +146,7 @@ header h1 {
   width: 250px;
   height: 350px;
   border-radius: 10%;
-  background: url('photopresentation.png') center / cover no-repeat;
+  background: url('aboutme.png') center / cover no-repeat;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
@@ -1244,6 +1244,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
