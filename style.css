@@ -760,6 +760,18 @@ main,
   }
 }
 
+.project-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+  .project-grid{ 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -1232,6 +1244,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
