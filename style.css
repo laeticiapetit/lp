@@ -114,6 +114,18 @@ header h1 {
   margin: 60px auto;
 }
 
+.bannerleft-section { 
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.bannerleft-img {
+  width: 100vh;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
 
 .profile-section {
   display: flex;
@@ -137,15 +149,9 @@ header h1 {
   width: 190vh;
   height: auto;
   object-fit: contain;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
-.banner-left { 
-  width: 20%;          /* prend la largeur du conteneur */
-  height: auto;         /* respecte le ratio */
-  display: block;       /* supprime les espaces inline */
-  margin: 0;
-}
 
 .btn {
   display: inline-block;
@@ -1236,6 +1242,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
