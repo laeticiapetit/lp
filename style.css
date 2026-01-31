@@ -1053,7 +1053,12 @@ main > section:last-of-type {
    RESPONSIVE – MOBILE (≤ 500px)
 ================================ */
 @media (max-width: 500px) {
-
+  
+.bannerleft-section { 
+  display: flex;
+  justify-content: flex-start;
+}
+  
   .bannerleft-img {
     width: 85vw;
   }
@@ -1066,12 +1071,12 @@ main > section:last-of-type {
   }
 
   .project-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    grid-template-columns: 2fr;
+    gap: 10px;
   }
 
   .project-grid img {
-    width: 100%;
+    width: 50%;
     margin: 0 auto;
   }
 
@@ -1304,6 +1309,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
