@@ -143,6 +143,7 @@ header h1 {
   width: 150vh;
   display: flex;
   justify-content: left;
+  padding: 30px 30px;
 }
   
 
@@ -1233,6 +1234,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
