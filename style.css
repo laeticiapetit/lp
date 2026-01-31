@@ -126,6 +126,18 @@ header h1 {
   object-fit: contain;
 }
 
+.dessin-section {  
+  display: flex;
+  justify-content: center;
+}
+
+
+.dessin-img {
+  width: 150vh;
+  height: auto;
+  object-fit: contain;
+}
+
 
 
 .btn {
@@ -1215,6 +1227,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
