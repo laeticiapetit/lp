@@ -860,6 +860,37 @@ main > section:last-of-type {
 ================================ */
 @media (max-width: 900px) {
 
+  .bannerleft-section,
+  .profile-section,
+  .dessin-section {
+    justify-content: center;
+  }
+
+  .bannerleft-img {
+    width: 420px;
+    height: auto;
+  }
+
+  .profile-img {
+    width: 80vw;        /* au lieu de 170vh */
+    max-width: 500px;
+  }
+
+  .dessin-img {
+    width: 85vw;        /* au lieu de 190vh */
+    max-width: 550px;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .project-grid img {
+    width: 100%;
+    max-width: 100%;
+  }
+
   /* PROJETS + À MON SUJET */
   .projet-visuel,
   .projet-visuel.reverse,
@@ -1023,7 +1054,27 @@ main > section:last-of-type {
 ================================ */
 @media (max-width: 500px) {
 
-  /* ================= HEADER ================= */
+  .bannerleft-img {
+    width: 85vw;
+  }
+
+  .profile-img,
+  .dessin-img {
+    width: 90vw;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project-grid img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
   header {
     height: 70px;
     padding: 10px 12px;
@@ -1253,6 +1304,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
