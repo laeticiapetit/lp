@@ -38,7 +38,7 @@ a {
 header {
   margin-bottom: 60px;
   background: rgba(0, 0, 0, 0.55); /* identique au glass-block */
-  height: 120px;
+  height: 100px;
   padding: 30px 50px;
   display: flex;
   justify-content: space-between;
@@ -1265,6 +1265,7 @@ main > section:last-of-type {
   object-fit: cover !important;
   display: block !important;
 }
+
 
 
 
