@@ -121,7 +121,7 @@ header h1 {
 }
 
 .profile-img {
-  width: 190vh;
+  width: 150vh;
   height: auto;
   object-fit: contain;
 }
@@ -1215,6 +1215,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
