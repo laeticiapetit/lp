@@ -116,29 +116,10 @@ header h1 {
 }
 
 
-.quote-box {
-  background: rgba(255,255,255,0.95);
-  color: #222;
-  width: 80%;
-  margin: auto;
-  padding: 4%;
-  border-radius: 35px;
-  font-size: clamp(1.2rem, 2vw, 2.2rem);
-  line-height: 1.6;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
-
-.quote-box span {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.9rem;
-}
-
-
 .profile-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 50px;
 }
 
@@ -148,12 +129,6 @@ header h1 {
   border-radius: 10%;
   background: url('aboutme.png') center / cover no-repeat;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.profile-text p {
-  margin: 15px 0;
-  font-size: 16px;
-  line-height: 1.8;
 }
 
 
@@ -1244,6 +1219,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
