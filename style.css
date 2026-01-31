@@ -154,12 +154,11 @@ header h1 {
 .project-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
   margin: 0 auto;
 }
 
 .project-grid img{
-  width: auto;
+  width: 450px;
   height: auto;
   object-fit: contain;
 }
@@ -1245,6 +1244,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
