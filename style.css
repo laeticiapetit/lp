@@ -756,7 +756,7 @@ main,
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  width: min(1100px, 92vw);
+  width: min(900px, 92vw);
   margin: 0 auto;
 }
 
@@ -1267,6 +1267,7 @@ main > section:last-of-type {
   object-fit: cover !important;
   display: block !important;
 }
+
 
 
 
