@@ -188,7 +188,7 @@ header h1 {
 
 .project-grid{
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 30px;
   width: min(1100px, 92vw);
   margin: 0 auto;
@@ -1256,6 +1256,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
