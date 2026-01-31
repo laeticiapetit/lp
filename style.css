@@ -122,7 +122,7 @@ header h1 {
 }
 
 .profile-img {
-  width: 400px;
+  width: 100vh;
   height: auto;
   object-fit: contain;
 }
@@ -1216,6 +1216,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
