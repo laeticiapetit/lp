@@ -158,6 +158,13 @@ header h1 {
   margin: 0 auto;
 }
 
+.project-grid img{
+  width: 50vh;
+  height: auto;
+  object-fit: contain;
+  padding: 20px;
+}
+
 .btn {
   display: inline-block;
   padding: 16px 35px;
@@ -1247,6 +1254,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
