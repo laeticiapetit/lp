@@ -124,8 +124,6 @@ header h1 {
 .profile-img {
   width: 400px;
   height: auto;
-  border-radius: 10%;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
   object-fit: contain;
 }
 
@@ -1218,6 +1216,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
