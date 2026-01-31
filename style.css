@@ -147,7 +147,6 @@ header h1 {
   width: 190vh;
   height: auto;
   object-fit: contain;
-  margin-bottom: 50px;
   margin-top: 30px;
 }
 
@@ -1286,6 +1285,7 @@ main > section:last-of-type {
   max-width: 1100px;
   margin: 0 auto;
 }
+
 
 
 
