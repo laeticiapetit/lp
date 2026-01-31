@@ -1288,6 +1288,10 @@ main > section:last-of-type {
 
 
 
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
 
 
 
