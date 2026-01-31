@@ -141,6 +141,7 @@ header h1 {
 
 .banner-left { 
   width: 150vh;
+  height: auto;
   display: flex;
   justify-content: left;
   padding: 30px 30px;
@@ -186,7 +187,9 @@ header h1 {
 }
 
 
-.project-grid,
+.project-grid {
+
+  
 .passion-grid {
   display: flex;
   flex-wrap: wrap;
@@ -200,10 +203,6 @@ header h1 {
   height: 350px;
 }
 
-.passion-card {
-  width: 18%;
-  height: 380px;
-}
 
 
 .gallery-grid {
@@ -1234,6 +1233,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
