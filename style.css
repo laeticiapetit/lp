@@ -139,7 +139,12 @@ header h1 {
   margin-bot: 20px;
 }
 
-
+.banner-left { 
+  width: 150vh;
+  display: flex;
+  justify-content: left;
+}
+  
 
 .btn {
   display: inline-block;
@@ -1228,6 +1233,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
