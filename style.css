@@ -1040,7 +1040,11 @@ main > section:last-of-type {
     flex-shrink: 0;
   }
 
-  /* ================= CARTES – PASSIONS ================= */
+  
+  .project-grid { 
+    grid-template-columns: 1fr;
+  }
+  
   .passion-card {
     width: 90%;
     aspect-ratio: 3 / 4;          /* 🎯 format illustration */
@@ -1244,6 +1248,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
