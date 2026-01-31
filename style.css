@@ -141,14 +141,14 @@ header h1 {
 }
 
 .banner-left { 
-  width: 30%;
-  max-width: 600px;   /* ajuste */
-  height: auto;
-  display: block;
-  margin: 0 auto 60px;
-  justify-content: flex-start;
+  width: 100%;          /* prend la largeur du conteneur */
+  max-width: 900px;     /* empêche qu’elle soit gigantesque */
+  height: auto;         /* respecte le ratio */
+  display: block;       /* supprime les espaces inline */
+  margin: 0;
+  justify-content: flex-start;/* collée à gauche */
 }
-  
+
 
 .btn {
   display: inline-block;
@@ -1269,6 +1269,7 @@ main > section:last-of-type {
   object-fit: cover !important;
   display: block !important;
 }
+
 
 
 
