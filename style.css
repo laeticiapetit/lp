@@ -133,7 +133,7 @@ header h1 {
 
 
 .dessin-img {
-  width: 170vh;
+  width: 190vh;
   height: auto;
   object-fit: contain;
   margin-bot: 20px;
@@ -1248,6 +1248,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
