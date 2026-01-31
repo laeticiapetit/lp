@@ -136,6 +136,7 @@ header h1 {
   width: 170vh;
   height: auto;
   object-fit: contain;
+  margin-bot: 20px;
 }
 
 
@@ -1227,6 +1228,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
