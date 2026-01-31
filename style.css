@@ -1258,6 +1258,22 @@ main > section:last-of-type {
 
 
 
+/* Force la grille des projets (prioritaire si un autre style écrase) */
+.glass-block .project-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.glass-block .project-grid img{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
 
 
 
