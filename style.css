@@ -186,23 +186,6 @@ header h1 {
 }
 
 
-.project-grid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 30px;
-  width: min(1100px, 92vw);
-  margin: 0 auto;
-}
-
-.project-grid img{
-  width: 100%;
-  aspect-ratio: 4 / 3;   /* même taille de miniature */
-  object-fit: cover;     /* ou "contain" si tu ne veux JAMAIS rogner */
-  display: block;
-}
-
-
-
 
 .project-card {
   width: 45%;
@@ -810,6 +793,9 @@ main,
   border-radius: 25px;
   padding: 60px 50px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .section > .glass-block {
