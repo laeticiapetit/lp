@@ -9,7 +9,7 @@ html, body {
   overflow-x: hidden;
 }
 
-* {
+{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -75,7 +75,6 @@ header h1 {
   background: rgba(0,0,0,0.95);
   padding: 30px 0;
   text-align: center;
-
   z-index: 1900;
 }
 
@@ -1216,6 +1215,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
