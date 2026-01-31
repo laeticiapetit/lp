@@ -116,7 +116,7 @@ header h1 {
 
 .bannerleft-section { 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 20px;
 }
 
@@ -142,7 +142,6 @@ header h1 {
   justify-content: center;
   margin-bottom: 50px;
 }
-
 
 .dessin-img {
   width: 190vh;
@@ -1241,6 +1240,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
