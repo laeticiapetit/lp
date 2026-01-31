@@ -140,10 +140,11 @@ header h1 {
 }
 
 .banner-left { 
-  width: 150vh;
+  width: 100%;
+  max-width: 600px; /* ajuste selon ton design */
   height: auto;
+  padding: 30px;
   justify-content: left;
-  padding: 30px 30px;
 }
   
 
@@ -1248,6 +1249,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
