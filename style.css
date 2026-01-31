@@ -791,11 +791,9 @@ main,
 
 .glass-block {
   background: rgba(0, 0, 0, 0.55);
-  border-radius: 25px;
-  padding: 60px 50px;
+  padding: 50px 50px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.45);
   width: 100%;
-  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -1267,6 +1265,7 @@ main > section:last-of-type {
   object-fit: cover !important;
   display: block !important;
 }
+
 
 
 
