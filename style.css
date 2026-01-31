@@ -803,7 +803,6 @@ main,
 }
 
 .section > .glass-block {
-  margin-bottom: 100px;
   background: rgba(0, 0, 0, 0.55);
   padding: 60px 50px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.45);
@@ -1033,10 +1032,7 @@ main > section:last-of-type {
     transform: scale(1.2);
   }
 
-  .glass-block {
-    padding: 35px 20px;
-  }
-}
+
 
 /* ===============================
    RESPONSIVE – MOBILE (≤ 500px)
@@ -1266,6 +1262,7 @@ main > section:last-of-type {
   max-width: 1100px;
   margin: 0 auto;
 }
+
 
 
 
