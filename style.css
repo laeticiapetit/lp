@@ -161,6 +161,8 @@ header h1 {
   width: 450px;
   height: auto;
   object-fit: contain;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .btn {
@@ -1251,6 +1253,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
