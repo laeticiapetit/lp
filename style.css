@@ -187,13 +187,21 @@ header h1 {
 }
 
 
-.project-grid {
+.project-grid{
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 miniatures par ligne */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 30px;
-  max-width: 1100px;
+  width: min(1100px, 92vw);
   margin: 0 auto;
 }
+
+.project-grid img{
+  width: 100%;
+  aspect-ratio: 4 / 3;   /* même taille de miniature */
+  object-fit: cover;     /* ou "contain" si tu ne veux JAMAIS rogner */
+  display: block;
+}
+
 
 
 
@@ -1249,6 +1257,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
