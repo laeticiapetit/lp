@@ -141,7 +141,7 @@ header h1 {
 }
 
 .banner-left { 
-  width: 50%;
+  width: 20%;
   height: auto;
   padding: 30px 30px 30px 0; /* pas de padding à gauche */
 }
@@ -1256,6 +1256,7 @@ main > section:last-of-type {
     gap: 25px;
   }
 }
+
 
 
 
