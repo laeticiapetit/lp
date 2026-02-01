@@ -1246,27 +1246,20 @@ main,
 
 
 
-/* RESET DE BASE (recommandé) */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ========= FIX NAV + MENU (à mettre tout en bas du CSS) ========= */
 
-/* ===== HEADER ===== */
+/* Header fixé en haut */
 header {
-  position: fixed;          /* reste en haut */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(6px);
-  z-index: 1000;
+  height: 90px;
+  z-index: 9999;
 }
 
-/* ===== NAV ===== */
-nav {
+/* Nav du header */
+.top-nav {
   height: 100%;
   display: flex;
   align-items: center;
@@ -1274,76 +1267,61 @@ nav {
   position: relative;
 }
 
-/* ===== TITRE CENTRÉ ===== */
-nav h1 {
-  color: white;
-  font-size: 32px;
-  letter-spacing: 2px;
-}
-
-/* ===== MENU WRAPPER (IMPORTANT) ===== */
+/* Burger à gauche */
 .menu-wrapper {
   position: absolute;
-  left: 30px;               /* position du logo menu */
+  left: 25px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* ===== LOGO / BOUTON MENU ===== */
-.menu-button {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+/* Icône */
+.menu-button { cursor: pointer; display: flex; align-items: center; }
+.menu-icon { width: 55px; height: auto; display: block; }
+
+/* Logo droite */
+.logo-right {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-/* ===== MENU DÉROULANT ===== */
-.menu {
+/* ✅ MENU CACHÉ PAR DÉFAUT (IMPORTANT) */
+#mobileMenu {
   position: absolute;
-  top: calc(100% + 15px);   /* juste sous le header */
+  top: calc(100% + 12px);
   left: 0;
 
-  min-width: 260px;
-  padding: 20px;
+  width: 320px;
+  padding: 18px;
 
-  background: rgba(0, 0, 0, 0.9);
-  border-radius: 10px;
+  border-radius: 12px;
 
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 
-  transition: opacity 0.2s ease, transform 0.2s ease;
   transform: translateY(-10px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s;
 }
 
-/* ===== OUVERTURE AU SURVOL ===== */
-.menu-wrapper:hover .menu {
+/* ✅ OUVERTURE AU SURVOL */
+.menu-wrapper:hover #mobileMenu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transform: translateY(0);
 }
 
-/* ===== LIENS DU MENU ===== */
-.menu ul {
-  list-style: none;
-}
+/* Mise en forme du menu */
+#mobileMenu div { margin-bottom: 14px; }
+#mobileMenu span { display: block; font-weight: 700; margin-bottom: 8px; }
+#mobileMenu a { display: block; text-decoration: none; padding: 6px 0; }
 
-.menu li {
-  margin: 12px 0;
-}
+/* Pour éviter que le contenu passe sous le header */
+body { padding-top: 90px; }
 
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  opacity: 0.85;
-  transition: opacity 0.2s ease;
-}
-
-.menu a:hover {
-  opacity: 1;
-}
 
 
 
