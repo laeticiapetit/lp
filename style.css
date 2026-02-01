@@ -227,7 +227,7 @@ header h1 {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 25px;
+  gap: 10px;
   margin-top: 40px;
 }
 
@@ -1227,6 +1227,7 @@ main,
   max-width: 1100px;
   margin: 0 auto;
 }
+
 
 
 
