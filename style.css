@@ -724,7 +724,6 @@ main,
   gap: 40px;
   width: 100%;
   max-width: 1100px;
-  margin: 40px auto 0;
 }
 
 .slides-grid .slide-item{
@@ -1229,6 +1228,7 @@ main,
   max-width: 1100px;
   margin: 0 auto;
 }
+
 
 
 
