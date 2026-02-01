@@ -1245,7 +1245,30 @@ main,
 
 
 
-/* ===== NAVBAR STYLES ===== */
+/* ==================== GENERAL STYLES ==================== */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==================== NAVBAR ==================== */
 
 /* Header fixe */
 .site-header {
@@ -1256,24 +1279,16 @@ main,
   height: 80px;
   z-index: 9999;
 
-  /* Arrière-plan avec image et couleur */
+  /* Arrière-plan fixe (image ou couleur) */
   background: url('background-image.jpg') center/cover no-repeat, rgba(0, 0, 0, 0.7);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   display: flex;
-  justify-content: center;
-}
-
-/* Barre de navigation */
-.site-header .top-nav {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 0 20px;
 }
 
-/* Bouton de menu gauche */
+/* Bouton menu burger */
 .menu-wrapper {
   display: flex;
   align-items: center;
@@ -1290,7 +1305,7 @@ main,
   height: auto;
 }
 
-/* Logo au centre */
+/* Logo centré */
 .logo {
   text-decoration: none;
   color: white;
@@ -1298,6 +1313,7 @@ main,
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 /* Logo droit */
@@ -1306,16 +1322,275 @@ main,
   height: auto;
 }
 
-/* Ajouter un espace entre les éléments */
-.site-header .top-nav > * {
-  flex-shrink: 0;
+/* Menu déroulant masqué par défaut */
+#mobileMenu {
+  display: none; /* Fermé par défaut */
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 1000;
 }
 
+/* Menu déroulant ouvert */
+#mobileMenu.open {
+  display: block;
+}
+
+/* Style des blocs du menu */
+#mobileMenu .menu-block {
+  margin-bottom: 20px;
+}
+
+#mobileMenu span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#mobileMenu a {
+  display: block;
+  color: white;
+  padding: 8px 0;
+  transition: color 0.3s;
+}
+
+#mobileMenu a:hover {
+  color: #E8C482; /* Couleur d'accent */
+}
+
+/* Responsivité */
 @media (max-width: 768px) {
   .logo {
     font-size: 20px; /* Ajustement pour mobiles */
   }
 }
+
+/* ==================== PAGE BACKGROUND ==================== */
+
+.page-background {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;   /* mobile moderne */
+  min-height: 100vh; /* fallback */
+  background: url("goldennight.png") center center / cover no-repeat;
+  z-index: -10;
+}
+
+/* ==================== LINKS ==================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==================== SECTIONS ==================== */
+
+.section {
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ==================== BUTTONS ==================== */
+
+.btn {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  padding: 16px 35px;
+  border-radius: 30px;
+  background: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 25px auto 0 auto;
+}
+
+.btn:hover {
+  background: #E8C482;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* ==================== PROJECT GRID ==================== */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+}
+
+.project-grid img {
+  width: 450px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* ==================== GALLERY ==================== */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.gallery-item {
+  height: 360px;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ==================== GLOBAL FOOTER ==================== */
+
+footer {
+  width: 100vw;
+  margin-top: 50px;
+  margin-left: calc(50% - 50vw);
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+footer .icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .icons img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+footer .icons img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* ==================== BACK TO TOP ==================== */
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #E8C482;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+  transform: translateY(-5px);
+  background: #D4A248;
+}
+
+/* ==================== RESPONSIVE STYLES ==================== */
+
+@media (max-width: 900px) {
+  .bannerleft-section,
+  .profile-section,
+  .dessin-section {
+    justify-content: center;
+  }
+
+  .bannerleft-img {
+    width: 420px;
+    height: auto;
+  }
+
+  .profile-img,
+  .dessin-img {
+    width: 80vw;
+    max-width: 500px;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .project-grid img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    height: 70px;
+    padding: 10px 12px;
+  }
+
+  header h1 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    margin: 0;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .menu-icon,
+  .logo-right {
+    width: 36px;
+    height: auto;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .project-grid img {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
 
 
 
