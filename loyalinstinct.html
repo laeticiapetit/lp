@@ -90,43 +90,6 @@
       </a>
     </div>
   </footer>
-
-  
-  <!-- ================= LIGHTBOX (AJOUT) ================= -->
-  <div id="lightbox" aria-hidden="true">
-    <img id="lightboxImg" src="" alt="">
-  </div>
-
-  <!-- ================= JS LIGHTBOX (AJOUT) ================= -->
-  <script>
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightboxImg");
-
-    document.querySelectorAll(".slides-grid .slide-item img").forEach((img) => {
-      img.addEventListener("click", () => {
-        lightboxImg.src = img.src;
-        lightbox.style.display = "flex";
-        lightbox.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-      });
-    });
-
-    lightbox.addEventListener("click", () => {
-      lightbox.style.display = "none";
-      lightboxImg.src = "";
-      lightbox.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && lightbox.style.display === "flex") {
-        lightbox.style.display = "none";
-        lightboxImg.src = "";
-        lightbox.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-      }
-    });
-  </script>
   
   <button id="backToTop" aria-label="Retour en haut">↑</button>
 
@@ -166,6 +129,7 @@
 
 </body>
 </html>
+
 
 
 
