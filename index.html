@@ -124,24 +124,23 @@
 <!-- ================= JAVASCRIPT ================= -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Gestion du menu déroulant
-  const menuButton = document.querySelector('.menu-button');
-  const mobileMenu = document.getElementById('mobileMenu');
+  const menuButton = document.querySelector('.menu-button'); // Bouton menu burger
+  const mobileMenu = document.getElementById('mobileMenu');  // Menu déroulant
 
-  if (menuButton && mobileMenu) {
-    menuButton.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      menuButton.setAttribute('aria-expanded', isOpen.toString());
-    });
+  // Gestion du clic sur le bouton menu
+  menuButton.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open'); // Basculer classe "open"
+    menuButton.setAttribute('aria-expanded', isOpen);   // Mise à jour accessibilité
+  });
 
-    // Fermeture du menu lors du clic sur un élément
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        menuButton.setAttribute('aria-expanded', "false");
-      });
+  // Fermeture du menu lors du clic sur un lien
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');             // Retirer classe "open"
+      menuButton.setAttribute('aria-expanded', false); // Mise à jour accessibilité
     });
-  }
+  });
+});
 
   // Bouton retour en haut
   const backToTop = document.getElementById("backToTop");
@@ -163,6 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
 
