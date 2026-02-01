@@ -386,7 +386,6 @@ footer .icons img:hover {
   display: flex;
   align-items: center;
   gap: 60px;
-  margin-bottom: 100px;
 }
 
 .about-block.reverse {
@@ -1228,6 +1227,7 @@ main,
   max-width: 1100px;
   margin: 0 auto;
 }
+
 
 
 
