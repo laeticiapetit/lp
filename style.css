@@ -1245,7 +1245,7 @@ main,
 
 
 
-/* ========= FIX NAV + MENU ========= */
+/* ===== NAVBAR STYLES ===== */
 
 /* Header fixe */
 .site-header {
@@ -1253,127 +1253,69 @@ main,
   top: 0;
   left: 0;
   width: 100%;
-  height: 90px;
+  height: 80px;
   z-index: 9999;
-  background-color: white; /* Ajoute une couleur de fond pour le header fixe */
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour différencier du contenu */
+
+  /* Arrière-plan avec image et couleur */
+  background: url('background-image.jpg') center/cover no-repeat, rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
 }
 
-/* Nav header */
+/* Barre de navigation */
 .site-header .top-nav {
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-/* Burger à gauche (menu bouton) */
-.site-header .menu-wrapper {
-  position: absolute;
-  left: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* Bouton menu */
-.site-header .menu-button {
+/* Bouton de menu gauche */
+.menu-wrapper {
   display: flex;
   align-items: center;
-  cursor: pointer;
-  border: none; /* Pas de bordure sur le bouton */
-  background: none; /* Fond transparent */
-  padding: 0;
 }
 
-/* Icône du menu burger */
-.site-header .menu-icon {
-  width: 55px;
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 40px;
   height: auto;
 }
 
-/* Logo à droite */
-.site-header .logo-right {
-  position: absolute;
-  right: 25px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 55px;
-}
-
-/* Corps du menu mobile */
-.site-header .menu-wrapper > #mobileMenu.menu-panel {
-  position: absolute;
-  top: calc(100% + 12px);
-  left: 0;
-
-  width: 90vw; /* Largeur adaptative */
-  max-width: 340px; /* Largeur maximale */
-  padding: 18px;
-
-  background-color: white; /* Fond blanc pour le menu */
-  border-radius: 12px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
-
-  /* Caché par défaut */
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  transform: translateY(-10px);
-
-  /* Transition pour animation fluide */
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-
-  display: block !important; /* Au cas où */
-}
-
-/* Lorsqu'il est ouvert (via classe 'open') */
-.site-header .menu-wrapper > #mobileMenu.menu-panel.open {
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-  transform: translateY(0);
-}
-
-/* Mise en forme interne */
-#mobileMenu .menu-block {
-  margin-bottom: 14px;
-}
-
-#mobileMenu span {
-  display: block;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-#mobileMenu a {
-  display: block;
+/* Logo au centre */
+.logo {
   text-decoration: none;
-  padding: 6px 0;
-  color: black;
-  font-size: 16px;
+  color: white;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
 }
 
-#mobileMenu a:hover {
-  text-decoration: underline;
-  color: #007BFF; /* Ajoute une couleur d'accent */
+/* Logo droit */
+.logo-right {
+  width: 40px;
+  height: auto;
 }
 
-/* Corps de la page : compense le header fixe */
-body {
-  padding-top: 90px;
+/* Ajouter un espace entre les éléments */
+.site-header .top-nav > * {
+  flex-shrink: 0;
 }
 
-/* Désactiver animations si motion réduit */
-@media (prefers-reduced-motion: reduce) {
-  .site-header .menu-wrapper > #mobileMenu.menu-panel {
-    transition: none;
+@media (max-width: 768px) {
+  .logo {
+    font-size: 20px; /* Ajustement pour mobiles */
   }
 }
-
-
-
-
 
 
 
