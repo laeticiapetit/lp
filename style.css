@@ -1246,6 +1246,105 @@ main,
 
 
 
+/* RESET DE BASE (recommandé) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;          /* reste en haut */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+/* ===== NAV ===== */
+nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* ===== TITRE CENTRÉ ===== */
+nav h1 {
+  color: white;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+/* ===== MENU WRAPPER (IMPORTANT) ===== */
+.menu-wrapper {
+  position: absolute;
+  left: 30px;               /* position du logo menu */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ===== LOGO / BOUTON MENU ===== */
+.menu-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== MENU DÉROULANT ===== */
+.menu {
+  position: absolute;
+  top: calc(100% + 15px);   /* juste sous le header */
+  left: 0;
+
+  min-width: 260px;
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(-10px);
+}
+
+/* ===== OUVERTURE AU SURVOL ===== */
+.menu-wrapper:hover .menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* ===== LIENS DU MENU ===== */
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  margin: 12px 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.menu a:hover {
+  opacity: 1;
+}
+
 
 
 
