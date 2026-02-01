@@ -675,15 +675,7 @@ main,
   color: #d9d9d9;
 }
 
-/* =========================================================
-   PAGE: mescreationsvisuelles.html
-   Grille projets — 2 colonnes fixes
-========================================================= */
 
-/* Le bloc projet ne doit pas être en flex ici */
-.creations-visuelles .projet-visuel{
-  display: block;
-}
 
 
 .creations-visuelles .gallery-grid{
@@ -820,18 +812,6 @@ main,
 
 .section + .divider {
   margin-top: -80px;
-}
-
-.projet-visuel:last-child {
-  margin-bottom: 0;
-}
-
-.section:has(.projet-visuel) {
-  padding-bottom: 40px;
-}
-
-.about-block:last-child {
-  margin-bottom: 0;
 }
 
 /* ===============================
@@ -1204,10 +1184,6 @@ main,
   }
 }
 
-.creations-visuelles .projet-visuel{
-  margin-bottom: 0;     
-  gap: 0;                
-}
 
 .creations-visuelles .projet-video{
   margin-top: 40px;     
@@ -1253,6 +1229,7 @@ main,
   max-width: 1100px;
   margin: 0 auto;
 }
+
 
 
 
