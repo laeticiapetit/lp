@@ -717,7 +717,7 @@ main,
 
 .slides-grid{
   display: grid; /* manquait */
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 5px;
   width: 100%;
 }
@@ -1224,6 +1224,7 @@ main,
   max-width: 1100px;
   margin: 0 auto;
 }
+
 
 
 
