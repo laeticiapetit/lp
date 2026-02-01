@@ -1245,53 +1245,55 @@ main,
 
 
 
-
-/* ========= FIX NAV + MENU (à mettre tout en bas du CSS) ========= */
-/* ====== VERROU NAV + MENU (A COLLER TOUT EN BAS) ====== */
+/* ========= FIX NAV + MENU ========= */
 
 /* Header fixe */
-.site-header{
+.site-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 90px;
   z-index: 9999;
+  background-color: white; /* Ajoute une couleur de fond pour le header fixe */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour différencier du contenu */
 }
 
 /* Nav header */
-.site-header .top-nav{
+.site-header .top-nav {
   height: 100%;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-/* Burger à gauche = ancre du menu */
-.site-header .menu-wrapper{
+/* Burger à gauche (menu bouton) */
+.site-header .menu-wrapper {
   position: absolute;
   left: 25px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* Bouton */
-.site-header .menu-button{
+/* Bouton menu */
+.site-header .menu-button {
   display: flex;
   align-items: center;
   cursor: pointer;
+  border: none; /* Pas de bordure sur le bouton */
+  background: none; /* Fond transparent */
+  padding: 0;
 }
 
-/* Icône */
-.site-header .menu-icon{
+/* Icône du menu burger */
+.site-header .menu-icon {
   width: 55px;
   height: auto;
-  display: block;
 }
 
-/* Logo droit */
-.site-header .logo-right{
+/* Logo à droite */
+.site-header .logo-right {
   position: absolute;
   right: 25px;
   top: 50%;
@@ -1299,31 +1301,34 @@ main,
   height: 55px;
 }
 
-/* IMPORTANT : cacher le menu par défaut (même si un autre CSS dit l’inverse) */
-.site-header .menu-wrapper > #mobileMenu.menu-panel{
+/* Corps du menu mobile */
+.site-header .menu-wrapper > #mobileMenu.menu-panel {
   position: absolute;
   top: calc(100% + 12px);
   left: 0;
 
-  width: 340px;
+  width: 90vw; /* Largeur adaptative */
+  max-width: 340px; /* Largeur maximale */
   padding: 18px;
 
+  background-color: white; /* Fond blanc pour le menu */
   border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
 
-  /* caché */
+  /* Caché par défaut */
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
-
   transform: translateY(-10px);
-  transition: opacity .2s ease, transform .2s ease, visibility .2s;
 
-  /* au cas où tu as un display:flex sur nav */
-  display: block !important;
+  /* Transition pour animation fluide */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+
+  display: block !important; /* Au cas où */
 }
 
-/* Ouvrir au survol */
-.site-header .menu-wrapper:hover > #mobileMenu.menu-panel{
+/* Lorsqu'il est ouvert (via classe 'open') */
+.site-header .menu-wrapper > #mobileMenu.menu-panel.open {
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
@@ -1331,16 +1336,40 @@ main,
 }
 
 /* Mise en forme interne */
-#mobileMenu .menu-block{ margin-bottom: 14px; }
-#mobileMenu span{ display: block; font-weight: 700; margin-bottom: 8px; }
-#mobileMenu a{ display: block; text-decoration: none; padding: 6px 0; }
+#mobileMenu .menu-block {
+  margin-bottom: 14px;
+}
 
-/* Pour que le contenu ne passe pas sous le header fixe */
-body{ padding-top: 90px; }
+#mobileMenu span {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
 
+#mobileMenu a {
+  display: block;
+  text-decoration: none;
+  padding: 6px 0;
+  color: black;
+  font-size: 16px;
+}
 
+#mobileMenu a:hover {
+  text-decoration: underline;
+  color: #007BFF; /* Ajoute une couleur d'accent */
+}
 
+/* Corps de la page : compense le header fixe */
+body {
+  padding-top: 90px;
+}
 
+/* Désactiver animations si motion réduit */
+@media (prefers-reduced-motion: reduce) {
+  .site-header .menu-wrapper > #mobileMenu.menu-panel {
+    transition: none;
+  }
+}
 
 
 
