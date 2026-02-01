@@ -19,11 +19,14 @@
 <header class="site-header">
   <nav class="top-nav">
 
+    <!-- Conteneur pour le bouton de menu -->
     <div class="menu-wrapper">
-      <a class="menu-button" href="#" aria-label="Menu" role="button">
+      <!-- Bouton de menu avec rôle et accessibilité améliorée -->
+      <button class="menu-button" aria-label="Menu" aria-expanded="false">
         <img src="menuburger.png" class="menu-icon" alt="Menu">
-      </a>
+      </button>
 
+      <!-- Menu déroulant (masqué par défaut, ouvert via JavaScript) -->
       <nav id="mobileMenu" class="menu-panel" aria-label="Menu principal">
         <div class="menu-block">
           <span>Qui suis-je ?</span>
@@ -45,13 +48,14 @@
       </nav>
     </div>
 
+    <!-- Logo central du header -->
     <a href="index.html" class="logo"><h1>MON PORTFOLIO</h1></a>
+
+    <!-- Logo à droite -->
     <img src="lpwhite_logo.png" class="logo-right" alt="Logo Laeticia Petit">
 
   </nav>
 </header>
-
-
 
 <!-- ================= PROFIL ================= -->
   <div class="profile-section">
@@ -150,6 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
 
 
