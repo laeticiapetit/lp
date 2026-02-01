@@ -1247,9 +1247,10 @@ main,
 
 
 /* ========= FIX NAV + MENU (à mettre tout en bas du CSS) ========= */
+/* ====== VERROU NAV + MENU (A COLLER TOUT EN BAS) ====== */
 
-/* Header fixé en haut */
-header {
+/* Header fixe */
+.site-header{
   position: fixed;
   top: 0;
   left: 0;
@@ -1258,83 +1259,84 @@ header {
   z-index: 9999;
 }
 
-/* Nav du header */
-.top-nav {
+/* Nav header */
+.site-header .top-nav{
   height: 100%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
-/* Burger à gauche */
-.menu-wrapper {
+/* Burger à gauche = ancre du menu */
+.site-header .menu-wrapper{
   position: absolute;
   left: 25px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* Icône */
-.menu-button { cursor: pointer; display: flex; align-items: center; }
-.menu-icon { width: 55px; height: auto; display: block; }
+/* Bouton */
+.site-header .menu-button{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 
-/* Logo droite */
-.logo-right {
+/* Icône */
+.site-header .menu-icon{
+  width: 55px;
+  height: auto;
+  display: block;
+}
+
+/* Logo droit */
+.site-header .logo-right{
   position: absolute;
   right: 25px;
   top: 50%;
   transform: translateY(-50%);
+  height: 55px;
 }
 
-/* ✅ MENU CACHÉ PAR DÉFAUT (IMPORTANT) */
-#mobileMenu {
+/* IMPORTANT : cacher le menu par défaut (même si un autre CSS dit l’inverse) */
+.site-header .menu-wrapper > #mobileMenu.menu-panel{
   position: absolute;
   top: calc(100% + 12px);
   left: 0;
 
-  width: 320px;
+  width: 340px;
   padding: 18px;
 
   border-radius: 12px;
 
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  /* caché */
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 
   transform: translateY(-10px);
   transition: opacity .2s ease, transform .2s ease, visibility .2s;
+
+  /* au cas où tu as un display:flex sur nav */
+  display: block !important;
 }
 
-/* ✅ OUVERTURE AU SURVOL */
-.menu-wrapper:hover #mobileMenu {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+/* Ouvrir au survol */
+.site-header .menu-wrapper:hover > #mobileMenu.menu-panel{
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
   transform: translateY(0);
 }
 
-/* Mise en forme du menu */
-#mobileMenu div { margin-bottom: 14px; }
-#mobileMenu span { display: block; font-weight: 700; margin-bottom: 8px; }
-#mobileMenu a { display: block; text-decoration: none; padding: 6px 0; }
+/* Mise en forme interne */
+#mobileMenu .menu-block{ margin-bottom: 14px; }
+#mobileMenu span{ display: block; font-weight: 700; margin-bottom: 8px; }
+#mobileMenu a{ display: block; text-decoration: none; padding: 6px 0; }
 
-/* Pour éviter que le contenu passe sous le header */
-body { padding-top: 90px; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Pour que le contenu ne passe pas sous le header fixe */
+body{ padding-top: 90px; }
 
 
 
