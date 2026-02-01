@@ -66,7 +66,7 @@ header h1 {
 }
 
 
-#mobileMenu {
+mobileMenu {
   display: none;
   position: fixed;
   top: 120px;
@@ -1229,29 +1229,87 @@ main,
 
 
 
+/* ===== LIGHTBOX style "portfolio" ===== */
 #lightbox{
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.9);
-  display: none;
+  background: rgba(0,0,0,.92);
+  display: none;                 /* fermé par défaut */
+  z-index: 9999;
+
+  /* centrage */
   align-items: center;
   justify-content: center;
-  z-index: 9999;
-  cursor: zoom-out;
+
+  /* animation */
+  opacity: 0;
+  transition: opacity .18s ease;
+}
+
+#lightbox.is-open{
+  display: flex;
+  opacity: 1;
+}
+
+/* bloque l'image dans une zone centrale */
+#lbFigure{
+  margin: 0;
+  max-width: min(1100px, 92vw);
+  max-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* petit effet "carte" */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.55);
+
+  transform: scale(.98);
+  transition: transform .18s ease;
+}
+
+#lightbox.is-open #lbFigure{
+  transform: scale(1);
 }
 
 #lightboxImg{
-  max-width: 92vw;
+  width: 100%;
+  height: 100%;
   max-height: 92vh;
-  object-fit: contain;
-  border-radius: 18px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  object-fit: contain;  /* affiche tout, pas de rognage */
+  display: block;
+  background: rgba(255,255,255,.02);
 }
 
-
-.slide-item img{
-  cursor: zoom-in;
+/* boutons */
+#lbClose, #lbPrev, #lbNext{
+  position: absolute;
+  border: 0;
+  background: rgba(255,255,255,.08);
+  color: white;
+  cursor: pointer;
+  border-radius: 999px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  transition: transform .15s ease, background .15s ease;
 }
+
+#lbClose:hover, #lbPrev:hover, #lbNext:hover{
+  background: rgba(255,255,255,.16);
+  transform: translateY(-1px);
+}
+
+#lbClose{ top: 18px; right: 18px; font-size: 20px; }
+#lbPrev{ left: 18px; top: 50%; transform: translateY(-50%); }
+#lbNext{ right: 18px; top: 50%; transform: translateY(-50%); }
+
+/* rendre les miniatures "cliquables" */
+.slides-grid .slide-item img{ cursor: zoom-in; }
+
 
 
 
