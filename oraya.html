@@ -74,6 +74,18 @@
     </section>
   </main>
 
+  <div id="lightbox" aria-hidden="true">
+  <button id="lbClose" type="button" aria-label="Fermer">✕</button>
+
+  <button id="lbPrev" type="button" aria-label="Image précédente">‹</button>
+
+  <figure id="lbFigure">
+    <img id="lightboxImg" src="" alt="">
+  </figure>
+
+  <button id="lbNext" type="button" aria-label="Image suivante">›</button>
+</div>
+
   <!-- ================= FOOTER ================= -->
   <footer>
     2026 © Laeticia PETIT
@@ -90,41 +102,71 @@
     </div>
   </footer>
 
-  <!-- ================= LIGHTBOX (AJOUT) ================= -->
-  <div id="lightbox" aria-hidden="true">
-    <img id="lightboxImg" src="" alt="">
-  </div>
-
-  <!-- ================= JS LIGHTBOX (AJOUT) ================= -->
   <script>
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightboxImg");
+  const images = Array.from(document.querySelectorAll(".slides-grid .slide-item img"));
 
-    document.querySelectorAll(".slides-grid .slide-item img").forEach((img) => {
-      img.addEventListener("click", () => {
-        lightboxImg.src = img.src;
-        lightbox.style.display = "flex";
-        lightbox.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-      });
-    });
+  const lb = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lightboxImg");
+  const btnClose = document.getElementById("lbClose");
+  const btnPrev = document.getElementById("lbPrev");
+  const btnNext = document.getElementById("lbNext");
 
-    lightbox.addEventListener("click", () => {
-      lightbox.style.display = "none";
-      lightboxImg.src = "";
-      lightbox.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-    });
+  let index = -1;
 
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && lightbox.style.display === "flex") {
-        lightbox.style.display = "none";
-        lightboxImg.src = "";
-        lightbox.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-      }
-    });
-  </script>
+  function openAt(i){
+    index = i;
+    lbImg.src = images[index].src;
+    lb.classList.add("is-open");
+    lb.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function close(){
+    lb.classList.remove("is-open");
+    lb.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    lbImg.src = "";
+    index = -1;
+  }
+
+  function prev(){
+    if (images.length === 0) return;
+    index = (index - 1 + images.length) % images.length;
+    lbImg.src = images[index].src;
+  }
+
+  function next(){
+    if (images.length === 0) return;
+    index = (index + 1) % images.length;
+    lbImg.src = images[index].src;
+  }
+
+  // clic sur une miniature
+  images.forEach((img, i) => {
+    img.addEventListener("click", () => openAt(i));
+  });
+
+  // fermer
+  btnClose.addEventListener("click", close);
+
+  // clic sur le fond = fermer (mais pas quand on clique sur l'image)
+  lb.addEventListener("click", (e) => {
+    if (e.target === lb) close();
+  });
+
+  // navigation
+  btnPrev.addEventListener("click", prev);
+  btnNext.addEventListener("click", next);
+
+  // clavier
+  document.addEventListener("keydown", (e) => {
+    if (!lb.classList.contains("is-open")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") prev();
+    if (e.key === "ArrowRight") next();
+  });
+</script>
+
 
   <button id="backToTop" aria-label="Retour en haut">↑</button>
 
