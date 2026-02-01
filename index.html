@@ -1,65 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mon Portfolio - Laeticia Petit</title>
 
   <!-- Polices -->
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-<div class="page-background"></div>
+  <div class="page-background"></div>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <nav class="top-nav">
-    <!-- Menu burger à gauche -->
-    <div class="menu-wrapper">
-      <button class="menu-button" aria-label="Menu" aria-expanded="false">
-        <img src="menuburger.png" class="menu-icon" alt="Menu">
-      </button>
+  <!-- ================= HEADER ================= -->
+  <header>
+    <img src="menuburger.png" class="menu-icon" alt="Menu">
+    <a href="index.html" class="logo"><h1>MON PORTFOLIO</h1></a>
+    <img src="lpwhite_logo.png" class="logo-right" alt="Logo Laeticia Petit">
+  </header>
+
+  <!-- ================= MENU MOBILE ================= -->
+  <nav id="mobileMenu">
+    <div>
+      <span>Qui suis-je ?</span>
+      <a href="amonsujet.html">À mon sujet</a>
+      <a href="magalerie.html">Ma Galerie</a>
     </div>
-    
-      <!-- Menu déroulant (masqué par défaut, ouvert via JavaScript) -->
-      <nav id="mobileMenu" class="menu-panel" aria-label="Menu principal">
-        <div class="menu-block">
-          <span>Qui suis-je ?</span>
-          <a href="amonsujet.html">À mon sujet</a>
-          <a href="magalerie.html">Ma Galerie</a>
-        </div>
 
-        <div class="menu-block">
-          <span>De la Formation au Projet</span>
-          <a href="parcourspro.html">Mon parcours de Formation</a>
-          <a href="moncv.html">Mon CV</a>
-        </div>
+    <div>
+      <span>De la Formation au Projet</span>
+      <a href="parcourspro.html">Mon parcours de Formation</a>
+      <a href="moncv.html">Mon CV</a>
+    </div>
 
-        <div class="menu-block">
-          <span>Mes projets</span>
-          <a href="mesprojetsevenementiels.html">Mes Projets Evénementiels</a>
-          <a href="mescreationsvisuelles.html">Mes Créations Visuelles</a>
-        </div>
-      </nav>
+    <div>
+      <span>Mes projets</span>
+      <a href="mesprojetsevenementiels.html">Mes Projets Evénementiels</a>
+      <a href="mescreationsvisuelles.html">Mes Créations Visuelles</a>
     </div>
   </nav>
-  
-    <!-- Logo central -->
-    <a href="index.html" class="logo">
-      <h1>MON PORTFOLIO</h1>
-    </a>
-    
-    <!-- Logo à droite -->
-    <img src="lpwhite_logo.png" class="logo-right" alt="Logo Laeticia Petit">
-  
-</header>
-  
-
-
 
 
 
@@ -100,65 +80,57 @@
 
 <a href="https://laeticiapetit.github.io/lp/magalerie.html" target="_blank" class="btn">Voir la Galerie</a>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-  2026 © Laeticia PETIT
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    2026 © Laeticia PETIT
+    <div class="icons">
+      <a href="https://www.instagram.com/little_ness_art/" target="_blank" rel="noopener">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/in/laeticia-petit-116b12319/" target="_blank" rel="noopener">
+        <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
+      </a>
+      <a href="mailto:laetitia84.petit@gmail.com">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Email">
+      </a>
+    </div>
+  </footer>
+  
+  <button id="backToTop" aria-label="Retour en haut">↑</button>
 
-  <div class="icons">
-    <a href="https://www.instagram.com/little_ness_art/" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-    </a>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuIcon = document.querySelector('.menu-icon');
+      const mobileMenu = document.getElementById('mobileMenu');
 
-    <a href="https://www.linkedin.com/in/laeticia-petit-116b12319/" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
-    </a>
+      if (menuIcon && mobileMenu) {
+        menuIcon.addEventListener('click', () => {
+          mobileMenu.style.display =
+            mobileMenu.style.display === 'block' ? 'none' : 'block';
+        });
 
-    <a href="mailto:laetitia84.petit@gmail.com">
-      <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Email">
-    </a>
-  </div>
-</footer>
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.style.display = 'none';
+          });
+        });
+      }
 
-<button id="backToTop" aria-label="Retour en haut">↑</button>
+      const backToTop = document.getElementById("backToTop");
+      if (backToTop) {
+        const toggle = () => {
+          backToTop.style.display = window.scrollY > 100 ? "flex" : "none";
+        };
 
-<!-- ================= JAVASCRIPT ================= -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.querySelector('.menu-button'); // Bouton menu burger
-  const mobileMenu = document.getElementById('mobileMenu');  // Menu déroulant
+        toggle();
+        window.addEventListener("scroll", toggle, { passive: true });
 
-  // Gestion du clic sur le bouton menu
-  menuButton.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('open'); // Basculer classe "open"
-    menuButton.setAttribute('aria-expanded', isOpen);   // Mise à jour accessibilité
-  });
-
-  // Fermeture du menu lors du clic sur un lien
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');             // Retirer classe "open"
-      menuButton.setAttribute('aria-expanded', false); // Mise à jour accessibilité
+        backToTop.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
     });
-  });
-});
-
-  // Bouton retour en haut
-  const backToTop = document.getElementById("backToTop");
-
-  if (backToTop) {
-    const toggleBackToTop = () => {
-      backToTop.style.display = (window.scrollY > 100) ? "flex" : "none";
-    };
-
-    toggleBackToTop();
-    window.addEventListener("scroll", toggleBackToTop, { passive: true });
-
-    backToTop.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
-});
-</script>
+  </script>
 
 </body>
 </html>
