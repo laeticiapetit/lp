@@ -58,39 +58,38 @@
 </header>
 
 <!-- ================= PROFIL ================= -->
-  <div class="profile-section">
+<div class="profile-section">
   <img src="aboutme.png" alt="Photo de Laeticia" class="profile-img">
-  </div>
+</div>
 
-  <a href="https://laeticiapetit.github.io/lp/amonsujet.html" target="_blank" class="btn">À mon sujet</a>
+<a href="https://laeticiapetit.github.io/lp/amonsujet.html" target="_blank" class="btn">À mon sujet</a>
   
 <!-- ================= MES PROJETS ================= -->
 <div class="bannerleft-section">
-  <img src="banniereprojet.png" alt="Mes derneirs projets" class="bannerleft-img">
+  <img src="banniereprojet.png" alt="Mes derniers projets" class="bannerleft-img">
 </div>
   
-  <div class="glass-block">
-
-    <div class="project-grid">
-      <a href="rosaverdana.html" class=""><img src="miniaturekstage.png" alt="Rosa Verdana"></a>
-      <a href="adobe.html" class=""><img src="miniaturekstage.png" alt="Adobe"></a>
-      <a href="laejin.html" class=""><img src="miniaturelaejin.png" alt="Laejin"></a>
-      <a href="kstage.html" class=""><img src="miniaturekstage.png" alt="K-Stage"></a>
-      <a href="loyalinstinct.html" class=""><img src="miniatureli.png" alt="Loyal Instinct"></a>
-      <a href="oraya.html" class=""><img src="miniatureoraya.png" alt="Oraya"></a>
-    </div>
+<div class="glass-block">
+  <div class="project-grid">
+    <a href="rosaverdana.html"><img src="miniaturekstage.png" alt="Rosa Verdana"></a>
+    <a href="adobe.html"><img src="miniaturekstage.png" alt="Adobe"></a>
+    <a href="laejin.html"><img src="miniaturelaejin.png" alt="Laejin"></a>
+    <a href="kstage.html"><img src="miniaturekstage.png" alt="K-Stage"></a>
+    <a href="loyalinstinct.html"><img src="miniatureli.png" alt="Loyal Instinct"></a>
+    <a href="oraya.html"><img src="miniatureoraya.png" alt="Oraya"></a>
   </div>
+</div>
 
-      <a href="https://laeticiapetit.github.io/lp/mescreationsvisuelles.html" target="_blank" class="btn">En voir +</a>
+<a href="https://laeticiapetit.github.io/lp/mescreationsvisuelles.html" target="_blank" class="btn">En voir +</a>
 
 <!-- ================= MA PASSION ================= -->
 <div class="banner-left">
   <img src="bannieredessin.png" alt="Ma passion du dessin !" class="bannerleft-img">
 </div>
   
- <div class="dessin-section">
-  <img src="paneldessin.png" alt="galerie de dessin" class="dessin-img">
- </div>
+<div class="dessin-section">
+  <img src="paneldessin.png" alt="Galerie de dessin" class="dessin-img">
+</div>
 
 <a href="https://laeticiapetit.github.io/lp/magalerie.html" target="_blank" class="btn">Voir la Galerie</a>
 
@@ -115,25 +114,29 @@
 
 <button id="backToTop" aria-label="Retour en haut">↑</button>
 
+<!-- ================= JAVASCRIPT ================= -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-
-  const menuIcon = document.querySelector('.menu-icon');
+  // Gestion du menu déroulant
+  const menuButton = document.querySelector('.menu-button');
   const mobileMenu = document.getElementById('mobileMenu');
 
-  if (menuIcon && mobileMenu) {
-    menuIcon.addEventListener('click', () => {
-      mobileMenu.style.display =
-        mobileMenu.style.display === 'block' ? 'none' : 'block';
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', isOpen.toString());
     });
 
+    // Fermeture du menu lors du clic sur un élément
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.style.display = 'none';
+        mobileMenu.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', "false");
       });
     });
   }
 
+  // Bouton retour en haut
   const backToTop = document.getElementById("backToTop");
 
   if (backToTop) {
@@ -148,48 +151,11 @@ document.addEventListener("DOMContentLoaded", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
-
 });
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
