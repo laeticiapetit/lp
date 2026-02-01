@@ -1229,7 +1229,29 @@ main,
 
 
 
+#lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
 
+#lightboxImg{
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+
+.slide-item img{
+  cursor: zoom-in;
+}
 
 
 
