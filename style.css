@@ -69,7 +69,7 @@ header h1 {
 #mobileMenu {
   display: none;
   position: fixed;
-  top: 120px;
+  top: 100px;
   left: 0;
   width: 100%;
   background: rgba(0,0,0,0.95);
@@ -1590,6 +1590,7 @@ footer .icons img:hover {
     margin: 0 auto;
   }
 }
+
 
 
 
