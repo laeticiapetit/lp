@@ -164,6 +164,11 @@ header h1 {
   margin-top: 10px;
 }
 
+.project-grid :hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.65);
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -847,11 +852,6 @@ main,
     width: 100%;
     max-width: 100%;
   }
-
-  .project-grid :hover{
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.65);
-}
 
   /* PROJETS + À MON SUJET */
   .projet-visuel,
@@ -1596,6 +1596,7 @@ footer .icons img:hover {
     margin: 0 auto;
   }
 }
+
 
 
 
