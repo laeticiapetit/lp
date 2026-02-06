@@ -162,6 +162,10 @@ header h1 {
   object-fit: contain;
 }
 
+.project-grid a{
+  display:inline;
+}
+
 .project-grid a:hover img {
   transform: scale(1.08);
 }
@@ -1598,6 +1602,7 @@ footer .icons img:hover {
     margin: 0 auto;
   }
 }
+
 
 
 
