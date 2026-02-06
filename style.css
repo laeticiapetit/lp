@@ -157,7 +157,7 @@ header h1 {
 }
 
 .project-grid img{
-  width: 450px;
+  width: 550px;
   height: auto;
   object-fit: contain;
   margin-bottom: 10px;
@@ -1643,6 +1643,7 @@ footer .icons img:hover {
     margin: 0 auto;
   }
 }
+
 
 
 
