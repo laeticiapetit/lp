@@ -848,6 +848,11 @@ main,
     max-width: 100%;
   }
 
+  .project-grid :hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.65);
+}
+
   /* PROJETS + À MON SUJET */
   .projet-visuel,
   .projet-visuel.reverse,
@@ -1436,58 +1441,6 @@ a {
   margin-top: 10px;
 }
 
-  /* --- HOVER PROJETS (Laejin / Loyal Instinct / Oraya) --- */
-
-.project-grid a{
-  position: relative;
-  display: block;               /* pour que le hover prenne toute la vignette */
-  overflow: hidden;             /* coupe le zoom dans la carte */
-  border-radius: 16px;          /* arrondi (ajuste si besoin) */
-  transform: translateZ(0);     /* évite des artefacts */
-  transition: transform 280ms ease, box-shadow 280ms ease;
-}
-
-.project-grid a img{
-  width: 100%;
-  height: auto;
-  display: block;
-  transform: scale(1);
-  transition: transform 420ms ease;
-}
-
-/* effet "ouvert" au hover */
-.project-grid a:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 18px 45px rgba(0,0,0,.35);
-}
-
-.project-grid a:hover img{
-  transform: scale(1.08);
-}
-
-/* petit voile / brillance (optionnel mais joli) */
-.project-grid a::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg,
-    rgba(255,255,255,0) 20%,
-    rgba(255,255,255,.18) 50%,
-    rgba(255,255,255,0) 80%);
-  transform: translateX(-120%);
-  transition: transform 520ms ease;
-  pointer-events: none;
-}
-
-.project-grid a:hover::after{
-  transform: translateX(120%);
-}
-
-/* accessibilité clavier */
-.project-grid a:focus-visible{
-  outline: 3px solid rgba(255,255,255,.85);
-  outline-offset: 3px;
-}
 
 /* ==================== GALLERY ==================== */
 
@@ -1643,6 +1596,7 @@ footer .icons img:hover {
     margin: 0 auto;
   }
 }
+
 
 
 
