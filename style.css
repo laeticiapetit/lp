@@ -167,7 +167,7 @@ header h1 {
 }
 
 .project-grid img{
-  width: 30%;
+  width: 100%;
   height: auto;
   display: block;
   object-fit: cover; /* ou contain si tu veux voir l'image entière */
@@ -1609,6 +1609,7 @@ footer .icons img:hover {
     margin: 0 auto;
   }
 }
+
 
 
 
