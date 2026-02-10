@@ -130,6 +130,57 @@
   <button id="backToTop" aria-label="Retour en haut">↑</button>
 
   <script>
+(function () {
+  const track = document.querySelector(".oraya-carousel__track");
+  const prev = document.querySelector(".oraya-carousel__btn--prev");
+  const next = document.querySelector(".oraya-carousel__btn--next");
+  const dotsWrap = document.querySelector(".oraya-carousel__dots");
+  const slides = Array.from(document.querySelectorAll(".oraya-carousel__slide"));
+
+  if (!track || !dotsWrap || slides.length === 0) return;
+
+  // Dots auto (12)
+  const dots = slides.map((_, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "oraya-carousel__dot";
+    b.setAttribute("aria-label", `Aller à l’image ${i + 1}`);
+    b.addEventListener("click", () => {
+      slides[i].scrollIntoView({ behavior: "smooth", inline: "center" });
+    });
+    dotsWrap.appendChild(b);
+    return b;
+  });
+
+  function scrollByOne(dir) {
+    const w = track.getBoundingClientRect().width;
+    track.scrollBy({ left: dir * w, behavior: "smooth" });
+  }
+
+  prev?.addEventListener("click", () => scrollByOne(-1));
+  next?.addEventListener("click", () => scrollByOne(1));
+
+  // Clavier (quand le carrousel a le focus)
+  track.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") { e.preventDefault(); scrollByOne(-1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); scrollByOne(1); }
+  });
+
+  // Slide active -> dot active
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      const idx = slides.indexOf(entry.target);
+      dots.forEach(d => d.classList.remove("is-active"));
+      if (dots[idx]) dots[idx].classList.add("is-active");
+    }
+  }, { root: track, threshold: 0.6 });
+
+  slides.forEach(s => io.observe(s));
+  dots[0]?.classList.add("is-active");
+})();
+
+  
     document.addEventListener("DOMContentLoaded", () => {
       const menuIcon = document.querySelector('.menu-icon');
       const mobileMenu = document.getElementById('mobileMenu');
