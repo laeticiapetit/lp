@@ -575,7 +575,6 @@ main,
 .carousel-container {
   position: relative;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -1604,6 +1603,7 @@ footer .icons img:hover {
     margin: 0 auto;
   }
 }
+
 
 
 
