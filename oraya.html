@@ -185,6 +185,57 @@
   <button id="backToTop" aria-label="Retour en haut">↑</button>
 
   <script>
+    
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".carousel.page-parcours");
+  if (!carousel) return;
+
+  const track = carousel.querySelector(".carousel-track");
+  const slides = Array.from(carousel.querySelectorAll(".slide"));
+  const prevBtn = carousel.querySelector(".nav.prev");
+  const nextBtn = carousel.querySelector(".nav.next");
+  const dotsWrap = carousel.querySelector(".dots");
+
+  if (!track || slides.length === 0 || !dotsWrap) return;
+
+  let index = 0;
+
+  // Crée les points
+  dotsWrap.innerHTML = "";
+  const dots = slides.map((_, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", `Aller à la diapositive ${i + 1}`);
+    b.addEventListener("click", () => goTo(i));
+    dotsWrap.appendChild(b);
+    return b;
+  });
+
+  function update() {
+    track.style.transform = `translateX(${-index * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle("active", i === index));
+  }
+
+  function goTo(i) {
+    index = Math.max(0, Math.min(i, slides.length - 1));
+    update();
+  }
+
+  prevBtn?.addEventListener("click", () => goTo(index - 1));
+  nextBtn?.addEventListener("click", () => goTo(index + 1));
+
+  // Clavier (optionnel)
+  carousel.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") goTo(index - 1);
+    if (e.key === "ArrowRight") goTo(index + 1);
+  });
+
+  // Ajustement quand la fenêtre change (optionnel mais propre)
+  window.addEventListener("resize", update, { passive: true });
+
+  update();
+});
+
     document.addEventListener("DOMContentLoaded", () => {
       const menuIcon = document.querySelector('.menu-icon');
       const mobileMenu = document.getElementById('mobileMenu');
