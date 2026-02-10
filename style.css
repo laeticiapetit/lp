@@ -634,7 +634,6 @@ main,
   background: rgba(0, 0, 0, 0.4);
   color: white;
   border: none;
-  font-size: 2rem;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 50%;
@@ -1603,6 +1602,7 @@ footer .icons img:hover {
     margin: 0 auto;
   }
 }
+
 
 
 
