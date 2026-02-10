@@ -43,29 +43,39 @@
 
   <!-- ================= CONTENU ================= -->
   <main>
-    <section class="section">
-      <div class="glass-block">
-       <article class="projet-visuel">
-        <div class="slides-grid">
-          <div class="slide-item"><img src="LI1.png" alt="Diapositive 1"></div>
-          <div class="slide-item"><img src="LI2.png" alt="Diapositive 2"></div>
-          <div class="slide-item"><img src="LI3.png" alt="Diapositive 3"></div>
-          <div class="slide-item"><img src="LI4.png" alt="Diapositive 4"></div>
-          <div class="slide-item"><img src="LI5.png" alt="Diapositive 5"></div>
-          <div class="slide-item"><img src="LI6.png" alt="Diapositive 6"></div>
-          <div class="slide-item"><img src="LI7.png" alt="Diapositive 7"></div>
-          <div class="slide-item"><img src="LI8.png" alt="Diapositive 8"></div>
-          <div class="slide-item"><img src="LI10.png" alt="Diapositive 10"></div>
-          <div class="slide-item"><video controls autoplay muted loop playsinline><source src="li9.mp4" type="video/mp4"></video></div>
+
+    <section class="carousel page-parcours" aria-label="Carrousel Oraya">
+      <div class="glass-block carousel-container">
+        <div class="carousel-track">
+    
+          <div class="slide"><img src="LI1.png" alt="Diapositive 1"></div>
+          <div class="slide"><img src="LI2.png" alt="Diapositive 2"></div>
+          <div class="slide"><img src="LI3.png" alt="Diapositive 3"></div>
+          <div class="slide"><img src="LI4.png" alt="Diapositive 4"></div>
+          <div class="slide"><img src="LI5.png" alt="Diapositive 5"></div>
+          <div class="slide"><img src="LI6.png" alt="Diapositive 6"></div>
+          <div class="slide"><img src="LI7.png" alt="Diapositive 7"></div>
+          <div class="slide"><img src="LI8.png" alt="Diapositive 8"></div>
+          <div class="slide"><img src="LI9.png" alt="Diapositive 9"></div>
+          <div class="slide"><img src="LI10.png" alt="Diapositive 10"></div>
+      <div class="slide-item"><video controls autoplay muted loop playsinline><source src="li9.mp4" type="video/mp4"></video></div>
+    
         </div>
-      </article>
+    
+        <!-- Flèches -->
+        <button class="nav prev" type="button" aria-label="Slide précédent">❮</button>
+        <button class="nav next" type="button" aria-label="Slide suivant">❯</button>
 
-        <span class="date"> ✦ Janvier 2026 ✦ </span>
-
-      </div>
+                <span class="date"> ✦ Janvier 2026 ✦ </span>
+          <!-- Points -->
+        <div class="dots" aria-label="Pagination du carrousel"></div>
+          
+        
+      </div>  
     </section>
+    
   </main>
-
+  
   <!-- ================= FOOTER ================= -->
   <footer>
     2026 © Laeticia PETIT
@@ -81,10 +91,64 @@
       </a>
     </div>
   </footer>
-  
+
   <button id="backToTop" aria-label="Retour en haut">↑</button>
 
   <script>
+    
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".carousel.page-parcours");
+  if (!carousel) return;
+
+  const track = carousel.querySelector(".carousel-track");
+  const slides = Array.from(carousel.querySelectorAll(".slide"));
+  const prevBtn = carousel.querySelector(".nav.prev");
+  const nextBtn = carousel.querySelector(".nav.next");
+  const dotsWrap = carousel.querySelector(".dots");
+
+  if (!track || slides.length === 0 || !dotsWrap) return;
+
+  let index = 0;
+
+  // Crée les points
+  dotsWrap.innerHTML = "";
+  const dots = slides.map((_, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", `Aller à la diapositive ${i + 1}`);
+    b.addEventListener("click", () => goTo(i));
+    dotsWrap.appendChild(b);
+    return b;
+  });
+
+  function update() {
+    track.style.transform = `translateX(${-index * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle("active", i === index));
+  }
+
+function goTo(i) {
+  if (i < 0) index = slides.length - 1;
+  else if (i >= slides.length) index = 0;
+  else index = i;
+
+  update();
+}
+
+prevBtn?.addEventListener("click", () => goTo(index - 1));
+nextBtn?.addEventListener("click", () => goTo(index + 1));
+
+  // Clavier (optionnel)
+  carousel.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") goTo(index - 1);
+    if (e.key === "ArrowRight") goTo(index + 1);
+  });
+
+  // Ajustement quand la fenêtre change (optionnel mais propre)
+  window.addEventListener("resize", update, { passive: true });
+
+  update();
+});
+
     document.addEventListener("DOMContentLoaded", () => {
       const menuIcon = document.querySelector('.menu-icon');
       const mobileMenu = document.getElementById('mobileMenu');
@@ -120,15 +184,6 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
 
 
