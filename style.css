@@ -660,7 +660,7 @@ main,
   height: 12px;
   border-radius: 50%;
   border: none;
-  background: #E8C482;
+  background: #cfcfcf;
   cursor: pointer;
 }
 
@@ -987,7 +987,7 @@ main,
     width: 42px;
     height: 42px;
     font-size: 1.4rem;
-    background: rgba(0,0,0,0.55);
+    background: #E8C482;
   }
 
   .nav.prev { left: 10px; }
@@ -1601,6 +1601,7 @@ footer .icons img:hover {
     margin: 0 auto;
   }
 }
+
 
 
 
