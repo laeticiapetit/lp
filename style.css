@@ -598,7 +598,7 @@ main,
 .page-parcours .slide img{
   max-width: 100%;
   height: auto;
-  max-height: 120vh;
+  max-height: 100vh;
   object-fit: contain;
   object-position: center;
 }
@@ -1604,6 +1604,7 @@ footer .icons img:hover {
     margin: 0 auto;
   }
 }
+
 
 
 
