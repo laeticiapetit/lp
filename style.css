@@ -823,10 +823,6 @@ main,
   margin-top: 0;
 }
 
-.section + .divider {
-  margin-top: -80px;
-}
-
 /* ===============================
    RESPONSIVE – STRUCTURE MOBILE
    (tablette + mobile)
@@ -1609,6 +1605,7 @@ footer .icons img:hover {
     margin: 0 auto;
   }
 }
+
 
 
 
