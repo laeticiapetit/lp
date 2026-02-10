@@ -76,8 +76,41 @@
         </article>
       </div>
     </section>
-  </main>
 
+
+  <section class="hero-carousel" aria-label="Galerie de visuels Oraya">
+  <div class="hero-carousel__viewport" id="oraya-carousel">
+    <button class="hero-carousel__btn hero-carousel__btn--prev" type="button" aria-label="Image précédente">
+      ‹
+    </button>
+
+    <ul class="hero-carousel__track" aria-live="polite">
+      <li class="hero-carousel__slide" id="oraya-s1">
+        <img src="images/oraya-1.jpg" alt="Oraya — visuel 1" loading="lazy">
+      </li>
+      <li class="hero-carousel__slide" id="oraya-s2">
+        <img src="images/oraya-2.jpg" alt="Oraya — visuel 2" loading="lazy">
+      </li>
+      <li class="hero-carousel__slide" id="oraya-s3">
+        <img src="images/oraya-3.jpg" alt="Oraya — visuel 3" loading="lazy">
+      </li>
+      <!-- Ajoute autant de slides que tu veux -->
+    </ul>
+
+    <button class="hero-carousel__btn hero-carousel__btn--next" type="button" aria-label="Image suivante">
+      ›
+    </button>
+
+    <div class="hero-carousel__dots" aria-label="Aller à une image">
+      <a class="hero-carousel__dot" href="#oraya-s1" aria-label="Aller à l’image 1"></a>
+      <a class="hero-carousel__dot" href="#oraya-s2" aria-label="Aller à l’image 2"></a>
+      <a class="hero-carousel__dot" href="#oraya-s3" aria-label="Aller à l’image 3"></a>
+    </div>
+  </div>
+</section>
+
+</main>
+  
   <!-- ================= FOOTER ================= -->
   <footer>
     2026 © Laeticia PETIT
