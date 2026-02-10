@@ -652,8 +652,7 @@ main,
 .dots {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 10px;
 }
 
 .dots button {
@@ -1602,6 +1601,7 @@ footer .icons img:hover {
     margin: 0 auto;
   }
 }
+
 
 
 
