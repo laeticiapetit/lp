@@ -1113,15 +1113,6 @@ main,
     margin: 0 auto;
   }
 
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .project-grid img {
-    width: 50%;
-    margin: 0 auto;
-  }
 
   header {
     height: 70px;
@@ -1698,6 +1689,7 @@ footer .icons img:hover {
     width: 120px;
   }
 }
+
 
 
 
