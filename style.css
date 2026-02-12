@@ -924,12 +924,12 @@ main,
   }
 
   .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
   }
 
   .project-grid img {
-    width:0 10%;
+    width: 100%;
     max-width: 100%;
   }
 
@@ -1140,7 +1140,7 @@ main,
   }
 
   .project-grid img {
-    width: 35%;
+    width: 50%;
     margin: 0 auto;
   }
 
@@ -1627,10 +1627,6 @@ footer .icons img:hover {
     justify-content: center;
   }
 
-   .project-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
 
   .project-grid img {
     width: 50%;
@@ -1682,7 +1678,7 @@ footer .icons img:hover {
   }
 
   .project-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
 
@@ -1756,6 +1752,7 @@ footer .icons img:hover {
     aspect-ratio: 3 / 4;
   }
 }
+
 
 
 
