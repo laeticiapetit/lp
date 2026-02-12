@@ -1605,11 +1605,11 @@ footer .icons img:hover {
   }
 
   .project-grid { 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   }
 
   .project-grid img {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -1727,6 +1727,7 @@ footer .icons img:hover {
     right: 6px;
   }
 }
+
 
 
 
