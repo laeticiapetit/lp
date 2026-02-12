@@ -1785,7 +1785,13 @@ footer .icons img:hover {
     object-fit: cover;    /* garde le format "illustration" */
     display: block;
   }
+  
+  .bannerleft-img{
+    width: 70vw;
+    max-width: 320px;
+  }
 }
+
 
 
 
