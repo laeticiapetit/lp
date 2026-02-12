@@ -1750,6 +1750,44 @@ footer .icons img:hover {
 
 
 
+/* =========================================
+   À MON SUJET — Image au-dessus / texte dessous
+   (tablette + téléphone)
+   ========================================= */
+
+@media (max-width: 600px){
+
+  .about-block,
+  .about-block.reverse{
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  /* Image toujours au-dessus */
+  .about-image{
+    order: -1;
+    width: 100%;
+  }
+
+  .about-image img{
+    width: 100%;
+    height: auto;
+    max-height: 320px;   /* ajuste si tu veux plus/moins grand */
+    object-fit: cover;   /* garde un rendu propre */
+  }
+
+  /* Texte dessous */
+  .about-text{
+    order: 1;
+    width: 100%;
+    max-width: 680px;
+    padding: 0 14px;
+  }
+}
+
 
 
 
