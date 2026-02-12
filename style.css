@@ -1136,8 +1136,14 @@ main,
   }
 
   .project-grid { 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   }
+
+  .project-grid img {
+    width: 35%;
+    margin: 0 auto;
+  }
+
   
   .passion-card {
     width: 90%;
@@ -1620,6 +1626,17 @@ footer .icons img:hover {
   .dessin-section {
     justify-content: center;
   }
+
+   .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .project-grid img {
+    width: 50%;
+    margin: 0 auto;
+  }
+
 
   .bannerleft-img {
     width: 420px;
