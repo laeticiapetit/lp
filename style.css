@@ -1754,6 +1754,39 @@ footer .icons img:hover {
 }
 
 
+/* ===============================
+   MOBILE — AGRANDIR IMAGES "PRÉSENTATION" & "PASSION"
+   =============================== */
+
+/* Présentation : hero / profil / dessin */
+@media (max-width: 500px){
+  .hero__img,
+  .profile-img,
+  .dessin-img{
+    width: 95vw;
+    max-width: 520px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* Passion : carte passion */
+@media (max-width: 500px){
+  .passion-card{
+    width: 95vw;          /* au lieu de 90% si tu veux plus grand */
+    max-width: 520px;
+    margin: 20px auto;
+  }
+
+  .passion-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* garde le format "illustration" */
+    display: block;
+  }
+}
+
 
 
 
