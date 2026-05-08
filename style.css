@@ -155,7 +155,6 @@ header h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
