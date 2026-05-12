@@ -99,7 +99,7 @@ header h1 {
 }
 
 
-.section {
+.section { 
   background: rgba(0,0,0,0.5);
   text-align: center;
   overflow: hidden;
