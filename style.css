@@ -101,7 +101,6 @@ header h1 {
 
 .section {
   background: rgba(0,0,0,0.5);
-  border-radius: 20px;
   text-align: center;
   overflow: hidden;
 }
