@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Portfolio - Laeticia Petit</title>
+
+  <!-- Polices -->
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-background"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <img src="menuburger.png" class="menu-icon" alt="Menu">
+    <a href="index.html" class="logo"><h1>MON PORTFOLIO</h1></a>
+    <img src="lpwhite_logo.png" class="logo-right" alt="Logo Laeticia Petit">
+  </header>
+
+  <!-- ================= MENU MOBILE ================= -->
+  <nav id="mobileMenu">
+    <div>
+      <span>Qui suis-je ?</span>
+      <a href="amonsujet.html">À mon sujet</a>
+      <a href="magalerie.html">Ma Galerie</a>
+    </div>
+
+    <div>
+      <span>De la Formation au Projet</span>
+      <a href="parcourspro.html">Mon parcours de Formation</a>
+      <a href="moncv.html">Mon CV</a>
+    </div>
+
+    <div>
+      <span>Mes projets</span>
+      <a href="mesprojetsevenementiels.html">Mes Projets Evénementiels</a>
+      <a href="mescreationsvisuelles.html">Mes Créations Visuelles</a>
+    </div>
+  </nav>
+
+  <!-- ================= CONTENU ================= -->
+  <main>
+
+    <section class="carousel page-parcours" aria-label="Carrousel Oraya">
+      <div class="glass-block carousel-container">
+        <div class="carousel-track">
+    
+          <div class="slide"><img src="smile1.png" alt="Diapositive 1"></div>
+          <div class="slide"><img src="smile2.png" alt="Diapositive 2"></div>
+          <div class="slide"><img src="smile3.png" alt="Diapositive 3"></div>
+          <div class="slide"><img src="smile4.png" alt="Diapositive 4"></div>
+          <div class="slide"><img src="smile5.png" alt="Diapositive 5"></div>
+          <div class="slide"><img src="smile6.png" alt="Diapositive 6"></div>
+          <div class="slide"><img src="smile7.png" alt="Diapositive 7"></div>
+          <div class="slide"><img src="smile8.png" alt="Diapositive 8"></div>
+          <div class="slide"><img src="smile9.png" alt="Diapositive 9"></div>
+          <div class="slide"><img src="smile10.png" alt="Diapositive 10"></div>
+          <div class="slide"><img src="smile11.png" alt="Diapositive 11"></div>
+          <div class="slide"><img src="smile12.png" alt="Diapositive 12"></div>
+    
+        </div>
+    
+        <!-- Flèches -->
+        <button class="nav prev" type="button" aria-label="Slide précédent">❮</button>
+        <button class="nav next" type="button" aria-label="Slide suivant">❯</button>
+
+              <span class="date"> ✦ Mai 2026 ✦ </span>
+          <!-- Points -->
+        <div class="dots" aria-label="Pagination du carrousel"></div>
+          
+        
+      </div>  
+    </section>
+    
+  </main>
+  
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    2026 © Laeticia PETIT
+    <div class="icons">
+      <a href="https://www.instagram.com/little_ness_art/" target="_blank" rel="noopener">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/in/laeticia-petit-116b12319/" target="_blank" rel="noopener">
+        <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
+      </a>
+      <a href="mailto:laetitia84.petit@gmail.com">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Email">
+      </a>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Retour en haut">↑</button>
+
+  <script>
+    
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".carousel.page-parcours");
+  if (!carousel) return;
+
+  const track = carousel.querySelector(".carousel-track");
+  const slides = Array.from(carousel.querySelectorAll(".slide"));
+  const prevBtn = carousel.querySelector(".nav.prev");
+  const nextBtn = carousel.querySelector(".nav.next");
+  const dotsWrap = carousel.querySelector(".dots");
+
+  if (!track || slides.length === 0 || !dotsWrap) return;
+
+  let index = 0;
+
+  // Crée les points
+  dotsWrap.innerHTML = "";
+  const dots = slides.map((_, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", `Aller à la diapositive ${i + 1}`);
+    b.addEventListener("click", () => goTo(i));
+    dotsWrap.appendChild(b);
+    return b;
+  });
+
+  function update() {
+    track.style.transform = `translateX(${-index * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle("active", i === index));
+  }
+
+function goTo(i) {
+  if (i < 0) index = slides.length - 1;
+  else if (i >= slides.length) index = 0;
+  else index = i;
+
+  update();
+}
+
+prevBtn?.addEventListener("click", () => goTo(index - 1));
+nextBtn?.addEventListener("click", () => goTo(index + 1));
+
+  // Clavier (optionnel)
+  carousel.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") goTo(index - 1);
+    if (e.key === "ArrowRight") goTo(index + 1);
+  });
+
+  // Ajustement quand la fenêtre change (optionnel mais propre)
+  window.addEventListener("resize", update, { passive: true });
+
+  update();
+});
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuIcon = document.querySelector('.menu-icon');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      if (menuIcon && mobileMenu) {
+        menuIcon.addEventListener('click', () => {
+          mobileMenu.style.display =
+            mobileMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.style.display = 'none';
+          });
+        });
+      }
+
+      const backToTop = document.getElementById("backToTop");
+      if (backToTop) {
+        const toggle = () => {
+          backToTop.style.display = window.scrollY > 100 ? "flex" : "none";
+        };
+
+        toggle();
+        window.addEventListener("scroll", toggle, { passive: true });
+
+        backToTop.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
