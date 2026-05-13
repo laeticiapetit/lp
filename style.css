@@ -613,6 +613,7 @@ main,
 .carousel,
 .carousel-track,
 .slide {
+  margin: 20;
   border-radius: 0;
   overflow: visible;
 }
