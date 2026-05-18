@@ -439,6 +439,10 @@ footer .icons img:hover {
   box-shadow: 0 18px 40px rgba(0,0,0,0.75);
 }
 
+.element.style {
+    margin-right: 20px;
+}
+
 body {
   min-height: 100vh;
   display: flex;
